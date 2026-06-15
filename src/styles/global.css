@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+  --font-primary: 'Inter', system-ui, sans-serif;
+  --color-orange: #FF8C00;
+  
+  /* Default (Light Mode) */
+  --color-dark-gray: #333333;
+  --color-bg: #f5f5f5;
+  --color-text: #333333;
+  --color-text-muted: #555555;
+  --color-heading: #111111;
+  --color-card-bg: #ffffff;
+  --color-border: #dddddd;
+  --color-hover-bg: rgba(0,0,0,0.05);
+  --color-code-bg: #eaeaea;
+}
+
+html.theme-dark {
+  --color-bg: #1a1a1a;
+  --color-text: #e0e0e0;
+  --color-text-muted: #ccc;
+  --color-heading: #ffffff;
+  --color-card-bg: #2a2a2a;
+  --color-border: #444;
+  --color-hover-bg: rgba(255,255,255,0.1);
+  --color-code-bg: #1e1e1e;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
+  margin-top: 0;
+}
+
+a {
+  color: var(--color-orange);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

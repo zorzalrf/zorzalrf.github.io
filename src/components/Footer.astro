@@ -1,0 +1,105 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="brand-info">
+        <div class="brand-header">
+          <img src={import.meta.env.BASE_URL + 'favicon.svg'} alt="Zorzal RF Logo" class="footer-logo" />
+          <span class="brand-name">Zorzal RF</span>
+        </div>
+        <p><a href="#" class="open-contact-dialog">Formulario de Contacto</a></p>
+      </div>
+      <div class="footer-links">
+        <a href={import.meta.env.BASE_URL}>Inicio</a>
+        <a href={import.meta.env.BASE_URL + 'catalog/'}>Catálogo</a>
+        <!--<a href={import.meta.env.BASE_URL + 'tutorials/'}>Tutoriales</a>-->
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; {currentYear} Zorzal RF. Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--color-card-bg);
+    border-top: 1px solid var(--color-border);
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .brand-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .footer-logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  .brand-name {
+    color: var(--color-orange);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .brand-info p {
+    color: var(--color-text-muted);
+    margin: 0.5rem 0 0 0;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .footer-links a {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+  
+  .footer-links a:hover {
+    color: var(--color-orange);
+  }
+  
+  .copyright {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  @media (max-width: 600px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .brand-header {
+      justify-content: center;
+    }
+  }
+</style>

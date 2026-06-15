@@ -1,0 +1,308 @@
+---
+interface Props {
+  title: string;
+  category: 'Entrega Inmediata' | 'Entrega en 30 días' | 'Entrega en 45 días' | 'Sin Stock';
+  type: string[];
+  specs: string[];
+  price?: number;
+  mercadoLibreUrl?: string;
+  idealUse?: string;
+}
+
+const { title, category, type, specs, price, idealUse, mercadoLibreUrl = "https://www.mercadolibre.com.ar" } = Astro.props;
+
+// Helper to split the category text into two lines
+const splitCategory = (cat: string) => {
+  if (cat.startsWith('Entrega ')) {
+    return { line1: 'Entrega', line2: cat.substring(8) };
+  }
+  return { line1: cat, line2: '' };
+};
+
+const parsedCategory = splitCategory(category);
+
+// Helper to get CSS class based on delivery category
+const getCategoryClass = (cat: string) => {
+  switch (cat) {
+    case 'Entrega Inmediata': return 'badge-inmediata';
+    case 'Entrega en 30 días': return 'badge-30';
+    case 'Entrega en 45 días': return 'badge-45';
+    default: return '';
+  }
+};
+
+const badgeClass = getCategoryClass(category);
+const buttonText = category === 'Sin Stock' ? 'Agotado' : 'Muy pronto';
+---
+
+<div class="product-card" data-category={category} data-type={type.join(',')}>
+  <div class="card-header">
+    <h3>{title}</h3>
+    <div class={`delivery-badge ${badgeClass}`} style={{ visibility: category === 'Sin Stock' ? 'hidden' : 'visible' }}>
+      <span class="badge-line-1">{parsedCategory.line1}</span>
+      {parsedCategory.line2 && <span class="badge-line-2">{parsedCategory.line2}</span>}
+    </div>
+  </div>
+  
+  <div class="card-body">
+    {idealUse && (
+      <div class="ideal-use">
+        <strong>Aplicación:</strong> {idealUse}
+      </div>
+    )}
+    <h4>Especificaciones Técnicas</h4>
+    <ul class="specs-list">
+      {specs.map((spec) => (
+        <li>{spec}</li>
+      ))}
+    </ul>
+  </div>
+  
+  <div class="card-footer">
+    <span class="action-button disabled-btn">
+      {buttonText}
+    </span>
+    {category !== 'Entrega Inmediata' && category !== 'Sin Stock' && (
+      <div class="reserve-text">
+        Este es un producto de importación bajo demanda. Una vez confirmado tu pedido, realizamos la gestión de importación y soporte técnico pre-entrega.
+      </div>
+    )}
+  </div>
+</div>
+
+<style>
+  .product-card {
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    border-color: var(--color-orange);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+  
+  .card-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--color-heading);
+  }
+  
+  .delivery-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    text-align: right;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .badge-line-1 {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    opacity: 0.9;
+  }
+
+  .badge-line-2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+
+  /* Accessible Badge Colors for Light Mode */
+  .badge-inmediata {
+    background-color: rgba(74, 222, 128, 0.15);
+    color: #166534;
+    border: 1px solid rgba(74, 222, 128, 0.4);
+  }
+  
+  .badge-30 {
+    background-color: rgba(250, 204, 21, 0.15);
+    color: #854d0e;
+    border: 1px solid rgba(250, 204, 21, 0.4);
+  }
+  
+  .badge-45 {
+    background-color: rgba(248, 113, 113, 0.15);
+    color: #991b1b;
+    border: 1px solid rgba(248, 113, 113, 0.4);
+  }
+
+  .badge-sin-stock {
+    background-color: rgba(156, 163, 175, 0.15);
+    color: #374151;
+    border: 1px solid rgba(156, 163, 175, 0.4);
+  }
+
+  /* Accessible Badge Colors for Dark Mode */
+  :global(.theme-dark) .badge-inmediata {
+    background-color: rgba(74, 222, 128, 0.1);
+    color: #4ade80;
+    border-color: rgba(74, 222, 128, 0.3);
+  }
+  
+  :global(.theme-dark) .badge-30 {
+    background-color: rgba(250, 204, 21, 0.1);
+    color: #facc15;
+    border-color: rgba(250, 204, 21, 0.3);
+  }
+  
+  :global(.theme-dark) .badge-45 {
+    background-color: rgba(248, 113, 113, 0.1);
+    color: #f87171;
+    border-color: rgba(248, 113, 113, 0.3);
+  }
+  
+  :global(.theme-dark) .badge-sin-stock {
+    background-color: rgba(156, 163, 175, 0.1);
+    color: #9ca3af;
+    border-color: rgba(156, 163, 175, 0.3);
+  }
+
+  .card-body {
+    flex-grow: 1;
+  }
+  
+  .card-body h4 {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ideal-use {
+    font-size: 0.85rem;
+    color: var(--color-orange);
+    background: var(--color-hover-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+  
+  .specs-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: var(--color-text);
+    font-size: 0.95rem;
+  }
+  
+  .specs-list li {
+    margin-bottom: 0.25rem;
+  }
+  
+  .card-footer {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .reserve-text {
+    width: 100%;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    background: var(--color-hover-bg);
+    padding: 0.75rem;
+    border-radius: 4px;
+    border-left: 3px solid var(--color-orange);
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-heading);
+  }
+  
+  .action-button {
+    background-color: var(--color-orange);
+    color: var(--color-dark-gray);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-left: auto;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .action-button:hover {
+    background-color: #e67e00;
+  }
+  
+  .action-button.disabled-btn {
+    background-color: var(--color-border);
+    color: var(--color-text-muted);
+    cursor: not-allowed;
+  }
+  
+  .action-button.disabled-btn:hover {
+    background-color: var(--color-border);
+  }
+</style>
+
+<script>
+  const confirmBtns = document.querySelectorAll('.requires-confirmation');
+  confirmBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      // If it hasn't been confirmed yet
+      if (!btn.classList.contains('confirmed')) {
+        e.preventDefault(); // Stop redirection to MercadoLibre
+        
+        btn.classList.add('confirmed');
+        btn.setAttribute('data-original-text', btn.textContent || 'Reservar');
+        btn.textContent = 'Entendido, continuar';
+        
+        // Find the hidden reserve text in the same footer and show it
+        const textElement = btn.parentElement?.querySelector('.reserve-text') as HTMLElement;
+        if (textElement) {
+          textElement.style.display = 'block';
+        }
+      } else {
+        // It has been confirmed, let the default navigation happen,
+        // but reset the button state back to original after a short delay
+        setTimeout(() => {
+          btn.classList.remove('confirmed');
+          btn.textContent = btn.getAttribute('data-original-text') || 'Reservar';
+          const textElement = btn.parentElement?.querySelector('.reserve-text') as HTMLElement;
+          if (textElement) {
+            textElement.style.display = 'none';
+          }
+        }, 300);
+      }
+    });
+  });
+</script>

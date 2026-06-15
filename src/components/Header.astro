@@ -1,0 +1,101 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+const homeUrl = import.meta.env.BASE_URL;
+// Provide paths to both SVG logos
+const darkLogoSrc = homeUrl + 'dark-mode-logo.svg';
+const lightLogoSrc = homeUrl + 'light-mode-logo.svg';
+---
+
+<header class="site-header">
+  <div class="container">
+    <a href={homeUrl} class="brand">
+      <img src={darkLogoSrc} alt="Zorzal RF Logo" class="logo logo-dark" />
+      <img src={lightLogoSrc} alt="Zorzal RF Logo" class="logo logo-light" />
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href={homeUrl}>Inicio</a></li>
+        <li><a href={homeUrl + 'catalog/'}>Catálogo</a></li>
+        <!--<li><a href={homeUrl + 'tutorials/'}>Tutoriales</a></li>-->
+        <li><a href="#" class="open-contact-dialog">Contacto</a></li>
+      </ul>
+      <ThemeToggle />
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background-color: var(--color-card-bg);
+    border-bottom: 2px solid var(--color-orange);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px #0000004d;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .logo {
+    height: 128px;
+    max-width: 180px;
+    object-fit: contain;
+    width: auto;
+    margin-right: 0.75rem;
+  }
+  
+  html.theme-dark .logo-dark { display: block; }
+  html.theme-dark .logo-light { display: none; }
+  
+  html:not(.theme-dark) .logo-dark { display: none; }
+  html:not(.theme-dark) .logo-light { display: block; }
+  
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .main-nav a:hover,
+  .main-nav a:focus {
+    color: var(--color-orange);
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .main-nav ul {
+      gap: 1.25rem;
+    }
+  }
+</style>
