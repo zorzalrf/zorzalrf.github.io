@@ -32,6 +32,8 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    env:
+      PUBLIC_GA_ID: ${{ secrets.PUBLIC_GA_ID }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -68,8 +70,6 @@ jobs:
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Astro
         working-directory: ${{ env.BUILD_PATH }}
-        env:
-          PUBLIC_GA_ID: ${{ secrets.PUBLIC_GA_ID }}
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
             --site "${{ steps.pages.outputs.origin }}" \
