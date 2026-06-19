@@ -11,10 +11,7 @@ interface Props {
 }
 
 const { title, description = "Zorzal RF - Soluciones Técnicas y Tutoriales de Radiofrecuencia" } = Astro.props;
-const gaId = import.meta.env.PUBLIC_GA_ID;
-if (!gaId) {
-  console.warn("ERROR: PUBLIC_GA_ID no está definido.");
-}
+const gaId = 'G-RFXJ47L4P6';
 ---
 
 <!doctype html>
