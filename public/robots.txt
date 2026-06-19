@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zorzalrf.com/sitemap-index.xml
