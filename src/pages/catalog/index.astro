@@ -5,7 +5,11 @@ import ProductCard from '../../components/ProductCard.astro';
 // We are hardcoding some for demo purposes as requested by the structure
 import { catalogItems } from '../../data/catalog';
 
-const shuffledItems = [...catalogItems].sort(() => Math.random() - 0.5);
+const heroItems = catalogItems.filter(item => item.isHero && item.category !== 'Sin Stock');
+const outOfStockItems = catalogItems.filter(item => item.category === 'Sin Stock');
+const otherItems = catalogItems.filter(item => !item.isHero && item.category !== 'Sin Stock').sort(() => Math.random() - 0.5);
+
+const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
 ---
 
 <Layout title="Catálogo">
@@ -16,10 +20,10 @@ const shuffledItems = [...catalogItems].sort(() => Math.random() - 0.5);
 
   <div class="filters">
     <span class="filter-label">Filtrar por Entrega:</span>
-    <button class="filter-btn filter-delivery-btn active" data-delivery="all">Todos</button>
-    <button class="filter-btn filter-delivery-btn" data-delivery="Entrega Inmediata" style="border-color: #4ade80;">Entrega Inmediata</button>
-    <button class="filter-btn filter-delivery-btn" data-delivery="Entrega en 30 días" style="border-color: #facc15;">Entrega a 30 Días</button>
-    <button class="filter-btn filter-delivery-btn" data-delivery="Entrega en 45 días" style="border-color: #f87171;">Entrega a 45 Días</button>
+    <button class="filter-btn filter-delivery-btn" data-delivery="all">Todos</button>
+    <button class="filter-btn filter-delivery-btn active" data-delivery="Entrega Inmediata" style="border-color: #4ade80;">Entrega Inmediata</button>
+    <button class="filter-btn filter-delivery-btn" data-delivery="Entrega 30 días" style="border-color: #facc15;">Entrega a 30 Días</button>
+    <button class="filter-btn filter-delivery-btn" data-delivery="Entrega 45 días" style="border-color: #f87171;">Entrega a 45 Días</button>
   </div>
 
   <div class="filters">
@@ -32,13 +36,15 @@ const shuffledItems = [...catalogItems].sort(() => Math.random() - 0.5);
   </div>
 
   <div class="product-grid">
-    {shuffledItems.map(item => (
+    {sortedItems.map(item => (
       <ProductCard 
         title={item.title} 
         category={item.category} 
         type={item.type}
         specs={item.specs} 
         idealUse={item.idealUse}
+        isHero={item.isHero}
+        badge={item.badge}
       />
     ))}
   </div>
@@ -93,7 +99,7 @@ const shuffledItems = [...catalogItems].sort(() => Math.random() - 0.5);
   const typeButtons = document.querySelectorAll('.filter-type-btn');
   const cards = document.querySelectorAll('.product-card');
 
-  let currentDelivery = 'all';
+  let currentDelivery = 'Entrega Inmediata';
   let currentType = 'all';
 
   function updateGrid() {
@@ -108,6 +114,9 @@ const shuffledItems = [...catalogItems].sort(() => Math.random() - 0.5);
       }
     });
   }
+
+  // Initial call to set correct visibility based on default filters
+  updateGrid();
 
   deliveryButtons.forEach(btn => {
     btn.addEventListener('click', () => {

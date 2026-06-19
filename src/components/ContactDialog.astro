@@ -1,4 +1,8 @@
 ---
+import { catalogItems } from '../data/catalog';
+
+// Get unique product titles and sort alphabetically
+const productOptions = Array.from(new Set(catalogItems.map(item => item.title))).sort();
 ---
 <dialog id="contact-dialog" class="contact-dialog">
   <div class="dialog-content">
@@ -20,7 +24,13 @@
 
       <div class="form-group">
         <label for="modelo">Modelo de Equipo / Proyecto</label>
-        <input type="text" id="modelo" name="modelo" placeholder="Ej: Kit RTL SDR v3" required />
+        <select id="modelo" name="modelo" required>
+          <option value="" disabled selected>Seleccioná el modelo o proyecto...</option>
+          {productOptions.map(product => (
+            <option value={product}>{product}</option>
+          ))}
+          <option value="Consulta General / Otro Proyecto">Consulta General / Otro Proyecto</option>
+        </select>
       </div>
 
       <div class="form-group">

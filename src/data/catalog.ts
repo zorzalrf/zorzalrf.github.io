@@ -1,4 +1,4 @@
-export type DeliveryCategory = 'Entrega Inmediata' | 'Entrega en 30 días' | 'Entrega en 45 días' | 'Sin Stock';
+export type DeliveryCategory = 'Entrega Inmediata' | 'Entrega 30 días' | 'Entrega 45 días' | 'Sin Stock';
 export type ProductType = 'SDR' | 'Antena' | 'Accesorios' | 'Filtros';
 
 export interface CatalogItem {
@@ -8,6 +8,8 @@ export interface CatalogItem {
   specs: string[];
   idealUse?: string;
   mercadoLibreUrl?: string;
+  isHero?: boolean;
+  badge?: string;
 }
 
 export const catalogItems: CatalogItem[] = [
@@ -22,7 +24,7 @@ export const catalogItems: CatalogItem[] = [
       "Interfaz USB para procesamiento digital de señal"
     ],
     "idealUse": "Monitoreo avanzado de alta precisión en HF.",
-    "category": "Entrega en 45 días"
+    "category": "Entrega 45 días"
   },
   {
     "title": "Airspy R2",
@@ -35,7 +37,7 @@ export const catalogItems: CatalogItem[] = [
       "Sincronización externa para sistemas complejos"
     ],
     "idealUse": "Escaneo profesional de radiofrecuencia panorámico.",
-    "category": "Entrega en 45 días"
+    "category": "Entrega 45 días"
   },
   {
     "title": "SpyVerter R2",
@@ -48,7 +50,7 @@ export const catalogItems: CatalogItem[] = [
       "Extensión de cobertura de receptores a espectro HF/DC"
     ],
     "idealUse": "Permite recibir onda corta en equipos VHF/UHF.",
-    "category": "Entrega en 45 días"
+    "category": "Entrega 45 días"
   },
   {
     "title": "Airspy Mini",
@@ -61,27 +63,29 @@ export const catalogItems: CatalogItem[] = [
       "Eficiencia energética optimizada para dispositivos móviles"
     ],
     "idealUse": "Recepción SDR de alto rendimiento en formato portátil.",
-    "category": "Entrega en 45 días"
+    "category": "Entrega 45 días"
   },
   {
     "title": "RTL-SDR Blog V3 R860 Dipole Antenna Kit",
     "type": ["SDR", "Antena"],
     "specs": [
       "Tuner R860 (R820T2) con oscilador TCXO de 1 PPM",
-      "Carcasa de aluminio con refrigeración pasiva",
+      "Compatible con SDRSharp, GQRX y HDSDR",
       "Circuito Bias-Tee conmutable vía software",
       "Protección ESD adicional y bajo nivel de ruido",
       "Incluye base dipolo, cables y soportes"
     ],
     "idealUse": "Kit completo para iniciarse en radioescucha.",
-    "category": "Entrega Inmediata"
+    "category": "Entrega Inmediata",
+    "isHero": true,
+    "badge": "RECOMENDADO PARA PRINCIPIANTES"
   },
   {
     "title": "RTL-SDR Blog V3 R860",
     "type": ["SDR"],
     "specs": [
       "Tuner R860 (R820T2) con oscilador TCXO de 1 PPM",
-      "Conector de antena SMA hembra",
+      "Compatible con SDRSharp, GQRX y HDSDR",
       "Muestreo directo integrado para recepción HF básica",
       "Carcasa metálica blindada para reducción de ruido",
       "Circuito Bias-Tee interno para alimentación de accesorios"
@@ -178,7 +182,7 @@ export const catalogItems: CatalogItem[] = [
       "Módulo GPS integrado para sincronización precisa de tiempo/frecuencia"
     ],
     "idealUse": "Receptor web multi-banda de alta fidelidad.",
-    "category": "Entrega en 45 días"
+    "category": "Entrega 45 días"
   },
   {
     "title": "Antena Iridium 33-HC610-28",

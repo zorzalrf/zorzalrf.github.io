@@ -1,15 +1,17 @@
 ---
 interface Props {
   title: string;
-  category: 'Entrega Inmediata' | 'Entrega en 30 días' | 'Entrega en 45 días' | 'Sin Stock';
+  category: 'Entrega Inmediata' | 'Entrega 30 días' | 'Entrega 45 días' | 'Sin Stock';
   type: string[];
   specs: string[];
   price?: number;
   mercadoLibreUrl?: string;
   idealUse?: string;
+  isHero?: boolean;
+  badge?: string;
 }
 
-const { title, category, type, specs, price, idealUse, mercadoLibreUrl = "https://www.mercadolibre.com.ar" } = Astro.props;
+const { title, category, type, specs, price, idealUse, isHero, badge, mercadoLibreUrl = "https://www.mercadolibre.com.ar" } = Astro.props;
 
 // Helper to split the category text into two lines
 const splitCategory = (cat: string) => {
@@ -25,8 +27,8 @@ const parsedCategory = splitCategory(category);
 const getCategoryClass = (cat: string) => {
   switch (cat) {
     case 'Entrega Inmediata': return 'badge-inmediata';
-    case 'Entrega en 30 días': return 'badge-30';
-    case 'Entrega en 45 días': return 'badge-45';
+    case 'Entrega 30 días': return 'badge-30';
+    case 'Entrega 45 días': return 'badge-45';
     default: return '';
   }
 };
@@ -35,7 +37,8 @@ const badgeClass = getCategoryClass(category);
 const buttonText = category === 'Sin Stock' ? 'Agotado' : 'Muy pronto';
 ---
 
-<div class="product-card" data-category={category} data-type={type.join(',')}>
+<div class={`product-card ${isHero ? 'hero-card' : ''}`} data-category={category} data-type={type.join(',')}>
+  {badge && <div class="hero-badge">{badge}</div>}
   <div class="card-header">
     <h3>{title}</h3>
     <div class={`delivery-badge ${badgeClass}`} style={{ visibility: category === 'Sin Stock' ? 'hidden' : 'visible' }}>
@@ -88,6 +91,30 @@ const buttonText = category === 'Sin Stock' ? 'Agotado' : 'Muy pronto';
     border-color: var(--color-orange);
   }
   
+  .hero-card {
+    border: 2px solid var(--color-orange);
+    box-shadow: 0 4px 12px rgba(255, 140, 0, 0.15);
+    position: relative;
+  }
+  
+  .hero-card:hover {
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.25);
+  }
+  
+  .hero-badge {
+    position: absolute;
+    top: -12px;
+    left: 1.5rem;
+    background-color: var(--color-orange);
+    color: var(--color-dark-gray);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 10;
+  }
+  
   .card-header {
     display: flex;
     justify-content: space-between;
@@ -105,14 +132,16 @@ const buttonText = category === 'Sin Stock' ? 'Agotado' : 'Muy pronto';
   .delivery-badge {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
     padding: 0.35rem 0.75rem;
     border-radius: 6px;
     font-size: 0.75rem;
     line-height: 1.2;
-    text-align: right;
+    text-align: center;
     white-space: nowrap;
     flex-shrink: 0;
+    min-width: 130px;
   }
 
   .badge-line-1 {

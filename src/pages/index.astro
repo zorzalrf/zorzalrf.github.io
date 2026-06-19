@@ -7,6 +7,7 @@ import ProductCard from '../components/ProductCard.astro';
   <section class="hero">
     <h1>Componentes y Soluciones para Recepción de Alta Performance</h1>
     <p>Nos especializamos en Radio Definida por Software (SDR), rastreo ADS-B y sistemas de RF especializados.</p>
+    <p class="authority-text">Hardware original, seleccionado y testeado.</p>
     <div class="cta-group">
       <a href={import.meta.env.BASE_URL + 'catalog/'} class="button primary">Ver Catálogo</a>
       <!--<a href={import.meta.env.BASE_URL + 'tutorials/'} class="button secondary">Leer Tutoriales</a>-->
@@ -17,19 +18,21 @@ import ProductCard from '../components/ProductCard.astro';
     <h2>Equipos Destacados</h2>
     <div class="product-grid">
       <ProductCard 
-        title="RTL-SDR Blog Multipurpose Dipole Antenna Kit"
+        title="RTL-SDR Blog V3 R860 Dipole Antenna Kit"
         category="Entrega Inmediata" 
-        specs={["Base dipolo versátil con cable RG174 de 60 cm", "Incluye 4 antenas telescópicas intercambiables", "Cable de extensión RG174 de 3 metros", "Soportes incluidos: trípode flexible y ventosa", "Diseño adaptable para uso temporal en exteriores"]} 
-    idealUse="Kit completo para iniciarse en radioescucha."
-        type= {["Antena"]}
-    />
+        specs={["Tuner R860 (R820T2) con oscilador TCXO de 1 PPM", "Compatible con SDRSharp, GQRX y HDSDR", "Carcasa de aluminio con refrigeración pasiva", "Incluye base dipolo, cables y soportes", "Diseño adaptable para uso temporal en exteriores"]} 
+        idealUse="Kit completo para iniciarse en radioescucha."
+        type={["SDR", "Antena"]}
+        isHero={true}
+        badge="RECOMENDADO PARA PRINCIPIANTES"
+      />
     <ProductCard
         title="RTL-SDR Blog V3 R860 (USB-C)"
         type= {["SDR"]}
         specs={[
       "Versión actualizada con conector USB-C hembra",
       "Tuner R860 (R820T2) con TCXO de 1 PPM",
-      "Carcasa de aluminio con disipación pasiva",
+      "Compatible con SDRSharp, GQRX y HDSDR",
       "Protección ESD mejorada contra sobretensiones",
       "Muestreo directo integrado para bandas HF"
     ]}
@@ -51,13 +54,23 @@ import ProductCard from '../components/ProductCard.astro';
     font-size: 3rem;
     color: var(--color-orange);
     margin-bottom: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: normal;
   }
   
   .hero p {
     font-size: 1.25rem;
     color: var(--color-text-muted);
     max-width: 800px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.5rem;
+  }
+
+  .authority-text {
+    font-size: 1rem;
+    color: var(--color-text);
+    font-weight: 500;
+    margin-bottom: 2rem;
   }
   
   .cta-group {
