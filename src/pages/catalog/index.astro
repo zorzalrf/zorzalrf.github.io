@@ -21,9 +21,9 @@ const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
   <div class="filters">
     <span class="filter-label">Filtrar por Entrega:</span>
     <button class="filter-btn filter-delivery-btn" data-delivery="all">Todos</button>
-    <button class="filter-btn filter-delivery-btn active" data-delivery="Entrega Inmediata" style="border-color: #4ade80;">Entrega Inmediata</button>
-    <button class="filter-btn filter-delivery-btn" data-delivery="Entrega 30 días" style="border-color: #facc15;">Entrega a 30 Días</button>
-    <button class="filter-btn filter-delivery-btn" data-delivery="Entrega 45 días" style="border-color: #f87171;">Entrega a 45 Días</button>
+    <button class="filter-btn filter-delivery-btn active" data-delivery="Entrega Inmediata" style="border-color: #4ade80;">Inmediata</button>
+    <button class="filter-btn filter-delivery-btn" data-delivery="Entrega 30 días" style="border-color: #facc15;">30 Días</button>
+    <button class="filter-btn filter-delivery-btn" data-delivery="Entrega 45 días" style="border-color: #f87171;">45 Días</button>
   </div>
 
   <div class="filters">
@@ -101,6 +101,33 @@ const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
 
   let currentDelivery = 'Entrega Inmediata';
   let currentType = 'all';
+
+  // Read URL parameters for automatic filtering
+  const urlParams = new URLSearchParams(window.location.search);
+  const typeParam = urlParams.get('type');
+
+  if (typeParam) {
+    currentType = typeParam;
+    currentDelivery = 'all'; // Show all delivery options when coming from a specific category link
+
+    // Update UI active classes for types
+    typeButtons.forEach(btn => {
+      if (btn.getAttribute('data-type') === currentType) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    // Update UI active classes for delivery
+    deliveryButtons.forEach(btn => {
+      if (btn.getAttribute('data-delivery') === currentDelivery) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
 
   function updateGrid() {
     cards.forEach(card => {

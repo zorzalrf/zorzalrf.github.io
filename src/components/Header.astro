@@ -6,7 +6,7 @@ const darkLogoSrc = homeUrl + 'dark-mode-logo.svg';
 const lightLogoSrc = homeUrl + 'light-mode-logo.svg';
 ---
 
-<header class="site-header">
+<header class="site-header" id="main-header">
   <div class="container">
     <a href={homeUrl} class="brand">
       <img src={darkLogoSrc} alt="Zorzal RF Logo" class="logo logo-dark" />
@@ -30,6 +30,21 @@ const lightLogoSrc = homeUrl + 'light-mode-logo.svg';
     border-bottom: 2px solid var(--color-orange);
     padding: 1rem 0;
     box-shadow: 0 4px 6px #0000004d;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: padding 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease;
+  }
+  
+  .site-header.is-scrolled {
+    padding: 0.25rem 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  :global(html.theme-dark) .site-header.is-scrolled {
+    background-color: rgba(42, 42, 42, 0.85);
   }
   
   .container {
@@ -48,11 +63,16 @@ const lightLogoSrc = homeUrl + 'light-mode-logo.svg';
   }
   
   .logo {
-    height: 128px;
+    height: 80px;
     max-width: 180px;
     object-fit: contain;
     width: auto;
     margin-right: 0.75rem;
+    transition: height 0.3s ease;
+  }
+  
+  .is-scrolled .logo {
+    height: 48px; /* Reducido aún más para el scroll */
   }
   
   html.theme-dark .logo-dark { display: block; }
@@ -99,3 +119,21 @@ const lightLogoSrc = homeUrl + 'light-mode-logo.svg';
     }
   }
 </style>
+
+<script>
+  const header = document.getElementById('main-header');
+  
+  const handleScroll = () => {
+    // La diferencia de altura al achicar es de aprox 56px (logo y padding).
+    // La brecha (histéresis) debe ser mayor a 56px para evitar el loop.
+    if (window.scrollY > 100) {
+      header?.classList.add('is-scrolled');
+    } else if (window.scrollY < 10) {
+      header?.classList.remove('is-scrolled');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  // Run once on load to catch initial state
+  handleScroll();
+</script>
