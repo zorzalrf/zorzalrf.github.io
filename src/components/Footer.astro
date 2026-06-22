@@ -37,7 +37,7 @@ const currentYear = new Date().getFullYear();
       <div class="footer-col">
         <h4 class="col-title">CONTACTO</h4>
         <ul class="col-links contact-info">
-          <li><a href="mailto:hola@zorzalrf.com">hola@zorzalrf.com</a></li>
+          <li><a href="#" class="protected-email" data-contact="hola" data-domain="zorzalrf.com">Cargando email...</a></li>
           <li class="address">Buenos Aires, Argentina</li>
         </ul>
       </div>
@@ -218,3 +218,16 @@ const currentYear = new Date().getFullYear();
     }
   }
 </style>
+
+<script>
+  // Ofuscar el email para evitar spam bots
+  document.querySelectorAll('.protected-email').forEach(link => {
+    const contact = link.getAttribute('data-contact');
+    const domain = link.getAttribute('data-domain');
+    if (contact && domain) {
+      const email = `${contact}@${domain}`;
+      link.href = `mailto:${email}`;
+      link.textContent = email;
+    }
+  });
+</script>

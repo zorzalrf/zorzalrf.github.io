@@ -215,7 +215,9 @@ const productOptions = Array.from(new Set(catalogItems.map(item => item.title)))
       `Descripción:\n${descripcion}`
     );
 
-    window.location.href = `mailto:hola@zorzalrf.com?subject=${subject}&body=${body}`;
+    const contact = 'hola';
+    const domain = 'zorzalrf.com';
+    window.location.href = `mailto:${contact}@${domain}?subject=${subject}&body=${body}`;
     dialog.close();
     form.reset();
   });
