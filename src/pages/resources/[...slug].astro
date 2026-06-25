@@ -26,9 +26,23 @@ const getDifficultyClass = (diff: string) => {
   if (diff === 'Experto') return 'diff-experto';
   return 'diff-default';
 };
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": entry.data.title,
+  "description": entry.data.description,
+  "author": {
+    "@type": "Person",
+    "name": entry.data.author || "Zorzal RF"
+  },
+  "datePublished": new Date(entry.data.publishDate).toISOString(),
+  "url": Astro.url.href
+};
 ---
 
 <DocsLayout title={entry.data.title} description={entry.data.description} type="article">
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <article class="tutorial-content">
     <header>
       <div class="tags-row">
