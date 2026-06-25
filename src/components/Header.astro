@@ -19,8 +19,10 @@ const lightLogoSrc = homeUrl + 'light-mode-logo.svg';
         <li><a href={homeUrl + 'resources/'}>Centro de Recursos</a></li>
         <li><a href="#" class="open-contact-dialog">Contacto</a></li>
       </ul>
-      <ThemeToggle />
     </nav>
+    <div class="header-actions">
+      <ThemeToggle />
+    </div>
   </div>
 </header>
 
@@ -53,6 +55,12 @@ const lightLogoSrc = homeUrl + 'light-mode-logo.svg';
     padding: 0 1.5rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .header-actions {
+    display: flex;
     align-items: center;
   }
   
@@ -114,10 +122,16 @@ const lightLogoSrc = homeUrl + 'light-mode-logo.svg';
       flex-direction: column;
       gap: 0.5rem;
     }
+    .header-actions {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+    }
     .main-nav {
       flex-wrap: wrap;
       justify-content: center;
       gap: 0.75rem;
+      margin-top: 0.5rem;
     }
     .main-nav ul {
       flex-wrap: wrap;
