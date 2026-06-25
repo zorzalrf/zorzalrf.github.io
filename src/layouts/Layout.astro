@@ -19,17 +19,21 @@ const { title, description = "Zorzal RF - Soluciones Técnicas", type = 'website
   <head>
     <meta charset="UTF-8" />
     <script is:inline>
-      const theme = (() => {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-          return localStorage.getItem('theme');
+      const setTheme = () => {
+        const theme = (() => {
+          if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+            return localStorage.getItem('theme');
+          }
+          return 'light';
+        })();
+        if (theme === 'dark') {
+          document.documentElement.classList.add('theme-dark');
+        } else {
+          document.documentElement.classList.remove('theme-dark');
         }
-        return 'light';
-      })();
-      if (theme === 'dark') {
-        document.documentElement.classList.add('theme-dark');
-      } else {
-        document.documentElement.classList.remove('theme-dark');
-      }
+      };
+      setTheme();
+      document.addEventListener('astro:after-swap', setTheme);
     </script>
     <SEO title={title} description={description} type={type} />
     <meta name="viewport" content="width=device-width" />
