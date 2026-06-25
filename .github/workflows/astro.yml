@@ -72,6 +72,9 @@ jobs:
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
+      - name: Generate sitemap.xml
+        working-directory: ${{ env.BUILD_PATH }}
+        run: cp dist/sitemap-0.xml dist/sitemap.xml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -3,7 +3,10 @@ title: "Decodificación de ACARS con SDR"
 description: "Guía básica para recibir y decodificar mensajes de texto y telemetría de aviones en tiempo real."
 publishDate: 2026-06-16
 author: "Equipo Zorzal RF"
-tags: ["acars", "sdr", "aviacion", "vhf"]
+tags: ["sdr", "acars", "aviacion", "vhf", "tutorial"]
+category: "SDR Avanzado"
+difficulty: "Intermedio"
+readingTime: 5
 ---
 
 El sistema **ACARS** (Aircraft Communications Addressing and Reporting System) es un sistema de enlace de datos digital utilizado para transmitir mensajes cortos entre las aeronaves y las estaciones terrestres a través de radio (o satélite).
@@ -42,3 +45,11 @@ Estos son programas por línea de comandos diseñados específicamente para RTL-
 4. Cuando escuches una ráfaga corta de estática digital, tu software de decodificación debería mostrar un nuevo mensaje en pantalla con la matrícula del avión y el contenido del reporte.
 
 ¡Es un excelente proyecto para empezar a explorar la interceptación de telemetría aeronáutica!
+
+
+---
+
+### 🛒 ¿Necesitás el hardware para este proyecto?
+Recibí los mensajes de los aviones con claridad usando el equipo adecuado:
+- **[Kit RTL-SDR Blog V3 + Antena Dipolo - SDR Completo](/catalog/?type=SDR)**
+- **[Filtro Rechazo Banda FM (88-108 MHz)](/catalog/?type=Filtros)**

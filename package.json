@@ -13,8 +13,13 @@
     "@astrojs/check": "^0.9.9",
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^5.0.0",
+    "astro-pagefind": "^2.0.0",
+    "axios": "^1.18.1",
+    "cheerio": "^1.2.0",
+    "puppeteer": "^25.2.1",
     "rehype-katex": "^7.0.1",
-    "remark-math": "^6.0.0"
+    "remark-math": "^6.0.0",
+    "turndown": "^7.2.4"
   },
   "devDependencies": {
     "typescript": "^5.9.3"

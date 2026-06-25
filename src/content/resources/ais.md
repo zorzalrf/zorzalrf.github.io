@@ -3,7 +3,10 @@ title: "Monitoreo de Tráfico Marítimo (AIS)"
 description: "Cómo utilizar tu receptor SDR para rastrear barcos y embarcaciones comerciales a lo largo de la costa."
 publishDate: 2026-06-18
 author: "Equipo Zorzal RF"
-tags: ["ais", "maritimo", "sdr", "vhf"]
+tags: ["sdr", "ais", "barcos", "vhf", "tutorial"]
+category: "SDR Avanzado"
+difficulty: "Intermedio"
+readingTime: 5
 ---
 
 Así como los aviones utilizan ADS-B para evitar colisiones aéreas, la industria marítima utiliza un sistema casi idéntico llamado **AIS** (Automatic Identification System).
@@ -37,3 +40,11 @@ Hay varios programas dedicados a decodificar las ráfagas GMSK del sistema AIS:
 ## El Alcance
 
 Bajo condiciones normales, y con una antena instalada en el techo de tu casa, podés esperar ver embarcaciones a unas 20 a 40 millas náuticas. Sin embargo, bajo ciertas condiciones atmosféricas (como las inversiones térmicas), ocurre un fenómeno de "ducto troposférico" que permite que la señal VHF viaje por cientos de kilómetros sobre el mar, trayéndote datos de barcos desde distancias increíbles.
+
+
+---
+
+### 🛒 ¿Necesitás el hardware para este proyecto?
+Monitoreá el tráfico marítimo configurando nuestra antena dipolo a 162 MHz:
+- **[Kit Antena Dipolo Multipropósito para SDR - Portátil y Versátil](/catalog/?type=Antena)**
+- **[Receptor SDR RTL-SDR Blog V3 USB-C](/catalog/?type=SDR)**

@@ -1,0 +1,508 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ContactDialog from '../components/ContactDialog.astro';
+import SEO from '../components/SEO.astro';
+import Search from "astro-pagefind/components/Search.astro";
+import '../styles/global.css';
+import { getCollection } from 'astro:content';
+import { ViewTransitions } from 'astro:transitions';
+
+interface Props {
+  title: string;
+  description?: string;
+  type?: 'website' | 'article';
+}
+
+const { title, description = "Zorzal RF - Centro de Recursos y Documentación", type = 'website' } = Astro.props;
+
+const allResources = await getCollection('resources').catch(() => []);
+const categories = [
+  'Iniciación / Primeros Pasos', 
+  'Tecnología Aeronáutica', 
+  'Decodificación', 
+  'Satélites y Espacio', 
+  'SDR Avanzado', 
+  'Antenas y Cables', 
+  'Guías de Dispositivos', 
+  'General'
+];
+
+const groupedResources = categories.map(cat => ({
+  name: cat,
+  items: allResources.filter(r => r.data.category === cat).sort((a, b) => a.data.title.localeCompare(b.data.title))
+})).filter(g => g.items.length > 0);
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <ViewTransitions />
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        return 'light';
+      })();
+      if (theme === 'dark') {
+        document.documentElement.classList.add('theme-dark');
+      } else {
+        document.documentElement.classList.remove('theme-dark');
+      }
+    </script>
+    <SEO title={title} description={description} type={type} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href={`${import.meta.env.BASE_URL}favicon-96x96.png`} sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <link rel="shortcut icon" href={`${import.meta.env.BASE_URL}favicon.ico`} />
+    <link rel="apple-touch-icon" sizes="180x180" href={`${import.meta.env.BASE_URL}apple-touch-icon.png`} />
+    <link rel="manifest" href={`${import.meta.env.BASE_URL}site.webmanifest`} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+  </head>
+  <body>
+    <Header />
+    <div class="docs-layout">
+      <aside class="docs-sidebar" transition:persist="sidebar">
+        <div class="sidebar-search-container">
+          <button id="search-btn" class="search-btn" aria-label="Buscar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span class="search-text">Buscar...</span>
+            <kbd>Ctrl+K</kbd>
+          </button>
+        </div>
+        <div class="sidebar-header">
+          <a href={`${import.meta.env.BASE_URL}resources/`} class="back-to-index">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Inicio de Recursos
+          </a>
+        </div>
+        <nav class="sidebar-nav">
+          <ul class="sidebar-groups">
+            {groupedResources.map(group => {
+              const hasActiveItem = group.items.some(item => {
+                const itemUrl = import.meta.env.BASE_URL + 'resources/' + item.slug + '/';
+                return currentPath === itemUrl || currentPath === itemUrl.slice(0, -1);
+              });
+              return (
+              <li class="sidebar-group">
+                <details class="group-details" open={hasActiveItem}>
+                  <summary class="group-title">
+                    {group.name}
+                    <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </summary>
+                  <ul class="group-items">
+                    {group.items.map(item => {
+                      const itemUrl = import.meta.env.BASE_URL + 'resources/' + item.slug + '/';
+                      const isActive = currentPath === itemUrl || currentPath === itemUrl.slice(0, -1);
+                      return (
+                        <li>
+                          <a href={itemUrl} class={`sidebar-link ${isActive ? 'active' : ''}`}>
+                            {item.data.title}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </details>
+              </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </aside>
+      <main class="docs-main">
+        <div class="docs-content">
+          <slot />
+        </div>
+      </main>
+    </div>
+    <Footer />
+    <ContactDialog />
+
+    <dialog id="search-dialog" class="search-dialog">
+      <div class="search-dialog-inner">
+        <div class="search-dialog-header">
+          <h3>Buscar en Zorzal RF</h3>
+          <button id="close-search-btn" class="close-btn" aria-label="Cerrar">&times;</button>
+        </div>
+        <Search className="pagefind-ui" />
+      </div>
+    </dialog>
+
+    <script>
+      document.addEventListener('astro:page-load', () => {
+        const currentPath = window.location.pathname;
+        const links = document.querySelectorAll('.sidebar-link');
+        let activeLink: Element | null = null;
+        
+        for (const link of Array.from(links)) {
+          const href = link.getAttribute('href');
+          if (href && (currentPath === href || currentPath === href.slice(0, -1))) {
+            link.classList.add('active');
+            activeLink = link;
+            const details = link.closest('details');
+            if (details) details.setAttribute('open', '');
+          } else {
+            link.classList.remove('active');
+          }
+        }
+
+        // Auto-scroll del menú lateral hacia el item activo
+        if (activeLink) {
+          const sidebar = document.querySelector('.docs-sidebar');
+          if (sidebar) {
+            const linkRect = activeLink.getBoundingClientRect();
+            const sidebarRect = sidebar.getBoundingClientRect();
+            
+            // Si el item está fuera de la vista en el menú
+            if (linkRect.top < sidebarRect.top || linkRect.bottom > sidebarRect.bottom) {
+               // scrollear un poco mas arriba para que no quede pegado
+               activeLink.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }
+        }
+
+        const searchBtn = document.getElementById('search-btn');
+        const searchDialog = document.getElementById('search-dialog') as HTMLDialogElement;
+        const closeSearchBtn = document.getElementById('close-search-btn');
+
+        if (!searchBtn || !searchDialog || !closeSearchBtn) return;
+
+        const openSearch = () => {
+          searchDialog.showModal();
+          setTimeout(() => {
+            const input = searchDialog.querySelector('input');
+            if (input) input.focus();
+          }, 100);
+        };
+
+        const closeSearch = () => {
+          searchDialog.close();
+        };
+
+        searchBtn.addEventListener('click', openSearch);
+        closeSearchBtn.addEventListener('click', closeSearch);
+
+        searchDialog.addEventListener('click', (e) => {
+          if (e.target === searchDialog) {
+            closeSearch();
+          }
+        });
+
+        // Solo atar el Ctrl+K si estamos en la vista de Docs donde el botón existe
+        const handleKeyDown = (e: KeyboardEvent) => {
+          if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            openSearch();
+          }
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+
+        // Limpiar el event listener cuando la página se descarga para View Transitions
+        document.addEventListener('astro:before-swap', () => {
+            document.removeEventListener('keydown', handleKeyDown);
+        }, { once: true });
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+  .docs-layout {
+    flex: 1;
+    display: flex;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .docs-sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--color-border);
+    height: calc(100vh - 70px); /* Adjust based on header height */
+    position: sticky;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg);
+    overflow-y: auto;
+  }
+
+  /* Custom scrollbar for sidebar */
+  .docs-sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .docs-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .docs-sidebar::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 4px;
+  }
+
+  .sidebar-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .back-to-index {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-orange);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+  }
+
+  .back-to-index:hover {
+    color: var(--color-orange-dark, #cc7000);
+  }
+
+  .sidebar-nav {
+    padding: 1.5rem;
+  }
+
+  .sidebar-groups {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .group-details summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    padding: 0.25rem 0;
+  }
+
+  .group-details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .group-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin: 0;
+    font-weight: 700;
+    transition: color 0.2s;
+  }
+
+  .group-details summary:hover .group-title,
+  .group-details summary:hover .chevron {
+    color: var(--color-orange);
+  }
+
+  .chevron {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--color-text-muted);
+  }
+
+  .group-details[open] .chevron {
+    transform: rotate(180deg);
+  }
+
+  .group-items {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .sidebar-link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    transition: all 0.2s;
+    margin-left: -0.75rem;
+  }
+
+  .sidebar-link:hover {
+    background-color: var(--color-card-bg);
+    color: var(--color-orange);
+  }
+
+  .sidebar-link.active {
+    background-color: rgba(255, 140, 0, 0.1);
+    color: var(--color-orange);
+    font-weight: 600;
+    border-left: 4px solid var(--color-orange);
+    padding-left: calc(0.75rem - 4px);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .docs-main {
+    flex: 1;
+    min-width: 0; /* Prevent flex overflow */
+    padding: 3rem 2rem;
+  }
+
+  .docs-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 900px) {
+    .docs-layout {
+      flex-direction: column;
+    }
+
+    .docs-sidebar {
+      width: 100%;
+      height: auto;
+      position: static;
+      border-right: none;
+      border-bottom: 1px solid var(--color-border);
+      max-height: 300px; /* Optional: limit height on mobile */
+    }
+
+    .docs-main {
+      padding: 2rem 1rem;
+    }
+  }
+
+  /* Search Styles */
+  .sidebar-search-container {
+    padding: 1.5rem 1.5rem 0.5rem;
+  }
+
+  .search-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .search-btn:hover {
+    border-color: var(--color-orange);
+    color: var(--color-orange);
+  }
+  
+  .search-text {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .search-btn kbd {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 0.1rem 0.3rem;
+    font-size: 0.75rem;
+    font-family: monospace;
+  }
+
+  .search-dialog {
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+    background: transparent;
+    max-width: 650px;
+    width: 90%;
+    overflow: visible;
+  }
+  .search-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+  }
+  .search-dialog-inner {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+  }
+  .search-dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .search-dialog-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--color-heading);
+  }
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  .close-btn:hover {
+    background: rgba(255, 140, 0, 0.1);
+    color: var(--color-orange);
+  }
+
+  /* Pagefind UI overrides */
+  :global(.pagefind-ui) {
+    --pagefind-ui-primary: var(--color-orange);
+    --pagefind-ui-text: var(--color-text);
+    --pagefind-ui-background: var(--color-bg);
+    --pagefind-ui-border: var(--color-border);
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 8px;
+    --pagefind-ui-font: inherit;
+  }
+  :global(.pagefind-ui .pagefind-ui__search-input) {
+    font-weight: normal;
+  }
+</style>

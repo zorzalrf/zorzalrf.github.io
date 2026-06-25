@@ -20,6 +20,7 @@ const currentYear = new Date().getFullYear();
         <ul class="col-links">
           <li><a href={import.meta.env.BASE_URL}>Inicio</a></li>
           <li><a href={import.meta.env.BASE_URL + 'catalog/'}>Catálogo</a></li>
+          <li><a href={import.meta.env.BASE_URL + 'resources/'}>Centro de Recursos</a></li>
           <li><a href="#" class="open-contact-dialog">Contacto</a></li>
         </ul>
       </div>
@@ -226,7 +227,7 @@ const currentYear = new Date().getFullYear();
     const domain = link.getAttribute('data-domain');
     if (contact && domain) {
       const email = `${contact}@${domain}`;
-      link.href = `mailto:${email}`;
+      (link as HTMLAnchorElement).href = `mailto:${email}`;
       link.textContent = email;
     }
   });

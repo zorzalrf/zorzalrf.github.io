@@ -10,7 +10,7 @@ import ProductCard from '../components/ProductCard.astro';
     <p class="authority-text">Hardware original, seleccionado y testeado.</p>
     <div class="cta-group">
       <a href={import.meta.env.BASE_URL + 'catalog/'} class="button primary">Ver Catálogo</a>
-      <!--<a href={import.meta.env.BASE_URL + 'tutorials/'} class="button secondary">Leer Tutoriales</a>-->
+    <a href={import.meta.env.BASE_URL + 'resources/'} class="button secondary">Ir al Centro de Recursos</a>
     </div>
   </section>
 
@@ -18,27 +18,40 @@ import ProductCard from '../components/ProductCard.astro';
     <h2>Equipos Destacados</h2>
     <div class="product-grid">
       <ProductCard 
-        title="RTL-SDR Blog V3 R860 Dipole Antenna Kit"
+        title="Kit RTL-SDR Blog V3 + Antena Dipolo - SDR Completo"
         category="Entrega Inmediata" 
-        specs={["Tuner R860 (R820T2) con oscilador TCXO de 1 PPM", "Compatible con SDRSharp, GQRX y HDSDR", "Carcasa de aluminio con refrigeración pasiva", "Incluye base dipolo, cables y soportes", "Diseño adaptable para uso temporal en exteriores"]} 
+        specs={["Tuner R860 (R820T2) con oscilador TCXO de 1 PPM", "Compatible con SDRSharp, GQRX y HDSDR", "Circuito Bias-Tee conmutable vía software", "Protección ESD adicional y bajo nivel de ruido", "Incluye base dipolo, cables y soportes"]} 
         idealUse="Kit completo para iniciarse en radioescucha."
         type={["SDR", "Antena"]}
         isHero={true}
         badge="RECOMENDADO PARA PRINCIPIANTES"
       />
-    <ProductCard
-        title="RTL-SDR Blog V3 R860 (USB-C)"
-        type= {["SDR"]}
+      <ProductCard
+        title="Estación ADS-B: Receptor V3 + Antena + Filtro"
+        category="Entrega Inmediata"
+        type={["SDR", "Antena", "Filtros"]}
         specs={[
-      "Versión actualizada con conector USB-C hembra",
-      "Tuner R860 (R820T2) con TCXO de 1 PPM",
-      "Compatible con SDRSharp, GQRX y HDSDR",
-      "Protección ESD mejorada contra sobretensiones",
-      "Muestreo directo integrado para bandas HF"
-    ]}
-    idealUse="Receptor SDR optimizado para dispositivos modernos.",
-    category="Entrega Inmediata"
-    />
+          "Receptor RTL-SDR Blog V3 (Carcasa de aluminio)",
+          "Antena exterior 5.5 dBi 1090 MHz con conector N",
+          "Filtro SAW 1090 MHz para rechazo de interferencias",
+          "Cableado KMR de bajas pérdidas y adaptadores",
+          "Kit completo llave en mano para montar un radar local"
+        ]}
+        idealUse="Kit integral para montar tu propio radar de aviones."
+      />
+      <ProductCard
+        title="Airspy HF+ Discovery - Receptor SDR de alta performance"
+        category="Entrega 45 días"
+        type={["SDR"]}
+        specs={[
+          "Rango de frecuencia optimizado para bandas HF y VHF",
+          "Arquitectura Zero-IF con filtros de seguimiento de alta selectividad",
+          "Rango dinámico de clase mundial en entornos HF",
+          "ADC de alto rendimiento para una mínima distorsión de señal",
+          "Interfaz USB para procesamiento digital de señal"
+        ]}
+        idealUse="Monitoreo avanzado de alta precisión en HF."
+      />
     </div>
   </section>
 </Layout>

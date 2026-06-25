@@ -16,7 +16,7 @@ const lightLogoSrc = homeUrl + 'light-mode-logo.svg';
       <ul>
         <li><a href={homeUrl}>Inicio</a></li>
         <li><a href={homeUrl + 'catalog/'}>Catálogo</a></li>
-        <!--<li><a href={homeUrl + 'tutorials/'}>Tutoriales</a></li>-->
+        <li><a href={homeUrl + 'resources/'}>Centro de Recursos</a></li>
         <li><a href="#" class="open-contact-dialog">Contacto</a></li>
       </ul>
       <ThemeToggle />
@@ -121,19 +121,18 @@ const lightLogoSrc = homeUrl + 'light-mode-logo.svg';
 </style>
 
 <script>
-  const header = document.getElementById('main-header');
-  
-  const handleScroll = () => {
-    // La diferencia de altura al achicar es de aprox 56px (logo y padding).
-    // La brecha (histéresis) debe ser mayor a 56px para evitar el loop.
-    if (window.scrollY > 100) {
-      header?.classList.add('is-scrolled');
-    } else if (window.scrollY < 10) {
-      header?.classList.remove('is-scrolled');
-    }
-  };
+  document.addEventListener('astro:page-load', () => {
+    const header = document.getElementById('main-header');
+    
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        header?.classList.add('is-scrolled');
+      } else if (window.scrollY < 10) {
+        header?.classList.remove('is-scrolled');
+      }
+    };
 
-  window.addEventListener('scroll', handleScroll);
-  // Run once on load to catch initial state
-  handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+  });
 </script>

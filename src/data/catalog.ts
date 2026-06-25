@@ -14,7 +14,7 @@ export interface CatalogItem {
 
 export const catalogItems: CatalogItem[] = [
   {
-    "title": "Airspy HF+ Discovery",
+    "title": "Airspy HF+ Discovery - Receptor SDR de alta perfomance",
     "type": ["SDR"],
     "specs": [
       "Rango de frecuencia optimizado para bandas HF y VHF",
@@ -27,7 +27,7 @@ export const catalogItems: CatalogItem[] = [
     "category": "Entrega 45 días"
   },
   {
-    "title": "Airspy R2",
+    "title": "Airspy R2 SDR Profesional - 12 bits Alta Sensibilidad",
     "type": ["SDR"],
     "specs": [
       "Rango de frecuencia nativo de 24 MHz a 1800 MHz",
@@ -40,7 +40,7 @@ export const catalogItems: CatalogItem[] = [
     "category": "Entrega 45 días"
   },
   {
-    "title": "SpyVerter R2",
+    "title": "SpyVerter R2 - Upconverter HF para SDR (Calidad Profesional)",
     "type": ["Accesorios"],
     "specs": [
       "Convertidor ascendente (Up-converter) de banda ancha",
@@ -53,7 +53,7 @@ export const catalogItems: CatalogItem[] = [
     "category": "Entrega 45 días"
   },
   {
-    "title": "Airspy Mini",
+    "title": "Airspy Mini SDR - Receptor Alto Rendimiento 12 bits",
     "type": ["SDR"],
     "specs": [
       "Rango de frecuencia nativo de 24 MHz a 1700 MHz",
@@ -66,7 +66,7 @@ export const catalogItems: CatalogItem[] = [
     "category": "Entrega 45 días"
   },
   {
-    "title": "RTL-SDR Blog V3 R860 Dipole Antenna Kit",
+    "title": "Kit RTL-SDR Blog V3 + Antena Dipolo - SDR Completo",
     "type": ["SDR", "Antena"],
     "specs": [
       "Tuner R860 (R820T2) con oscilador TCXO de 1 PPM",
@@ -81,7 +81,7 @@ export const catalogItems: CatalogItem[] = [
     "badge": "RECOMENDADO PARA PRINCIPIANTES"
   },
   {
-    "title": "RTL-SDR Blog V3 R860",
+    "title": "Receptor SDR RTL-SDR Blog V3 - HF/VHF/UHF TCXO 1PPM",
     "type": ["SDR"],
     "specs": [
       "Tuner R860 (R820T2) con oscilador TCXO de 1 PPM",
@@ -94,7 +94,7 @@ export const catalogItems: CatalogItem[] = [
     "category": "Entrega Inmediata"
   },
   {
-    "title": "RTL-SDR Blog V3 R860 (USB-C)",
+    "title": "Receptor SDR RTL-SDR Blog V3 USB-C - TCXO 1PPM SMA",
     "type": ["SDR"],
     "specs": [
       "Versión actualizada con conector USB-C hembra",
@@ -107,7 +107,7 @@ export const catalogItems: CatalogItem[] = [
     "category": "Entrega Inmediata"
   },
   {
-    "title": "RTL-SDR Blog Broadcast FM Band-Stop Filter",
+    "title": "Filtro Rechazo Banda FM (88-108 MHz) - FM Trap para SDR",
     "type": ["Filtros"],
     "specs": [
       "Atenuación de >50dB en banda FM (88 - 108 MHz)",
@@ -120,7 +120,7 @@ export const catalogItems: CatalogItem[] = [
     "category": "Entrega Inmediata"
   },
   {
-    "title": "RTL-SDR Blog Multipurpose Dipole Antenna Kit",
+    "title": "Kit Antena Dipolo Multipropósito para SDR - Portátil y Versátil",
     "type": ["Antena"],
     "specs": [
       "Base dipolo versátil con cable RG174 de 60 cm",
@@ -133,7 +133,7 @@ export const catalogItems: CatalogItem[] = [
     "category": "Entrega Inmediata"
   },
   {
-    "title": "1090 MHz SAW Filter",
+    "title": "Filtro SAW 1090 MHz (ADS-B) - Reduce Interferencia",
     "type": ["Filtros"],
     "specs": [
       "Filtro pasabanda centrado específicamente en 1090 MHz",
@@ -146,7 +146,7 @@ export const catalogItems: CatalogItem[] = [
     "category": "Entrega Inmediata"
   },
   {
-    "title": "Antena 5.5dBi 1090 MHz",
+    "title": "Antena ADS-B 1090 MHz 5.5dBi - Exterior Profesional N-Type",
     "type": ["Antena"],
     "specs": [
       "Ganancia de 5.5 dBi para largo alcance",
@@ -159,7 +159,7 @@ export const catalogItems: CatalogItem[] = [
     "category": "Entrega Inmediata"
   },
   {
-    "title": "RTL-SDR Blog Wideband LNA",
+    "title": "LNA Wideband 50-4000MHz RTL-SDR Blog",
     "type": ["Accesorios"],
     "specs": [
       "Basado en el componente SPF5189Z de banda ancha",
@@ -172,7 +172,7 @@ export const catalogItems: CatalogItem[] = [
     "category": "Entrega Inmediata"
   },
   {
-    "title": "Web-888 16bit ADC 62M Bandwidth DDC Web SDR",
+    "title": "Web-888 SDR - Receptor de Red para Acceso Remoto",
     "type": ["SDR"],
     "specs": [
       "ADC de 16 bits con tasa de muestreo de 122.88 MHz",
@@ -185,7 +185,7 @@ export const catalogItems: CatalogItem[] = [
     "category": "Entrega 45 días"
   },
   {
-    "title": "Antena Iridium 33-HC610-28",
+    "title": "Antena Iridium 33-HC610-28 - Grado Industrial / Alta Precisión",
     "type": ["Antena"],
     "specs": [
       "Frecuencia de operación: 1.616 GHz a 1.626 GHz (Banda Iridium)",
@@ -198,7 +198,7 @@ export const catalogItems: CatalogItem[] = [
     "category": "Sin Stock"
   },
   {
-    "title": "RTL-SDR Blog Active L-Band Patch Antenna Set",
+    "title": "Antena Activa Patch Banda L (1.5-1.7 GHz) - Ideal Inmarsat / Iridium",
     "type": ["Antena"],
     "specs": [
       "Antena patch activa RHCP con LNA y filtro integrados",
@@ -211,16 +211,42 @@ export const catalogItems: CatalogItem[] = [
     "category": "Entrega Inmediata"
   },
   {
-    "title": "YouLoop ORIGINAL Portable Passive Magnetic Loop Antenna",
-    "type": ["Antena"],
+    "title": "Kit ADS-B 1090 MHz Profesional: Antena + Filtro + Cable",
+    "type": ["Antena", "Filtros", "Accesorios"],
     "specs": [
-      "Respuesta en frecuencia: 10 kHz - 30 MHz (HF) y hasta 300 MHz (VHF)",
-      "Diseño pasivo de banda ancha sin necesidad de sintonización",
-      "Balun de bajas pérdidas (típico 0.28 dB)",
-      "Potencia máxima soportada: 250 mW",
-      "Incluye balun, 2 cables loop de 1m y feedline de 2m"
+      "Antena exterior 5.5 dBi con conector N-Type",
+      "Filtro SAW pasabanda 1090 MHz",
+      "Cable coaxial KMR-240 de bajas pérdidas",
+      "Pigtails y adaptadores incluidos",
+      "Mejora el alcance de tu receptor en hasta un 300%"
     ],
-    "idealUse": "Recepción HF/VHF portátil de bajo ruido.",
+    "idealUse": "Para quienes ya tienen receptor y buscan alcance máximo.",
+    "category": "Entrega Inmediata"
+  },
+  {
+    "title": "Estación ADS-B: Receptor V3 + Antena + Filtro",
+    "type": ["SDR", "Antena", "Filtros"],
+    "specs": [
+      "Receptor RTL-SDR Blog V3 (Carcasa de aluminio)",
+      "Antena exterior 5.5 dBi 1090 MHz con conector N",
+      "Filtro SAW 1090 MHz para rechazo de interferencias",
+      "Cableado KMR de bajas pérdidas y adaptadores",
+      "Kit completo llave en mano para montar un radar local"
+    ],
+    "idealUse": "Kit integral para montar tu propio radar de aviones.",
+    "category": "Entrega Inmediata"
+  },
+  {
+    "title": "Kit Iridium Pro: Receptor Airspy R2 + Antena Industrial Calian HC610",
+    "type": ["SDR", "Antena"],
+    "specs": [
+      "Receptor SDR Profesional Airspy R2 (12 bits)",
+      "Antena activa Calian HC610 de grado industrial",
+      "Ideal para recepción 24/7 de la constelación Iridium",
+      "Rango de operación optimizado para Banda L",
+      "Calidad de señal superior para decodificación sin pérdida"
+    ],
+    "idealUse": "Decodificación profesional de señales Iridium/Inmarsat.",
     "category": "Sin Stock"
   }
-]
+];

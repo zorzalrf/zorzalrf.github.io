@@ -4,8 +4,10 @@ import rehypeKatex from 'rehype-katex';
 
 import sitemap from '@astrojs/sitemap';
 
+import pagefind from "astro-pagefind";
+
 export default defineConfig({
-  site: 'https://zorzalrf.github.io',
+  site: 'https://zorzalrf.com',
   base: '/',
   trailingSlash: 'always',
 
@@ -14,5 +16,5 @@ export default defineConfig({
     rehypePlugins: [rehypeKatex]
   },
 
-  integrations: [sitemap()]
+  integrations: [sitemap(), pagefind()]
 });

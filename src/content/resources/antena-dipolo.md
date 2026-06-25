@@ -3,7 +3,10 @@ title: "Construcción de una Antena Dipolo de Media Onda"
 description: "Aprendé los fundamentos teóricos y prácticos para construir tu propia antena dipolo para proyectos de radiofrecuencia y SDR."
 publishDate: 2026-06-15
 author: "Equipo Zorzal RF"
-tags: ["antenas", "sdr", "dipolo", "diy"]
+tags: ["antenas", "dipolo", "sdr", "hardware", "tutorial"]
+category: "Antenas y Cables"
+difficulty: "Principiante"
+readingTime: 6
 ---
 
 La **antena dipolo** es uno de los diseños más fundamentales y utilizados en el mundo de la radiofrecuencia (RF). Su simplicidad y eficiencia la convierten en un excelente punto de partida para cualquier entusiasta de la Radio Definida por Software (SDR) o radioaficionado.
@@ -44,3 +47,11 @@ $$
 - **Altura**: Tratá de elevar la antena lo más posible y alejada de metales grandes o interferencias eléctricas.
 
 ¡Con este sencillo diseño ya estás listo para conectar la antena a tu receptor SDR y empezar a explorar el espectro radioeléctrico!
+
+
+---
+
+### 🛒 ¿Necesitás el hardware para este proyecto?
+Si preferís ir por la solución rápida y efectiva, el Kit V3 viene con la base dipolo perfecta:
+- **[Kit Antena Dipolo Multipropósito para SDR - Portátil y Versátil](/catalog/?type=Antena)**
+- **[Kit RTL-SDR Blog V3 + Antena Dipolo - SDR Completo](/catalog/?type=SDR)**

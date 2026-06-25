@@ -20,8 +20,8 @@ const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
 
   <div class="filters">
     <span class="filter-label">Filtrar por Entrega:</span>
-    <button class="filter-btn filter-delivery-btn" data-delivery="all">Todos</button>
-    <button class="filter-btn filter-delivery-btn active" data-delivery="Entrega Inmediata" style="border-color: #4ade80;">Inmediata</button>
+    <button class="filter-btn filter-delivery-btn active" data-delivery="all">Todos</button>
+    <button class="filter-btn filter-delivery-btn" data-delivery="Entrega Inmediata" style="border-color: #4ade80;">Inmediata</button>
     <button class="filter-btn filter-delivery-btn" data-delivery="Entrega 30 días" style="border-color: #facc15;">30 Días</button>
     <button class="filter-btn filter-delivery-btn" data-delivery="Entrega 45 días" style="border-color: #f87171;">45 Días</button>
   </div>
@@ -99,7 +99,7 @@ const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
   const typeButtons = document.querySelectorAll('.filter-type-btn');
   const cards = document.querySelectorAll('.product-card');
 
-  let currentDelivery = 'Entrega Inmediata';
+  let currentDelivery = 'all';
   let currentType = 'all';
 
   // Read URL parameters for automatic filtering

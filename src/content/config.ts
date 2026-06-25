@@ -1,6 +1,6 @@
 import { z, defineCollection } from 'astro:content';
 
-const tutorialsCollection = defineCollection({
+const resourcesCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
@@ -8,6 +8,10 @@ const tutorialsCollection = defineCollection({
     publishDate: z.date(),
     author: z.string().default('Equipo Zorzal RF'),
     tags: z.array(z.string()).optional(),
+    category: z.enum(['Iniciación / Primeros Pasos', 'SDR Avanzado', 'Antenas y Cables', 'Satélites y Espacio', 'Decodificación', 'Guías de Dispositivos', 'Tecnología Aeronáutica', 'General']).default('General'),
+    difficulty: z.enum(['Principiante', 'Intermedio', 'Avanzado', 'Experto']).default('Principiante'),
+    readingTime: z.number().default(5),
+    featured: z.boolean().optional(),
   }),
 });
 
@@ -25,6 +29,6 @@ const catalogCollection = defineCollection({
 });
 
 export const collections = {
-  tutorials: tutorialsCollection,
+  resources: resourcesCollection,
   catalog: catalogCollection,
 };
