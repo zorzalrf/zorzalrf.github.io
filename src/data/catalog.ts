@@ -1,4 +1,4 @@
-export type DeliveryCategory = 'Entrega Inmediata' | 'Entrega 30 días' | 'Entrega 45 días' | 'Sin Stock';
+export type DeliveryCategory = 'Entrega Inmediata' | 'Entrega 30 días' | 'Sin Stock';
 export type ProductType = 'SDR' | 'Antena' | 'Accesorios' | 'Filtros';
 
 export interface CatalogItem {
@@ -24,7 +24,7 @@ export const catalogItems: CatalogItem[] = [
       "Interfaz USB para procesamiento digital de señal"
     ],
     "idealUse": "Monitoreo avanzado de alta precisión en HF.",
-    "category": "Entrega 45 días"
+    "category": "Entrega 30 días"
   },
   {
     "title": "Airspy R2 SDR Profesional - 12 bits Alta Sensibilidad",
@@ -37,7 +37,7 @@ export const catalogItems: CatalogItem[] = [
       "Sincronización externa para sistemas complejos"
     ],
     "idealUse": "Escaneo profesional de radiofrecuencia panorámico.",
-    "category": "Entrega 45 días"
+    "category": "Entrega 30 días"
   },
   {
     "title": "SpyVerter R2 - Upconverter HF para SDR (Calidad Profesional)",
@@ -50,7 +50,7 @@ export const catalogItems: CatalogItem[] = [
       "Extensión de cobertura de receptores a espectro HF/DC"
     ],
     "idealUse": "Permite recibir onda corta en equipos VHF/UHF.",
-    "category": "Entrega 45 días"
+    "category": "Entrega 30 días"
   },
   {
     "title": "Airspy Mini SDR - Receptor Alto Rendimiento 12 bits",
@@ -63,7 +63,7 @@ export const catalogItems: CatalogItem[] = [
       "Eficiencia energética optimizada para dispositivos móviles"
     ],
     "idealUse": "Recepción SDR de alto rendimiento en formato portátil.",
-    "category": "Entrega 45 días"
+    "category": "Entrega 30 días"
   },
   {
     "title": "Kit RTL-SDR Blog V3 + Antena Dipolo - SDR Completo",
@@ -182,7 +182,7 @@ export const catalogItems: CatalogItem[] = [
       "Módulo GPS integrado para sincronización precisa de tiempo/frecuencia"
     ],
     "idealUse": "Receptor web multi-banda de alta fidelidad.",
-    "category": "Entrega 45 días"
+    "category": "Entrega 30 días"
   },
   {
     "title": "Antena Iridium 33-HC610-28 - Grado Industrial / Alta Precisión",

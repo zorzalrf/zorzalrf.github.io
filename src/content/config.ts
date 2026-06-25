@@ -19,7 +19,7 @@ const catalogCollection = defineCollection({
   type: 'data', // Or 'content' if they have markdown descriptions
   schema: z.object({
     title: z.string(),
-    category: z.enum(['Entrega Inmediata', 'Entrega 30 días', 'Entrega 45 días']),
+    category: z.enum(['Entrega Inmediata', 'Entrega 30 días']),
     price: z.number().optional(),
     mercadoLibreUrl: z.string().url().optional(),
     idealUse: z.string().optional(),

@@ -1,7 +1,7 @@
 ---
 interface Props {
   title: string;
-  category: 'Entrega Inmediata' | 'Entrega 30 días' | 'Entrega 45 días' | 'Sin Stock';
+  category: 'Entrega Inmediata' | 'Entrega 30 días' | 'Sin Stock';
   type: string[];
   specs: string[];
   price?: number;
@@ -28,7 +28,6 @@ const getCategoryClass = (cat: string) => {
   switch (cat) {
     case 'Entrega Inmediata': return 'badge-inmediata';
     case 'Entrega 30 días': return 'badge-30';
-    case 'Entrega 45 días': return 'badge-45';
     default: return '';
   }
 };

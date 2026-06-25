@@ -47,18 +47,25 @@
 </style>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
+  const handleToggle = () => {
+    const html = document.documentElement;
+    if (html.classList.contains('theme-dark')) {
+      html.classList.remove('theme-dark');
+      localStorage.setItem('theme', 'light');
+    } else {
+      html.classList.add('theme-dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  };
+
+  const setupThemeToggle = () => {
     const toggleBtn = document.getElementById('theme-toggle');
-    
-    toggleBtn?.addEventListener('click', () => {
-      const html = document.documentElement;
-      if (html.classList.contains('theme-dark')) {
-        html.classList.remove('theme-dark');
-        localStorage.setItem('theme', 'light');
-      } else {
-        html.classList.add('theme-dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    });
-  });
+    if (toggleBtn) {
+      toggleBtn.removeEventListener('click', handleToggle);
+      toggleBtn.addEventListener('click', handleToggle);
+    }
+  };
+
+  setupThemeToggle();
+  document.addEventListener('astro:page-load', setupThemeToggle);
 </script>
