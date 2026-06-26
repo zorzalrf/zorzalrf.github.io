@@ -15,20 +15,6 @@ const recursosCollection = defineCollection({
   }),
 });
 
-const catalogoCollection = defineCollection({
-  type: 'data', // Or 'content' if they have markdown descriptions
-  schema: z.object({
-    title: z.string(),
-    category: z.enum(['Entrega Inmediata', 'Entrega 30 días']),
-    price: z.number().optional(),
-    mercadoLibreUrl: z.string().url().optional(),
-    idealUse: z.string().optional(),
-    specs: z.array(z.string()),
-    inStock: z.boolean().default(true),
-  }),
-});
-
 export const collections = {
   recursos: recursosCollection,
-  catalogo: catalogoCollection,
 };
