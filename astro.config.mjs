@@ -11,6 +11,13 @@ export default defineConfig({
   base: '/',
   trailingSlash: 'always',
 
+  redirects: {
+    '/catalog': '/catalogo',
+    '/catalog/[...slug]': '/catalogo/[...slug]',
+    '/resources': '/recursos',
+    '/resources/[...slug]': '/recursos/[...slug]'
+  },
+
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex]
