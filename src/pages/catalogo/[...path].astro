@@ -117,7 +117,7 @@ const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
   
   if (catalogoIndex !== -1 && pathParts.length > catalogoIndex + 1) {
     const typeFromPath = pathParts[catalogoIndex + 1].toLowerCase();
-    const typeMap = {
+    const typeMap: Record<string, string> = {
       'sdr': 'SDR',
       'antenas': 'Antenas',
       'accesorios': 'Accesorios',
