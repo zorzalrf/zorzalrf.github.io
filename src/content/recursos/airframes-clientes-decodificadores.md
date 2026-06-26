@@ -18,7 +18,7 @@ Los clientes decodificadores (decoder clients) son el software que recibe las se
 
 ## acarsdec
 
-[acarsdec](https://github.com/TLeconte/acarsdec) es un decodificador ACARS VHF multicanal con soporte integrado para dispositivos [RTL-SDR](/catalogo/sdr), Airspy, SDRplay y SoapySDR. Puede decodificar hasta 8 canales simultáneamente dentro de una banda de 2 MHz y enviar los mensajes en formato JSON para servicios de agregación de datos.
+[acarsdec](https://github.com/TLeconte/acarsdec) es un decodificador ACARS VHF multicanal con soporte integrado para dispositivos [RTL-SDR](/catalogo/sdr/), Airspy, SDRplay y SoapySDR. Puede decodificar hasta 8 canales simultáneamente dentro de una banda de 2 MHz y enviar los mensajes en formato JSON para servicios de agregación de datos.
 
 ## dumpvdl2
 

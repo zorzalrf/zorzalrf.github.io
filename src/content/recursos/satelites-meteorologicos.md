@@ -55,5 +55,5 @@ Es un poco más complejo pero las imágenes tienen mucha mejor resolución y col
 
 ### 🛒 ¿Necesitás el hardware para este proyecto?
 El kit ideal para iniciarse en la recepción de satélites meteorológicos:
-- **[Kit Antena Dipolo Multipropósito para SDR - Portátil y Versátil](/catalogo/antenas)**
-- **[Receptor SDR RTL-SDR Blog V3 - HF/VHF/UHF](/catalogo/sdr)**
+- **[Kit Antena Dipolo Multipropósito para SDR - Portátil y Versátil](/catalogo/antenas/)**
+- **[Receptor SDR RTL-SDR Blog V3 - HF/VHF/UHF](/catalogo/sdr/)**

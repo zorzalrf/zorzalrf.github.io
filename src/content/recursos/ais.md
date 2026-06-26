@@ -46,5 +46,5 @@ Bajo condiciones normales, y con una antena instalada en el techo de tu casa, po
 
 ### 🛒 ¿Necesitás el hardware para este proyecto?
 Monitoreá el tráfico marítimo configurando nuestra antena dipolo a 162 MHz:
-- **[Kit Antena Dipolo Multipropósito para SDR - Portátil y Versátil](/catalogo/antenas)**
-- **[Receptor SDR RTL-SDR Blog V3 USB-C](/catalogo/sdr)**
+- **[Kit Antena Dipolo Multipropósito para SDR - Portátil y Versátil](/catalogo/antenas/)**
+- **[Receptor SDR RTL-SDR Blog V3 USB-C](/catalogo/sdr/)**

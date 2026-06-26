@@ -48,5 +48,5 @@ Recibir señales AERO de Inmarsat es más complejo que la recepción de VHF o HF
 | --- | --- | --- |
 | Antena | Antena parche, helicoidal de 7-10 vueltas o plato pequeño | Una hélice emparejada con un LNA da buenos resultados. |
 | LNA | Nooelec SAWbird+ IR | LNA filtrado para Banda L. Esencial para sacar señales débiles del ruido. |
-| SDR | [RTL-SDR](/catalogo/sdr) Blog V3 o similar | Bias-tee es conveniente para alimentar el [LNA](/catalogo/accesorios). |
+| SDR | [RTL-SDR](/catalogo/sdr/) Blog V3 o similar | Bias-tee es conveniente para alimentar el [LNA](/catalogo/accesorios/). |
 | Decodificador | `JAERO` | Decodificador AERO con interfaz gráfica. |

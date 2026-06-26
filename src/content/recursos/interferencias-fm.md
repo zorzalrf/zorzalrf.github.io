@@ -32,4 +32,4 @@ Podés conseguir filtros de excelente calidad en nuestra tienda. ¡Te van a camb
 
 ### 🛒 ¿Necesitás el hardware para este proyecto?
 Bloqueá las emisoras locales y recuperá la sensibilidad de tu SDR con nuestro filtro dedicado:
-- **[Filtro Rechazo Banda FM (88-108 MHz) - FM Trap para SDR](/catalogo/filtros)**
+- **[Filtro Rechazo Banda FM (88-108 MHz) - FM Trap para SDR](/catalogo/filtros/)**

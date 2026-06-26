@@ -53,5 +53,5 @@ $$
 
 ### 🛒 ¿Necesitás el hardware para este proyecto?
 Si preferís ir por la solución rápida y efectiva, el Kit V3 viene con la base dipolo perfecta:
-- **[Kit Antena Dipolo Multipropósito para SDR - Portátil y Versátil](/catalogo/antenas)**
-- **[Kit RTL-SDR Blog V3 + Antena Dipolo - SDR Completo](/catalogo/sdr)**
+- **[Kit Antena Dipolo Multipropósito para SDR - Portátil y Versátil](/catalogo/antenas/)**
+- **[Kit RTL-SDR Blog V3 + Antena Dipolo - SDR Completo](/catalogo/sdr/)**

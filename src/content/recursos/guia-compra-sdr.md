@@ -47,7 +47,7 @@ A diferencia de los anteriores (enfocados en VHF/UHF), el HF+ fue diseñado desd
 
 ### 🛒 ¿Ya elegiste tu SDR ideal?
 Encontrá todos los modelos mencionados en nuestra tienda, testeados y con garantía:
-- **[Airspy Mini SDR - Receptor Alto Rendimiento 12 bits](/catalogo/sdr)**
-- **[Airspy R2 SDR Profesional - 12 bits Alta Sensibilidad](/catalogo/sdr)**
-- **[Airspy HF+ Discovery - Receptor SDR de alta perfomance](/catalogo/sdr)**
-- **[Kit RTL-SDR Blog V3 + Antena Dipolo](/catalogo/sdr)**
+- **[Airspy Mini SDR - Receptor Alto Rendimiento 12 bits](/catalogo/sdr/)**
+- **[Airspy R2 SDR Profesional - 12 bits Alta Sensibilidad](/catalogo/sdr/)**
+- **[Airspy HF+ Discovery - Receptor SDR de alta perfomance](/catalogo/sdr/)**
+- **[Kit RTL-SDR Blog V3 + Antena Dipolo](/catalogo/sdr/)**

@@ -64,7 +64,7 @@ acarsdec -o 4 -j feed.airframes.io:5550 -i MI-ESTACION-ACARS -r 0 130.025 130.45
 
 | Opción | Descripción |
 | --- | --- |
-| `-r <dispositivo> f1 f2 ...` | Número del dispositivo [RTL-SDR](/catalogo/sdr) seguido de las frecuencias (en MHz) |
+| `-r <dispositivo> f1 f2 ...` | Número del dispositivo [RTL-SDR](/catalogo/sdr/) seguido de las frecuencias (en MHz) |
 | `-s <dispositivo> f1 f2 ...` | Número del dispositivo Airspy seguido de las frecuencias |
 | `-o <nivel>` | Formato de salida: `0` ninguno, `1` una-linea, `2` completo (por defecto), `3` monitor, `4` JSON, `5` ruta JSON |
 | `-j <host:puerto>` | Envía mensajes JSON mediante UDP al destino especificado |
