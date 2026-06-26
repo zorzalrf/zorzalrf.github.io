@@ -173,52 +173,56 @@ const productOptions = Array.from(new Set(catalogoItems.map(item => item.title))
 </style>
 
 <script>
-  const dialog = document.getElementById('contact-dialog') as HTMLDialogElement;
-  const form = document.getElementById('contact-form') as HTMLFormElement;
-  const closeBtns = document.querySelectorAll('.close-dialog');
+  document.addEventListener('astro:page-load', () => {
+    const dialog = document.getElementById('contact-dialog') as HTMLDialogElement;
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const closeBtns = document.querySelectorAll('.close-dialog');
+    const openBtns = document.querySelectorAll('.open-contact-dialog');
 
-  // Open dialog when any link with class .open-contact-dialog is clicked
-  document.addEventListener('click', (e) => {
-    const target = e.target as HTMLElement;
-    if (target.classList.contains('open-contact-dialog') || target.closest('.open-contact-dialog')) {
-      e.preventDefault();
-      dialog.showModal();
-    }
-  });
+    if (!dialog || !form) return;
 
-  // Close dialog logic
-  closeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      dialog.close();
+    // Open dialog logic
+    openBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        dialog.showModal();
+      });
     });
-  });
 
-  // Close when clicking outside the dialog (on the backdrop)
-  dialog.addEventListener('click', (e) => {
-    if (e.target === dialog) {
+    // Close dialog logic
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        dialog.close();
+      });
+    });
+
+    // Close when clicking outside the dialog (on the backdrop)
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) {
+        dialog.close();
+      }
+    });
+
+    // Handle form submit by constructing a mailto link
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const motivo = formData.get('motivo');
+      const modelo = formData.get('modelo');
+      const descripcion = formData.get('descripcion');
+
+      const subject = encodeURIComponent(`Consulta Zorzal RF: ${motivo} - ${modelo}`);
+      const body = encodeURIComponent(
+        `Motivo de Consulta: ${motivo}\n` +
+        `Modelo/Proyecto: ${modelo}\n\n` +
+        `Descripción:\n${descripcion}`
+      );
+
+      const contact = 'hola';
+      const domain = 'zorzalrf.com';
+      window.location.href = `mailto:${contact}@${domain}?subject=${subject}&body=${body}`;
       dialog.close();
-    }
-  });
-
-  // Handle form submit by constructing a mailto link
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
-    const motivo = formData.get('motivo');
-    const modelo = formData.get('modelo');
-    const descripcion = formData.get('descripcion');
-
-    const subject = encodeURIComponent(`Consulta Zorzal RF: ${motivo} - ${modelo}`);
-    const body = encodeURIComponent(
-      `Motivo de Consulta: ${motivo}\n` +
-      `Modelo/Proyecto: ${modelo}\n\n` +
-      `Descripción:\n${descripcion}`
-    );
-
-    const contact = 'hola';
-    const domain = 'zorzalrf.com';
-    window.location.href = `mailto:${contact}@${domain}?subject=${subject}&body=${body}`;
-    dialog.close();
-    form.reset();
+      form.reset();
+    });
   });
 </script>

@@ -186,16 +186,26 @@ const currentPath = Astro.url.pathname;
         const sidebarContent = document.getElementById('sidebar-content');
         
         if (mobileMenuBtn && sidebarContent) {
-          mobileMenuBtn.addEventListener('click', () => {
-            const isOpen = sidebarContent.classList.contains('is-open');
-            if (isOpen) {
-              sidebarContent.classList.remove('is-open');
-              mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            } else {
-              sidebarContent.classList.add('is-open');
-              mobileMenuBtn.setAttribute('aria-expanded', 'true');
-            }
-          });
+          // Colapsar el menú en mobile después de una navegación (tocar un item)
+          if (sidebarContent.classList.contains('is-open')) {
+            sidebarContent.classList.remove('is-open');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          }
+
+          // Evitar adjuntar eventos múltiples veces al elemento persistido
+          if (!mobileMenuBtn.hasAttribute('data-initialized')) {
+            mobileMenuBtn.setAttribute('data-initialized', 'true');
+            mobileMenuBtn.addEventListener('click', () => {
+              const isOpen = sidebarContent.classList.contains('is-open');
+              if (isOpen) {
+                sidebarContent.classList.remove('is-open');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+              } else {
+                sidebarContent.classList.add('is-open');
+                mobileMenuBtn.setAttribute('aria-expanded', 'true');
+              }
+            });
+          }
         }
 
         const searchBtn = document.getElementById('search-btn');
@@ -205,18 +215,26 @@ const currentPath = Astro.url.pathname;
         if (!searchBtn || !searchDialog || !closeSearchBtn) return;
 
         const openSearch = () => {
-          searchDialog.showModal();
-          setTimeout(() => {
-            const input = searchDialog.querySelector('input');
-            if (input) input.focus();
-          }, 100);
+          // Obtener el dialog actual porque searchBtn es persistido pero el dialog no lo es
+          const currentDialog = document.getElementById('search-dialog') as HTMLDialogElement;
+          if (currentDialog) {
+            currentDialog.showModal();
+            setTimeout(() => {
+              const input = currentDialog.querySelector('input');
+              if (input) input.focus();
+            }, 100);
+          }
         };
+
+        if (!searchBtn.hasAttribute('data-initialized')) {
+          searchBtn.setAttribute('data-initialized', 'true');
+          searchBtn.addEventListener('click', openSearch);
+        }
 
         const closeSearch = () => {
           searchDialog.close();
         };
 
-        searchBtn.addEventListener('click', openSearch);
         closeSearchBtn.addEventListener('click', closeSearch);
 
         searchDialog.addEventListener('click', (e) => {
