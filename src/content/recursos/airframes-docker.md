@@ -77,7 +77,7 @@ services:
     restart: always
     environment:
       - TZ=Etc/UTC
-      - SERIAL=               # Número de serie de tu [RTL-SDR](/catalogo/?type=SDR)
+      - SERIAL=               # Número de serie de tu [RTL-SDR](/catalogo/sdr)
       - GAIN=-10
       - PPM=0
       - FREQUENCIES=130.025;130.450;131.125;131.550

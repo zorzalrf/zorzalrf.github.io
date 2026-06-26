@@ -33,7 +33,7 @@ La forma más moderna y potente de empezar es usando la imagen de **[ADSB.im](ht
 
 1. Ingresá a [adsb.im/download](https://adsb.im/download) y descargá la imagen correspondiente a tu Raspberry Pi o placa SBC.
 2. Usá un programa como **BalenaEtcher** o **Raspberry Pi Imager** para grabar esa imagen en una tarjeta MicroSD.
-3. Poné la MicroSD en la Raspberry Pi, conectala al router por cable de red (idealmente), enchufá el [RTL-SDR](/catalogo/?type=SDR) (con su [antena](/catalogo/?type=Antena)) y encendela.
+3. Poné la MicroSD en la Raspberry Pi, conectala al router por cable de red (idealmente), enchufá el [RTL-SDR](/catalogo/sdr) (con su [antena](/catalogo/antenas)) y encendela.
 
 ## 4. Configuración y visualización de los aviones
 
@@ -48,6 +48,6 @@ La forma más moderna y potente de empezar es usando la imagen de **[ADSB.im](ht
 
 ### 🛒 ¿Necesitás el hardware para este proyecto?
 En Zorzal RF tenemos los componentes exactos para que armes tu estación ADS-B sin problemas de interferencias:
-- **[Estación ADS-B Zorzal RF: Receptor V3 + Antena + Filtro](/catalogo/?type=SDR)**
-- **[Filtro SAW 1090 MHz (ADS-B) - Reduce Interferencia](/catalogo/?type=Filtros)**
-- **[Antena ADS-B 1090 MHz 5.5dBi - Exterior Profesional](/catalogo/?type=Antena)**
+- **[Estación ADS-B Zorzal RF: Receptor V3 + Antena + Filtro](/catalogo/sdr)**
+- **[Filtro SAW 1090 MHz (ADS-B) - Reduce Interferencia](/catalogo/filtros)**
+- **[Antena ADS-B 1090 MHz 5.5dBi - Exterior Profesional](/catalogo/antenas)**

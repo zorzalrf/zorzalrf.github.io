@@ -38,4 +38,4 @@ La señal satelital llega a la antena. **Inmediatamente** (a 10 cm de distancia)
 
 Acá es donde entra la magia del **Bias-Tee** (que te enseñamos a usar en otro tutorial). El SDR envía 5 Voltios "subiendo" por el mismo cable coaxial para encender el LNA que está en el techo, mientras la señal de radio baja por ese mismo cable.
 
-Un equipo como el **LNA Wideband 50-4000MHz** de nuestra tienda está diseñado específicamente para aprovechar el Bias-Tee de receptores como el [RTL-SDR V3](/catalogo/?type=SDR), convirtiéndolo en un accesorio esencial e "invisible" que hace que tus señales satelitales exploten en la pantalla.
+Un equipo como el **LNA Wideband 50-4000MHz** de nuestra tienda está diseñado específicamente para aprovechar el Bias-Tee de receptores como el [RTL-SDR V3](/catalogo/sdr), convirtiéndolo en un accesorio esencial e "invisible" que hace que tus señales satelitales exploten en la pantalla.

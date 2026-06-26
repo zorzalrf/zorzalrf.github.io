@@ -48,7 +48,7 @@ sudo make install
 ```
 
 Opciones opcionales de compilación (flags):
-*   `-DRTLSDR=TRUE` — Soporte [RTL-SDR](/catalogo/?type=SDR) (habilitado por defecto si se encuentra librtlsdr)
+*   `-DRTLSDR=TRUE` — Soporte [RTL-SDR](/catalogo/sdr) (habilitado por defecto si se encuentra librtlsdr)
 *   `-DMIRISDR=TRUE` — Soporte Mirics SDR
 *   `-DSDRPLAY=TRUE` — Soporte SDRplay
 *   `-DSOAPYSDR=TRUE` — Soporte SoapySDR

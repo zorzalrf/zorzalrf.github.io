@@ -18,7 +18,7 @@ La solución más elegante para los usuarios avanzados es **sacar la antena y el
 ## Soluciones de Hardware Remoto
 
 ### 1. El nodo casero: Raspberry Pi + SpyServer
-Si tenés una Raspberry Pi y un [RTL-SDR](/catalogo/?type=SDR) (o Airspy), podés conectarlos, ponerlos en una caja estanca en tu terraza y usar un software ligero llamado **SpyServer** (desarrollado por los creadores de SDR#).
+Si tenés una Raspberry Pi y un [RTL-SDR](/catalogo/sdr) (o Airspy), podés conectarlos, ponerlos en una caja estanca en tu terraza y usar un software ligero llamado **SpyServer** (desarrollado por los creadores de SDR#).
 
 1. El SpyServer toma los datos USB crudos de la radio en la terraza.
 2. Los comprime de forma inteligente.

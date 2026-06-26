@@ -41,4 +41,4 @@ Si necesitás cables KMR a medida (KMR-240, KMR-400), en Zorzal RF armamos chico
 
 ### 🛒 ¿Necesitás el hardware para este proyecto?
 No pierdas señal con adaptadores baratos. Visitá nuestro catálogo para accesorios de calidad:
-- **[Ver Accesorios y Cables en el Catálogo](/catalogo/?type=Accesorios)**
+- **[Ver Accesorios y Cables en el Catálogo](/catalogo/accesorios)**

@@ -37,5 +37,5 @@ Acá te explicamos cómo activarlo en los programas más populares:
 
 ### 🛒 ¿Necesitás el hardware para este proyecto?
 Para sacarle el jugo al Bias-Tee de tu receptor, te recomendamos:
-- **[LNA Wideband 50-4000MHz RTL-SDR Blog](/catalogo/?type=Accesorios)**
-- **[Receptor SDR RTL-SDR Blog V3 USB-C - TCXO 1PPM SMA](/catalogo/?type=SDR)**
+- **[LNA Wideband 50-4000MHz RTL-SDR Blog](/catalogo/accesorios)**
+- **[Receptor SDR RTL-SDR Blog V3 USB-C - TCXO 1PPM SMA](/catalogo/sdr)**

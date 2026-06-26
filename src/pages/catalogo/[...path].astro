@@ -5,6 +5,16 @@ import ProductCard from '../../components/ProductCard.astro';
 // We are hardcoding some for demo purposes as requested by the structure
 import { catalogoItems } from '../../data/catalogo';
 
+export function getStaticPaths() {
+  return [
+    { params: { path: undefined } },
+    { params: { path: 'sdr' } },
+    { params: { path: 'antenas' } },
+    { params: { path: 'accesorios' } },
+    { params: { path: 'filtros' } },
+  ];
+}
+
 const heroItems = catalogoItems.filter(item => item.isHero && item.category !== 'Sin Stock');
 const outOfStockItems = catalogoItems.filter(item => item.category === 'Sin Stock');
 const otherItems = catalogoItems.filter(item => !item.isHero && item.category !== 'Sin Stock').sort(() => Math.random() - 0.5);
@@ -29,7 +39,7 @@ const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
     <span class="filter-label">Filtrar por Tipo:</span>
     <button class="filter-btn filter-type-btn active" data-type="all">Todos</button>
     <button class="filter-btn filter-type-btn" data-type="SDR" style="border-color: #60a5fa;">SDR</button>
-    <button class="filter-btn filter-type-btn" data-type="Antena" style="border-color: #a78bfa;">Antena</button>
+    <button class="filter-btn filter-type-btn" data-type="Antenas" style="border-color: #a78bfa;">Antenas</button>
     <button class="filter-btn filter-type-btn" data-type="Accesorios" style="border-color: #f472b6;">Accesorios</button>
     <button class="filter-btn filter-type-btn" data-type="Filtros" style="border-color: #38bdf8;">Filtros</button>
   </div>
@@ -101,12 +111,31 @@ const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
   let currentDelivery = 'all';
   let currentType = 'all';
 
-  // Read URL parameters for automatic filtering
+  // Read URL path for automatic filtering
+  const pathParts = window.location.pathname.split('/').filter(Boolean);
+  const catalogoIndex = pathParts.indexOf('catalogo');
+  
+  if (catalogoIndex !== -1 && pathParts.length > catalogoIndex + 1) {
+    const typeFromPath = pathParts[catalogoIndex + 1].toLowerCase();
+    const typeMap = {
+      'sdr': 'SDR',
+      'antenas': 'Antenas',
+      'accesorios': 'Accesorios',
+      'filtros': 'Filtros'
+    };
+    if (typeMap[typeFromPath]) {
+      currentType = typeMap[typeFromPath];
+    }
+  }
+
+  // Also support legacy URL parameters just in case
   const urlParams = new URLSearchParams(window.location.search);
   const typeParam = urlParams.get('type');
-
   if (typeParam) {
     currentType = typeParam;
+  }
+
+  if (currentType !== 'all') {
     currentDelivery = 'all'; // Show all delivery options when coming from a specific category link
 
     // Update UI active classes for types
@@ -159,6 +188,15 @@ const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
       btn.classList.add('active');
       currentType = btn.getAttribute('data-type') || 'all';
       updateGrid();
+      
+      // Update URL without reloading
+      const urlType = currentType.toLowerCase();
+      const basePathMatch = window.location.pathname.match(/^(.*\/catalogo)/);
+      const basePath = basePathMatch ? basePathMatch[1] : '/catalogo';
+      const newUrl = currentType === 'all' 
+        ? `${basePath}/`
+        : `${basePath}/${urlType}`;
+      window.history.pushState({}, '', newUrl);
     });
   });
 </script>

@@ -67,7 +67,7 @@ Ahora tenés que editar el archivo `station.cfg` (podés usar `nano station.cfg`
 
 *   `[station]` -> `callsign = TU_NOMBRE_O_LICENCIA` (El nombre que aparecerá en SondeHub).
 *   `[station]` -> `station_lat` y `station_lon` (Tus coordenadas para que el sistema calcule distancias).
-*   `[sdr]` -> `sdr_quantity = 1` (Si usás un solo [RTL-SDR](/catalogo/?type=SDR)).
+*   `[sdr]` -> `sdr_quantity = 1` (Si usás un solo [RTL-SDR](/catalogo/sdr)).
 
 Una vez configurado, simplemente levantá el contenedor de Docker:
 

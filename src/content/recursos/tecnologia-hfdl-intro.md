@@ -51,4 +51,4 @@ Utilizá [hfdl.observer](https://hfdl.observer/) para ver qué estaciones y frec
 
 ## Recibiendo HFDL
 
-La recepción requiere un SDR capaz de sintonizar HF (como un [Airspy HF+ Discovery](/catalogo/?type=SDR)) y una antena apropiada para HF. El software utilizado es `dumphfdl`. Una antena de hilo de al menos 10 metros, colocada lo más alto posible, es ideal para comenzar.
+La recepción requiere un SDR capaz de sintonizar HF (como un [Airspy HF+ Discovery](/catalogo/sdr)) y una antena apropiada para HF. El software utilizado es `dumphfdl`. Una antena de hilo de al menos 10 metros, colocada lo más alto posible, es ideal para comenzar.

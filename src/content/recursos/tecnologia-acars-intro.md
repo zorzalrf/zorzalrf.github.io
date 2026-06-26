@@ -54,4 +54,4 @@ VHF ACARS opera en frecuencias dedicadas dentro de la banda de aviación VHF.
 
 ## Recibiendo ACARS
 
-ACARS VHF es el punto de entrada más sencillo. Solo necesitás un dongle SDR básico y una [antena](/catalogo/?type=Antena) VHF junto con el software `acarsdec`.
+ACARS VHF es el punto de entrada más sencillo. Solo necesitás un dongle SDR básico y una [antena](/catalogo/antenas) VHF junto con el software `acarsdec`.

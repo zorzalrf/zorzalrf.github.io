@@ -52,4 +52,4 @@ VDL2 opera en canales dedicados dentro de la banda de aviación VHF. El Canal Co
 
 ## Recibiendo VDL2
 
-La recepción de VDL2 utiliza la misma antena VHF y el mismo hardware [RTL-SDR](/catalogo/?type=SDR) que el ACARS tradicional. El decodificador recomendado es `dumpvdl2`, que puede procesar múltiples canales simultáneamente.
+La recepción de VDL2 utiliza la misma antena VHF y el mismo hardware [RTL-SDR](/catalogo/sdr) que el ACARS tradicional. El decodificador recomendado es `dumpvdl2`, que puede procesar múltiples canales simultáneamente.

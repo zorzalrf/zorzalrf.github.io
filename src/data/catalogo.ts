@@ -1,5 +1,5 @@
 export type DeliveryCategory = 'Entrega Inmediata' | 'Entrega 30 días' | 'Sin Stock';
-export type ProductType = 'SDR' | 'Antena' | 'Accesorios' | 'Filtros';
+export type ProductType = 'SDR' | 'Antenas' | 'Accesorios' | 'Filtros';
 
 export interface CatalogItem {
   title: string;
@@ -67,7 +67,7 @@ export const catalogoItems: CatalogItem[] = [
   },
   {
     "title": "Kit RTL-SDR Blog V3 + Antena Dipolo - SDR Completo",
-    "type": ["SDR", "Antena"],
+    "type": ["SDR", "Antenas"],
     "specs": [
       "Tuner R860 (R820T2) con oscilador TCXO de 1 PPM",
       "Compatible con SDRSharp, GQRX y HDSDR",
@@ -121,7 +121,7 @@ export const catalogoItems: CatalogItem[] = [
   },
   {
     "title": "Kit Antena Dipolo Multipropósito para SDR - Portátil y Versátil",
-    "type": ["Antena"],
+    "type": ["Antenas"],
     "specs": [
       "Base dipolo versátil con cable RG174 de 60 cm",
       "Incluye 4 antenas telescópicas intercambiables",
@@ -147,7 +147,7 @@ export const catalogoItems: CatalogItem[] = [
   },
   {
     "title": "Antena ADS-B 1090 MHz 5.5dBi - Exterior Profesional N-Type",
-    "type": ["Antena"],
+    "type": ["Antenas"],
     "specs": [
       "Ganancia de 5.5 dBi para largo alcance",
       "Optimizado exclusivamente para la banda de 1090 MHz",
@@ -186,7 +186,7 @@ export const catalogoItems: CatalogItem[] = [
   },
   {
     "title": "Antena Iridium 33-HC610-28 - Grado Industrial / Alta Precisión",
-    "type": ["Antena"],
+    "type": ["Antenas"],
     "specs": [
       "Frecuencia de operación: 1.616 GHz a 1.626 GHz (Banda Iridium)",
       "Ganancia de 28 dB con polarización circular a derechas (RHCP)",
@@ -199,7 +199,7 @@ export const catalogoItems: CatalogItem[] = [
   },
   {
     "title": "Antena Activa Patch Banda L (1.5-1.7 GHz) - Ideal Inmarsat / Iridium",
-    "type": ["Antena"],
+    "type": ["Antenas"],
     "specs": [
       "Antena patch activa RHCP con LNA y filtro integrados",
       "Rango de frecuencia: 1525 MHz - 1660 MHz",
@@ -212,7 +212,7 @@ export const catalogoItems: CatalogItem[] = [
   },
   {
     "title": "Kit ADS-B 1090 MHz Profesional: Antena + Filtro + Cable",
-    "type": ["Antena", "Filtros", "Accesorios"],
+    "type": ["Antenas", "Filtros", "Accesorios"],
     "specs": [
       "Antena exterior 5.5 dBi con conector N-Type",
       "Filtro SAW pasabanda 1090 MHz",
@@ -225,7 +225,7 @@ export const catalogoItems: CatalogItem[] = [
   },
   {
     "title": "Estación ADS-B: Receptor V3 + Antena + Filtro",
-    "type": ["SDR", "Antena", "Filtros"],
+    "type": ["SDR", "Antenas", "Filtros"],
     "specs": [
       "Receptor RTL-SDR Blog V3 (Carcasa de aluminio)",
       "Antena exterior 5.5 dBi 1090 MHz con conector N",
@@ -238,7 +238,7 @@ export const catalogoItems: CatalogItem[] = [
   },
   {
     "title": "Kit Iridium Pro: Receptor Airspy R2 + Antena Industrial Calian HC610",
-    "type": ["SDR", "Antena"],
+    "type": ["SDR", "Antenas"],
     "specs": [
       "Receptor SDR Profesional Airspy R2 (12 bits)",
       "Antena activa Calian HC610 de grado industrial",

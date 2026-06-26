@@ -65,8 +65,8 @@ iridium-sniffer -d driver=rtlsdr 2>/dev/null | python3 iridium-parser.py
 
 ### Requisitos de Hardware
 
-*   **SDR**: Cualquier SDR que pueda sintonizar la Banda L de Iridium (1616–1626.5 MHz). SDRs con más ancho de banda capturarán más frecuencias Iridium a la vez. El [RTL-SDR](/catalogo/?type=SDR) funciona, pero tiene un ancho limitado de ~2.4 MHz.
-*   **[Antena](/catalogo/?type=Antena)**: Una antena omnidireccional Banda L con vista despejada al cielo.
-*   **[LNA](/catalogo/?type=Accesorios)**: Se recomienda encarecidamente un amplificador de bajo ruido (LNA) para el rango de 1.6 GHz (ej. Nooelec SAWbird+ IR).
+*   **SDR**: Cualquier SDR que pueda sintonizar la Banda L de Iridium (1616–1626.5 MHz). SDRs con más ancho de banda capturarán más frecuencias Iridium a la vez. El [RTL-SDR](/catalogo/sdr) funciona, pero tiene un ancho limitado de ~2.4 MHz.
+*   **[Antena](/catalogo/antenas)**: Una antena omnidireccional Banda L con vista despejada al cielo.
+*   **[LNA](/catalogo/accesorios)**: Se recomienda encarecidamente un amplificador de bajo ruido (LNA) para el rango de 1.6 GHz (ej. Nooelec SAWbird+ IR).
 
 > **Nota:** La decodificación Iridium es más avanzada que VHF ACARS o VDL2. Si recién comienzas con Airframes, considera empezar primero con `acarsdec` o `dumpvdl2`.
