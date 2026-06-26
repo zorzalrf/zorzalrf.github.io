@@ -16,7 +16,7 @@ interface Props {
 
 const { title, description = "Zorzal RF - Centro de Recursos y Documentación", type = 'website' } = Astro.props;
 
-const allResources = await getCollection('resources').catch(() => []);
+const allResources = await getCollection('recursos').catch(() => []);
 const categories = [
   'Iniciación / Primeros Pasos', 
   'Tecnología Aeronáutica', 
@@ -81,7 +81,7 @@ const currentPath = Astro.url.pathname;
           </button>
         </div>
         <div class="sidebar-header">
-          <a href={`${import.meta.env.BASE_URL}resources/`} class="back-to-index">
+          <a href={`${import.meta.env.BASE_URL}recursos/`} class="back-to-index">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             Inicio de Recursos
           </a>
@@ -90,7 +90,7 @@ const currentPath = Astro.url.pathname;
           <ul class="sidebar-groups">
             {groupedResources.map(group => {
               const hasActiveItem = group.items.some(item => {
-                const itemUrl = import.meta.env.BASE_URL + 'resources/' + item.slug + '/';
+                const itemUrl = import.meta.env.BASE_URL + 'recursos/' + item.slug + '/';
                 return currentPath === itemUrl || currentPath === itemUrl.slice(0, -1);
               });
               return (
@@ -102,7 +102,7 @@ const currentPath = Astro.url.pathname;
                   </summary>
                   <ul class="group-items">
                     {group.items.map(item => {
-                      const itemUrl = import.meta.env.BASE_URL + 'resources/' + item.slug + '/';
+                      const itemUrl = import.meta.env.BASE_URL + 'recursos/' + item.slug + '/';
                       const isActive = currentPath === itemUrl || currentPath === itemUrl.slice(0, -1);
                       return (
                         <li>

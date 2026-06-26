@@ -1,0 +1,374 @@
+---
+import { getCollection } from 'astro:content';
+import DocsLayout from '../../layouts/DocsLayout.astro';
+
+const allResources = await getCollection('recursos');
+
+// Helper to filter recursos avoiding duplicates if they match both conditions
+const filterUnique = (recursos: any[]) => {
+  return [...new Map(recursos.map(item => [item.slug, item])).values()];
+};
+
+const beginnerResources = filterUnique(allResources.filter(r => 
+  r.data.category === 'Iniciación / Primeros Pasos' || r.data.difficulty === 'Principiante'
+));
+
+const intermediateResources = filterUnique(allResources.filter(r => 
+  ['Antenas y Cables', 'Guías de Dispositivos', 'General'].includes(r.data.category) || r.data.difficulty === 'Intermedio'
+));
+
+const advancedResources = filterUnique(allResources.filter(r => 
+  ['Decodificación', 'Tecnología Aeronáutica', 'Satélites y Espacio', 'SDR Avanzado'].includes(r.data.category) || r.data.difficulty === 'Avanzado' || r.data.difficulty === 'Experto'
+));
+
+const getDifficultyColor = (diff: string) => {
+  if (diff === 'Principiante') return 'var(--color-green, #4ade80)';
+  if (diff === 'Intermedio') return 'var(--color-yellow, #facc15)';
+  if (diff === 'Avanzado') return 'var(--color-orange, #f97316)';
+  if (diff === 'Experto') return 'var(--color-red, #ef4444)';
+  return 'var(--color-text-muted)';
+};
+---
+
+<DocsLayout title="Centro de Recursos" description="Centro de recursos y documentación sobre SDR, ADS-B e ingeniería de RF. Guías paso a paso, tutoriales y referencias técnicas para todos los niveles.">
+  <div class="welcome-header">
+    <h1>Centro de Recursos y Documentación</h1>
+    <p class="subtitle">Aprendé sobre SDR, ADS-B e ingeniería de RF con guías paso a paso y referencias técnicas detalladas.</p>
+  </div>
+
+  <section class="learning-path">
+    <h2>¿Por dónde empiezo?</h2>
+    <p>Elegí la ruta de aprendizaje que mejor se adapte a tu nivel y equipamiento actual:</p>
+
+    <div class="path-grid">
+      <button class="path-card beginner" data-path="beginner">
+        <div class="icon">🌱</div>
+        <div class="path-content">
+          <h3>Soy principiante</h3>
+          <p>Quiero armar mi primer equipo y dar los primeros pasos en SDR.</p>
+        </div>
+      </button>
+
+      <button class="path-card intermediate" data-path="intermediate">
+        <div class="icon">📡</div>
+        <div class="path-content">
+          <h3>Tengo un SDR</h3>
+          <p>Quiero mejorar mi recepción, aprender sobre antenas y explorar nuevas frecuencias.</p>
+        </div>
+      </button>
+
+      <button class="path-card advanced" data-path="advanced">
+        <div class="icon">🛰️</div>
+        <div class="path-content">
+          <h3>Soy usuario avanzado</h3>
+          <p>Busco configuraciones Iridium, SATCOM y decodificación compleja.</p>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <!-- Contenedor dinámico de resultados -->
+  <section id="path-results" class="path-results hidden">
+    <div class="intro-box">
+      <h3 id="path-title"></h3>
+      <p id="path-intro"></p>
+    </div>
+
+    <!-- Grilla Principiante -->
+    <div id="grid-beginner" class="resource-grid hidden">
+      {beginnerResources.map(tutorial => (
+        <a href={import.meta.env.BASE_URL + 'recursos/' + tutorial.slug + '/'} class="tutorial-card">
+          <div class="tags-row">
+            <span class="difficulty-badge" style={`background-color: ${getDifficultyColor(tutorial.data.difficulty)}15; color: ${getDifficultyColor(tutorial.data.difficulty)}`}>
+              {tutorial.data.difficulty}
+            </span>
+            <span class="category-tag">{tutorial.data.category}</span>
+          </div>
+          <h4>{tutorial.data.title}</h4>
+          <p>{tutorial.data.description}</p>
+        </a>
+      ))}
+    </div>
+
+    <!-- Grilla Intermedio -->
+    <div id="grid-intermediate" class="resource-grid hidden">
+      {intermediateResources.map(tutorial => (
+        <a href={import.meta.env.BASE_URL + 'recursos/' + tutorial.slug + '/'} class="tutorial-card">
+          <div class="tags-row">
+            <span class="difficulty-badge" style={`background-color: ${getDifficultyColor(tutorial.data.difficulty)}15; color: ${getDifficultyColor(tutorial.data.difficulty)}`}>
+              {tutorial.data.difficulty}
+            </span>
+            <span class="category-tag">{tutorial.data.category}</span>
+          </div>
+          <h4>{tutorial.data.title}</h4>
+          <p>{tutorial.data.description}</p>
+        </a>
+      ))}
+    </div>
+
+    <!-- Grilla Avanzado -->
+    <div id="grid-advanced" class="resource-grid hidden">
+      {advancedResources.map(tutorial => (
+        <a href={import.meta.env.BASE_URL + 'recursos/' + tutorial.slug + '/'} class="tutorial-card">
+          <div class="tags-row">
+            <span class="difficulty-badge" style={`background-color: ${getDifficultyColor(tutorial.data.difficulty)}15; color: ${getDifficultyColor(tutorial.data.difficulty)}`}>
+              {tutorial.data.difficulty}
+            </span>
+            <span class="category-tag">{tutorial.data.category}</span>
+          </div>
+          <h4>{tutorial.data.title}</h4>
+          <p>{tutorial.data.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="general-info" id="general-info">
+    <h2>Explorá la biblioteca</h2>
+    <p>Usá la barra lateral izquierda para navegar por todas las categorías disponibles. Encontrarás desde conceptos básicos sobre ondas de radio hasta manuales de configuración para decodificadores como <code>dumpvdl2</code> y utilidades satelitales.</p>
+  </section>
+</DocsLayout>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const buttons = document.querySelectorAll('.path-card');
+    if (!buttons.length) return; // Exit if we are not on the index page
+
+    const resultsContainer = document.getElementById('path-results');
+    const generalInfo = document.getElementById('general-info');
+    const pathTitle = document.getElementById('path-title');
+    const pathIntro = document.getElementById('path-intro');
+    const grids = document.querySelectorAll('.resource-grid');
+
+    const pathContent = {
+      beginner: {
+        title: 'Ruta del Principiante',
+        intro: 'Bienvenido al camino del principiante: acá encontrarás todo para pasar de cero a tu primera estación operativa. Estas guías te explicarán sin tecnicismos innecesarios qué hardware comprar y cómo dar los primeros pasos seguros en el mundo SDR.'
+      },
+      intermediate: {
+        title: 'Ruta Intermedia (Mejora tu Estación)',
+        intro: 'Bienvenido al nivel intermedio. Si ya tenés tu SDR funcionando, acá descubrirás cómo optimizar tu recepción, construir mejores antenas (como el dipolo en V) y comenzar a alimentar datos de vuelos a redes como Airframes.'
+      },
+      advanced: {
+        title: 'Ruta de Usuario Avanzado',
+        intro: 'El terreno técnico puro. Explorá configuraciones complejas, despliegues de servidores en Linux, compilación de decodificadores (Iridium, VDL2, HFDL) e integraciones de nivel experto para comunicaciones satelitales y aeronáuticas.'
+      }
+    };
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remover active de todos
+        buttons.forEach(b => b.classList.remove('active'));
+        // Agregar active al clickeado
+        button.classList.add('active');
+
+        const path = button.getAttribute('data-path');
+
+        // Actualizar textos
+        if (path && pathContent[path as keyof typeof pathContent]) {
+          pathTitle!.textContent = pathContent[path as keyof typeof pathContent].title;
+          pathIntro!.textContent = pathContent[path as keyof typeof pathContent].intro;
+        }
+
+        // Ocultar todas las grillas
+        grids.forEach(grid => grid.classList.add('hidden'));
+
+        // Mostrar la correcta
+        const targetGrid = document.getElementById(`grid-${path}`);
+        if (targetGrid) {
+          targetGrid.classList.remove('hidden');
+        }
+
+        // Mostrar contenedor de resultados y ocultar info general
+        resultsContainer!.classList.remove('hidden');
+        generalInfo!.classList.add('hidden');
+
+        // Animación suave de entrada y scroll
+        resultsContainer!.style.opacity = '0';
+        resultsContainer!.style.transform = 'translateY(10px)';
+        
+        setTimeout(() => {
+          resultsContainer!.style.transition = 'all 0.4s ease';
+          resultsContainer!.style.opacity = '1';
+          resultsContainer!.style.transform = 'translateY(0)';
+          
+          // Scroll suave hacia la sección de resultados
+          resultsContainer!.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 10);
+      });
+    });
+  });
+</script>
+
+<style>
+  .welcome-header { margin-bottom: 3rem; }
+  .welcome-header h1 { font-size: 2.5rem; color: var(--color-orange); margin-bottom: 0.5rem; }
+  .subtitle { font-size: 1.2rem; color: var(--color-text-muted); max-width: 700px; }
+  .learning-path { margin-bottom: 2rem; }
+  .learning-path h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .learning-path > p { color: var(--color-text-muted); margin-bottom: 2rem; }
+  
+  .path-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .path-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-card-bg);
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+  }
+
+  .path-card:hover, .path-card.active {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  .path-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--color-orange);
+    opacity: 0.8;
+  }
+
+  .path-card.beginner { background: linear-gradient(145deg, var(--color-card-bg) 0%, rgba(74, 222, 128, 0.05) 100%); border-color: rgba(74, 222, 128, 0.2); }
+  .path-card.beginner::before { background: #4ade80; }
+  .path-card.beginner:hover, .path-card.beginner.active { border-color: #4ade80; }
+
+  .path-card.intermediate { background: linear-gradient(145deg, var(--color-card-bg) 0%, rgba(251, 191, 36, 0.05) 100%); border-color: rgba(251, 191, 36, 0.2); }
+  .path-card.intermediate::before { background: #fbbf24; }
+  .path-card.intermediate:hover, .path-card.intermediate.active { border-color: #fbbf24; }
+
+  .path-card.advanced { background: linear-gradient(145deg, var(--color-card-bg) 0%, rgba(239, 68, 68, 0.05) 100%); border-color: rgba(239, 68, 68, 0.2); }
+  .path-card.advanced::before { background: #ef4444; }
+  .path-card.advanced:hover, .path-card.advanced.active { border-color: #ef4444; }
+
+  .icon { font-size: 3rem; margin-bottom: 1rem; }
+  .path-content h3 { font-size: 1.3rem; color: var(--color-heading); margin: 0 0 0.5rem 0; font-family: inherit; }
+  .path-content p { color: var(--color-text-muted); font-size: 0.95rem; margin: 0; line-height: 1.5; }
+
+  /* Results Section */
+  .hidden {
+    display: none !important;
+  }
+
+  .path-results {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    border-top: 2px dashed var(--color-border);
+    padding-top: 3rem;
+    scroll-margin-top: 100px;
+  }
+
+  .intro-box {
+    background: linear-gradient(135deg, rgba(255,140,0,0.1) 0%, rgba(255,140,0,0.02) 100%);
+    border-left: 4px solid var(--color-orange);
+    padding: 1.5rem 2rem;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro-box h3 {
+    color: var(--color-orange);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  .intro-box p {
+    color: var(--color-text);
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  /* Grid of articles */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .tutorial-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s, border-color 0.2s;
+    height: 100%;
+  }
+
+  .tutorial-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-orange);
+  }
+
+  .tutorial-card h4 {
+    color: var(--color-heading);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.15rem;
+    line-height: 1.3;
+  }
+
+  .tutorial-card p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .tags-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .difficulty-badge {
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.7rem;
+  }
+
+  .category-tag {
+    background-color: var(--color-border);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: var(--color-text);
+    font-size: 0.75rem;
+  }
+
+  .general-info {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .general-info h2 { margin-top: 0; }
+</style>
