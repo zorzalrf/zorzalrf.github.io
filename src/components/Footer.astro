@@ -205,17 +205,20 @@ const currentYear = new Date().getFullYear();
   
   @media (max-width: 600px) {
     .footer-top {
-      grid-template-columns: 1fr;
-      text-align: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 1rem;
+    }
+    .brand-col, .footer-col:last-child {
+      grid-column: 1 / -1;
     }
     .brand-header {
-      justify-content: center;
+      justify-content: flex-start;
     }
     .social-links {
-      justify-content: center;
+      justify-content: flex-start;
     }
     .brand-description {
-      margin: 0 auto 1.5rem auto;
+      margin: 0 0 1.5rem 0;
     }
   }
 </style>
