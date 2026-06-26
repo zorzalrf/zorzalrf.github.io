@@ -4,7 +4,7 @@ description: "Descubrí qué hace a Airframes único, los datos que captura medi
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["airframes", "acars", "introducción", "ecosistema"]
-category: "Iniciación / Primeros Pasos"
+category: "Airframes"
 difficulty: "Principiante"
 readingTime: 4
 ---

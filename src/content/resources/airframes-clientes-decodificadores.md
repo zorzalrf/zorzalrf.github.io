@@ -4,7 +4,7 @@ description: "Conoce los diferentes clientes de software decodificador compatibl
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["decodificadores", "acarsdec", "dumpvdl2", "dumphfdl", "software", "airframes"]
-category: "Decodificación"
+category: "Airframes"
 difficulty: "Intermedio"
 readingTime: 6
 ---

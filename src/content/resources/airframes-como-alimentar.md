@@ -4,7 +4,7 @@ description: "Aprendé cómo enviar los datos de tus decodificadores a los servi
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["airframes", "feed", "tutorial", "acars", "vdl2", "hfdl"]
-category: "Decodificación"
+category: "Airframes"
 difficulty: "Intermedio"
 readingTime: 6
 ---

@@ -4,7 +4,7 @@ description: "Guía de inicio para comenzar a capturar y enviar datos ACARS a la
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["tutorial", "airframes", "acars", "vdl2", "hfdl", "rtl-sdr"]
-category: "Decodificación"
+category: "Airframes"
 difficulty: "Principiante"
 readingTime: 5
 ---

@@ -34,7 +34,7 @@ El **SpyVerter R2** es un dispositivo de calidad profesional que se coloca entre
 
 ## La Solución Definitiva: [Airspy HF+ Discovery](/catalog/?type=SDR)
 
-Si estás verdaderamente dedicado al "Diexismo" (escucha de señales extremadamente lejanas) o querés recibir imágenes débiles de WEFAX marítimo, la recomendación de Zorzal RF es el **[Airspy HF+](/catalog/?type=SDR) Discovery**.
+Si estás verdaderamente dedicado al "Diexismo" (escucha de señales extremadamente lejanas) o querés recibir imágenes débiles de WEFAX marítimo, la recomendación de Zorzal RF es el Airspy HF+ Discovery.
 
 Este no es un SDR modificado, sino que fue diseñado desde cero **específicamente para alta fidelidad en frecuencias bajas**. Gracias a sus convertidores analógico-digitales de nivel de laboratorio (18 bits de resolución real) y su rechazo de interferencias, el HF+ es capaz de separar estaciones lejanas diminutas incluso si tenés una radio AM local transmitiendo con miles de vatios al lado de tu casa.
 

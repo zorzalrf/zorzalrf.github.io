@@ -4,7 +4,7 @@ description: "Aprendé cómo usar Docker y ACARS Hub para ejecutar múltiples de
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["docker", "acars", "hub", "tutorial", "airframes", "feed"]
-category: "Decodificación"
+category: "Airframes"
 difficulty: "Avanzado"
 readingTime: 8
 ---

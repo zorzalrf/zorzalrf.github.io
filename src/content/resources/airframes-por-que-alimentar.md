@@ -4,7 +4,7 @@ description: "Descubrí por qué tu contribución a la red de Airframes.io es im
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["airframes", "feed", "comunidad", "adsbexchange"]
-category: "Decodificación"
+category: "Airframes"
 difficulty: "Principiante"
 readingTime: 5
 ---
