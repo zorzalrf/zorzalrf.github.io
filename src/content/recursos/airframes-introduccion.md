@@ -7,6 +7,7 @@ tags: ["airframes", "acars", "introducción", "ecosistema"]
 category: "Airframes"
 difficulty: "Principiante"
 readingTime: 4
+order: 1
 ---
 
 <div class="attribution">

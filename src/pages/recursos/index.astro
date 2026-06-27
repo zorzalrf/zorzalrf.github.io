@@ -2,7 +2,12 @@
 import { getCollection } from 'astro:content';
 import DocsLayout from '../../layouts/DocsLayout.astro';
 
-const allResources = await getCollection('recursos');
+const allResources = (await getCollection('recursos')).sort((a, b) => {
+  const orderA = a.data.order ?? 999;
+  const orderB = b.data.order ?? 999;
+  if (orderA !== orderB) return orderA - orderB;
+  return a.data.title.localeCompare(b.data.title);
+});
 
 // Helper to filter recursos avoiding duplicates if they match both conditions
 const filterUnique = (recursos: any[]) => {

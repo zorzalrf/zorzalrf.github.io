@@ -7,6 +7,7 @@ tags: ["decodificadores", "acarsdec", "dumpvdl2", "dumphfdl", "software", "airfr
 category: "Airframes"
 difficulty: "Intermedio"
 readingTime: 6
+order: 6
 ---
 
 <div class="attribution">

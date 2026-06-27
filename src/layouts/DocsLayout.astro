@@ -31,7 +31,12 @@ const categories = [
 
 const groupedResources = categories.map(cat => ({
   name: cat,
-  items: allResources.filter(r => r.data.category === cat).sort((a, b) => a.data.title.localeCompare(b.data.title))
+  items: allResources.filter(r => r.data.category === cat).sort((a, b) => {
+    const orderA = a.data.order ?? 999;
+    const orderB = b.data.order ?? 999;
+    if (orderA !== orderB) return orderA - orderB;
+    return a.data.title.localeCompare(b.data.title);
+  })
 })).filter(g => g.items.length > 0);
 
 const currentPath = Astro.url.pathname;

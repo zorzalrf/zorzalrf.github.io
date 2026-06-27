@@ -12,6 +12,7 @@ const recursosCollection = defineCollection({
     difficulty: z.enum(['Principiante', 'Intermedio', 'Avanzado', 'Experto']).default('Principiante'),
     readingTime: z.number().default(5),
     featured: z.boolean().optional(),
+    order: z.number().optional(),
   }),
 });
 
