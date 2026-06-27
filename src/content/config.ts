@@ -8,7 +8,7 @@ const recursosCollection = defineCollection({
     publishDate: z.date(),
     author: z.string().default('Equipo Zorzal RF'),
     tags: z.array(z.string()).optional(),
-    category: z.enum(['Iniciación / Primeros Pasos', 'SDR Avanzado', 'Antenas y Cables', 'Satélites y Espacio', 'Decodificación', 'Guías de Dispositivos', 'Tecnología Aeronáutica', 'General', 'Airframes']).default('General'),
+    category: z.enum(['Iniciación / Primeros Pasos', 'SDR Avanzado', 'Antenas y Cables', 'Decodificación', 'Guías de Dispositivos', 'Tecnología Aeronáutica', 'General', 'Airframes']).default('General'),
     difficulty: z.enum(['Principiante', 'Intermedio', 'Avanzado', 'Experto']).default('Principiante'),
     readingTime: z.number().default(5),
     featured: z.boolean().optional(),

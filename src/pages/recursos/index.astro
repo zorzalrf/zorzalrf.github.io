@@ -23,7 +23,7 @@ const intermediateResources = filterUnique(allResources.filter(r =>
 ));
 
 const advancedResources = filterUnique(allResources.filter(r => 
-  ['Decodificación', 'Tecnología Aeronáutica', 'Satélites y Espacio', 'SDR Avanzado'].includes(r.data.category) || r.data.difficulty === 'Avanzado' || r.data.difficulty === 'Experto'
+  ['Decodificación', 'Tecnología Aeronáutica', 'SDR Avanzado'].includes(r.data.category) || r.data.difficulty === 'Avanzado' || r.data.difficulty === 'Experto'
 ));
 
 const getDifficultyColor = (diff: string) => {
