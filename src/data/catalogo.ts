@@ -29,7 +29,7 @@ export const catalogoItems: CatalogItem[] = [
     "badge": "RECOMENDADO PARA PRINCIPIANTES"
   },
   {
-    "title": "Receptor SDR RTL-SDR Blog V3 - HF/VHF/UHF TCXO 1PPM",
+    "title": "Receptor RTL-SDR Blog V3 - HF/VHF/UHF TCXO 1PPM",
     "type": ["SDR"],
     "specs": [
       "Tuner R860 (R820T2) con oscilador TCXO de 1 PPM",
@@ -42,7 +42,7 @@ export const catalogoItems: CatalogItem[] = [
     "category": "Entrega Inmediata"
   },
   {
-    "title": "Receptor SDR RTL-SDR Blog V3 USB-C - TCXO 1PPM SMA",
+    "title": "Receptor RTL-SDR Blog V3 USB-C - TCXO 1PPM SMA",
     "type": ["SDR"],
     "specs": [
       "Versión actualizada con conector USB-C hembra",
