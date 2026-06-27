@@ -1,4 +1,4 @@
-export type DeliveryCategory = 'Entrega Inmediata' | 'Entrega 30 días' | 'Sin Stock';
+export type DeliveryCategory = 'Entrega Inmediata' | 'Sin Stock';
 export type ProductType = 'SDR' | 'Antenas' | 'Accesorios' | 'Filtros';
 
 export interface CatalogItem {
@@ -13,58 +13,10 @@ export interface CatalogItem {
 }
 
 export const catalogoItems: CatalogItem[] = [
-  {
-    "title": "Airspy HF+ Discovery - Receptor SDR de alta perfomance",
-    "type": ["SDR"],
-    "specs": [
-      "Rango de frecuencia optimizado para bandas HF y VHF",
-      "Arquitectura Zero-IF con filtros de seguimiento de alta selectividad",
-      "Rango dinámico de clase mundial en entornos HF",
-      "ADC de alto rendimiento para una mínima distorsión de señal",
-      "Interfaz USB para procesamiento digital de señal"
-    ],
-    "idealUse": "Monitoreo avanzado de alta precisión en HF.",
-    "category": "Entrega 30 días"
-  },
-  {
-    "title": "Airspy R2 SDR Profesional - 12 bits Alta Sensibilidad",
-    "type": ["SDR"],
-    "specs": [
-      "Rango de frecuencia nativo de 24 MHz a 1800 MHz",
-      "ADC de 12 bits con muestreo a 20 MSPS",
-      "Bajo ruido de fase en el oscilador principal",
-      "Puertos de extensión SGPIO integrados",
-      "Sincronización externa para sistemas complejos"
-    ],
-    "idealUse": "Escaneo profesional de radiofrecuencia panorámico.",
-    "category": "Entrega 30 días"
-  },
-  {
-    "title": "SpyVerter R2 - Upconverter HF para SDR (Calidad Profesional)",
-    "type": ["Accesorios"],
-    "specs": [
-      "Convertidor ascendente (Up-converter) de banda ancha",
-      "Mezclador doble balanceado de alta calidad",
-      "Oscilador de bajo ruido de fase integrado",
-      "Compatible con alimentación vía Bias-Tee",
-      "Extensión de cobertura de receptores a espectro HF/DC"
-    ],
-    "idealUse": "Permite recibir onda corta en equipos VHF/UHF.",
-    "category": "Entrega 30 días"
-  },
-  {
-    "title": "Airspy Mini SDR - Receptor Alto Rendimiento 12 bits",
-    "type": ["SDR"],
-    "specs": [
-      "Rango de frecuencia nativo de 24 MHz a 1700 MHz",
-      "Diseño ultra-compacto y portátil",
-      "Arquitectura basada en el modelo R2 de alto rendimiento",
-      "ADC de 12 bits con salida IQ de hasta 6 MSPS",
-      "Eficiencia energética optimizada para dispositivos móviles"
-    ],
-    "idealUse": "Recepción SDR de alto rendimiento en formato portátil.",
-    "category": "Entrega 30 días"
-  },
+
+
+
+
   {
     "title": "Kit RTL-SDR Blog V3 + Antena Dipolo - SDR Completo",
     "type": ["SDR", "Antenas"],
@@ -171,45 +123,9 @@ export const catalogoItems: CatalogItem[] = [
     "idealUse": "Amplifica señales débiles en banda ancha.",
     "category": "Entrega Inmediata"
   },
-  {
-    "title": "Web-888 SDR - Receptor de Red para Acceso Remoto",
-    "type": ["SDR"],
-    "specs": [
-      "ADC de 16 bits con tasa de muestreo de 122.88 MHz",
-      "Ancho de banda DDC de 62 MHz",
-      "Rango de frecuencia: 10 kHz - 60 MHz (HF) y 118 - 147 MHz (VHF)",
-      "Soporte para 13 canales de recepción simultáneos con waterfall",
-      "Módulo GPS integrado para sincronización precisa de tiempo/frecuencia"
-    ],
-    "idealUse": "Receptor web multi-banda de alta fidelidad.",
-    "category": "Entrega 30 días"
-  },
-  {
-    "title": "Antena Iridium 33-HC610-28 - Grado Industrial / Alta Precisión",
-    "type": ["Antenas"],
-    "specs": [
-      "Frecuencia de operación: 1.616 GHz a 1.626 GHz (Banda Iridium)",
-      "Ganancia de 28 dB con polarización circular a derechas (RHCP)",
-      "Clasificación IP67 para protección total contra polvo y agua",
-      "Estilo de montaje atornillado con conector SMA Macho",
-      "Rango de temperatura extendido: -40°C a +85°C"
-    ],
-    "idealUse": "Comunicaciones satelitales en entornos exigentes.",
-    "category": "Sin Stock"
-  },
-  {
-    "title": "Antena Activa Patch Banda L (1.5-1.7 GHz) - Ideal Inmarsat / Iridium",
-    "type": ["Antenas"],
-    "specs": [
-      "Antena patch activa RHCP con LNA y filtro integrados",
-      "Rango de frecuencia: 1525 MHz - 1660 MHz",
-      "Carcasa resistente a la intemperie (Weather Proof)",
-      "Alimentación vía Bias-Tee (3.3 - 5V, 20mA)",
-      "Incluye cable RG174 de 2m y soportes (trípode y ventosa)"
-    ],
-    "idealUse": "Recepción de satélites en banda L.",
-    "category": "Entrega Inmediata"
-  },
+
+
+
   {
     "title": "Kit ADS-B 1090 MHz Profesional: Antena + Filtro + Cable",
     "type": ["Antenas", "Filtros", "Accesorios"],
@@ -236,17 +152,5 @@ export const catalogoItems: CatalogItem[] = [
     "idealUse": "Kit integral para montar tu propio radar de aviones.",
     "category": "Entrega Inmediata"
   },
-  {
-    "title": "Kit Iridium Pro: Receptor Airspy R2 + Antena Industrial Calian HC610",
-    "type": ["SDR", "Antenas"],
-    "specs": [
-      "Receptor SDR Profesional Airspy R2 (12 bits)",
-      "Antena activa Calian HC610 de grado industrial",
-      "Ideal para recepción 24/7 de la constelación Iridium",
-      "Rango de operación optimizado para Banda L",
-      "Calidad de señal superior para decodificación sin pérdida"
-    ],
-    "idealUse": "Decodificación profesional de señales Iridium/Inmarsat.",
-    "category": "Sin Stock"
-  }
+
 ];

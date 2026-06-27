@@ -30,8 +30,8 @@ Las señales de Iridium operan en Banda L (alrededor de 1616–1626.5 MHz). Debi
 
 ### Requisitos de Hardware
 
-*   **SDR**: [Airspy R2](/catalogo/sdr/)
-*   **Antena**: [Calian HC610](/catalogo/sdr/)
+*   **SDR**: Receptor SDR compatible con la banda
+*   **Antena**: Antena activa Banda-L
 
 ### Flujo de Software
 

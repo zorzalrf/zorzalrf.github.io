@@ -28,12 +28,6 @@ const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
     <p>Explorá nuestra selección de equipos y componentes de RF especializados.</p>
   </div>
 
-  <div class="filters">
-    <span class="filter-label">Filtrar por Entrega:</span>
-    <button class="filter-btn filter-delivery-btn active" data-delivery="all">Todos</button>
-    <button class="filter-btn filter-delivery-btn" data-delivery="Entrega Inmediata" style="border-color: #4ade80;">Inmediata</button>
-    <button class="filter-btn filter-delivery-btn" data-delivery="Entrega 30 días" style="border-color: #facc15;">30 Días</button>
-  </div>
 
   <div class="filters">
     <span class="filter-label">Filtrar por Tipo:</span>
@@ -104,11 +98,11 @@ const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
 </style>
 
 <script>
-  const deliveryButtons = document.querySelectorAll('.filter-delivery-btn');
+
   const typeButtons = document.querySelectorAll('.filter-type-btn');
   const cards = document.querySelectorAll('.product-card');
 
-  let currentDelivery = 'all';
+
   let currentType = 'all';
 
   // Read URL path for automatic filtering
@@ -136,20 +130,9 @@ const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
   }
 
   if (currentType !== 'all') {
-    currentDelivery = 'all'; // Show all delivery options when coming from a specific category link
-
     // Update UI active classes for types
     typeButtons.forEach(btn => {
       if (btn.getAttribute('data-type') === currentType) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
-    });
-
-    // Update UI active classes for delivery
-    deliveryButtons.forEach(btn => {
-      if (btn.getAttribute('data-delivery') === currentDelivery) {
         btn.classList.add('active');
       } else {
         btn.classList.remove('active');
@@ -159,10 +142,9 @@ const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
 
   function updateGrid() {
     cards.forEach(card => {
-      const matchDelivery = currentDelivery === 'all' || card.getAttribute('data-category') === currentDelivery;
       const matchType = currentType === 'all' || (card.getAttribute('data-type') || '').split(',').includes(currentType);
       
-      if (matchDelivery && matchType) {
+      if (matchType) {
         (card as HTMLElement).style.display = 'flex';
       } else {
         (card as HTMLElement).style.display = 'none';
@@ -173,14 +155,6 @@ const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
   // Initial call to set correct visibility based on default filters
   updateGrid();
 
-  deliveryButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      deliveryButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentDelivery = btn.getAttribute('data-delivery') || 'all';
-      updateGrid();
-    });
-  });
 
   typeButtons.forEach(btn => {
     btn.addEventListener('click', () => {

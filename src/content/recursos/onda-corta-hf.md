@@ -24,18 +24,11 @@ Si bien este truco funciona y te permite tener un primer pantallazo de la onda c
 
 ## La Solución Profesional: Upconverters
 
-Si querés escuchar HF en serio con tu RTL-SDR o Airspy Mini, necesitás un equipo de hardware dedicado. La mejor forma de hacerlo es usando un **Upconverter**.
+Si querés escuchar HF en serio con tu RTL-SDR, necesitás un equipo de hardware dedicado. La mejor forma de hacerlo es usando un **Upconverter**.
 
-### SpyVerter R2
-El **SpyVerter R2** es un dispositivo de calidad profesional que se coloca entre tu antena y tu SDR. Su trabajo es tomar todas las señales bajas de HF (0 a 31 MHz) y "subirlas" a la banda de VHF (120 a 151 MHz), donde tu SDR se siente increíblemente cómodo y sensible. 
+Un Upconverter es un dispositivo que se coloca entre tu antena y tu SDR. Su trabajo es tomar todas las señales bajas de HF (0 a 31 MHz) y "subirlas" a una banda de VHF, donde tu SDR se siente increíblemente cómodo y sensible. 
 
 * Ventaja: Elimina completamente el ruido y las interferencias de la banda de AM local.
-* Ideal para: Usuarios que ya tienen un Airspy Mini o [RTL-SDR V3](/catalogo/sdr/).
-
-## La Solución Definitiva: [Airspy HF+ Discovery](/catalogo/sdr/)
-
-Si estás verdaderamente dedicado al "Diexismo" (escucha de señales extremadamente lejanas) o querés recibir imágenes débiles de WEFAX marítimo, la recomendación de Zorzal RF es el Airspy HF+ Discovery.
-
-Este no es un SDR modificado, sino que fue diseñado desde cero **específicamente para alta fidelidad en frecuencias bajas**. Gracias a sus convertidores analógico-digitales de nivel de laboratorio (18 bits de resolución real) y su rechazo de interferencias, el HF+ es capaz de separar estaciones lejanas diminutas incluso si tenés una radio AM local transmitiendo con miles de vatios al lado de tu casa.
+* Ideal para: Usuarios que ya tienen un [RTL-SDR V3](/catalogo/sdr/).
 
 > **💡 Consejo de Hardware:** Recordá que en HF la [antena](/catalogo/antenas/) es gigantesca en tamaño comparada con UHF. Un dipolo simple o un hilo largo (Random Wire) de 10 a 20 metros colgado en tu jardín es el compañero ideal para empezar en estas frecuencias.

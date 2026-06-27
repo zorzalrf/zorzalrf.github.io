@@ -38,7 +38,7 @@ Requiere que elijas una única red.
 | VDL2 | Mensajes digitales VDL Mode 2 | `dumpvdl2` | Antena látigo o colineal VHF |
 | HFDL | Enlace de datos HF oceánicos/remotos | `dumphfdl` | Antena de hilo (cable) o loop HF |
 | AERO | ACARS vía satélite Inmarsat | `JAERO` | Parche Banda-L + LNA |
-| AoI | ACARS vía Iridium | `iridium-toolkit` | Antena HC610/Helicoidal Banda-L + LNA |
+| AoI | ACARS vía Iridium | `iridium-toolkit` | Antena Banda-L + LNA |
 
 ### Doble SDR
 
