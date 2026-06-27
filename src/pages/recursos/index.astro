@@ -15,15 +15,15 @@ const filterUnique = (recursos: any[]) => {
 };
 
 const beginnerResources = filterUnique(allResources.filter(r => 
-  r.data.category === 'Iniciación / Primeros Pasos' || r.data.difficulty === 'Principiante'
+  r.data.difficulty === 'Principiante'
 ));
 
 const intermediateResources = filterUnique(allResources.filter(r => 
-  ['Antenas y Cables', 'Guías de Dispositivos', 'General'].includes(r.data.category) || r.data.difficulty === 'Intermedio'
+  r.data.difficulty === 'Intermedio'
 ));
 
 const advancedResources = filterUnique(allResources.filter(r => 
-  ['Decodificación', 'Tecnología Aeronáutica', 'SDR Avanzado'].includes(r.data.category) || r.data.difficulty === 'Avanzado' || r.data.difficulty === 'Experto'
+  r.data.difficulty === 'Avanzado' || r.data.difficulty === 'Experto'
 ));
 
 const getDifficultyColor = (diff: string) => {
