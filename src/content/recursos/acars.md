@@ -4,7 +4,7 @@ description: "Guía básica para recibir y decodificar mensajes de texto y telem
 publishDate: 2026-06-16
 author: "Equipo Zorzal RF"
 tags: ["sdr", "acars", "aviacion", "vhf", "tutorial"]
-category: "SDR Avanzado"
+category: "Tecnología Aeronáutica"
 difficulty: "Intermedio"
 readingTime: 5
 ---

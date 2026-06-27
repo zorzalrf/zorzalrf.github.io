@@ -4,7 +4,7 @@ description: "Aprendé a activar el Bias-Tee en diferentes softwares (SDR#, GQRX
 publishDate: 2026-06-24
 author: "Equipo Zorzal RF"
 tags: ["soporte", "bias-tee", "sdr-sharp", "gqrx", "sdr++"]
-category: "SDR Avanzado"
+category: "Guías de Dispositivos"
 difficulty: "Intermedio"
 readingTime: 3
 ---
