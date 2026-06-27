@@ -27,19 +27,31 @@ import ProductCard from '../components/ProductCard.astro';
         badge="RECOMENDADO PARA PRINCIPIANTES"
       />
       <ProductCard
-        title="Estación ADS-B: Receptor V3 + Antena + Filtro"
+        title="Kit ADS-B 1090 MHz Profesional: Antena + Filtro + Cable"
         category="Entrega Inmediata"
-        type={["SDR", "Antenas", "Filtros"]}
+        type={["Antenas", "Filtros", "Accesorios"]}
         specs={[
-          "Receptor RTL-SDR Blog V3 (Carcasa de aluminio)",
-          "Antena exterior 5.5 dBi 1090 MHz con conector N",
-          "Filtro SAW 1090 MHz para rechazo de interferencias",
-          "Cableado KMR de bajas pérdidas y adaptadores",
-          "Kit completo llave en mano para montar un radar local"
+          "Antena exterior 5.5 dBi con conector tipo N",
+          "Filtro SAW pasabanda 1090 MHz",
+          "Cable coaxial KMR-240 de bajas pérdidas",
+          "Pigtails y adaptadores incluidos",
+          "Mejora el alcance de tu receptor en hasta un 300%"
         ]}
         idealUse="Kit integral para montar tu propio radar de aviones."
       />
-
+      <ProductCard
+        title="Receptor RTL-SDR Blog V3 - HF/VHF/UHF TCXO 1PPM"
+        type={["SDR"]}
+        specs={[
+          "Tuner R860 (R820T2) con oscilador TCXO de 1 PPM",
+          "Compatible con SDRSharp, GQRX y HDSDR",
+          "Muestreo directo integrado para recepción HF básica",
+          "Carcasa metálica blindada para reducción de ruido",
+          "Circuito Bias-Tee interno para alimentación de accesorios"
+        ]}
+        idealUse="Receptor SDR versátil de excelente valor."
+        category="Entrega Inmediata"
+      />
     </div>
   </section>
 </Layout>

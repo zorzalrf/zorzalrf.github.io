@@ -13,10 +13,6 @@ export interface CatalogItem {
 }
 
 export const catalogoItems: CatalogItem[] = [
-
-
-
-
   {
     "title": "Kit RTL-SDR Blog V3 + Antena Dipolo - SDR Completo",
     "type": ["SDR", "Antenas"],
@@ -85,32 +81,6 @@ export const catalogoItems: CatalogItem[] = [
     "category": "Entrega Inmediata"
   },
   {
-    "title": "Filtro SAW 1090 MHz (ADS-B) - Reduce Interferencia",
-    "type": ["Filtros"],
-    "specs": [
-      "Filtro pasabanda centrado específicamente en 1090 MHz",
-      "Carcasa de aluminio resistente, en color azul",
-      "Diseñado para eliminar interferencias de bandas adyacentes",
-      "Instalación en línea entre antena y receptor",
-      "Optimizado para señales ADS-B (aviación)"
-    ],
-    "idealUse": "Mejora la recepción de vuelos ADS-B.",
-    "category": "Entrega Inmediata"
-  },
-  {
-    "title": "Antena ADS-B 1090 MHz 5.5dBi - Exterior Profesional N-Type",
-    "type": ["Antenas"],
-    "specs": [
-      "Ganancia de 5.5 dBi para largo alcance",
-      "Optimizado exclusivamente para la banda de 1090 MHz",
-      "Conector tipo N hembra de alta robustez",
-      "Diseñado para recepción ADS-B de alta precisión",
-      "Construcción resistente para montaje exterior"
-    ],
-    "idealUse": "Antena de largo alcance para tráfico aéreo.",
-    "category": "Entrega Inmediata"
-  },
-  {
     "title": "LNA Wideband 50-4000MHz RTL-SDR Blog",
     "type": ["Accesorios"],
     "specs": [
@@ -123,14 +93,11 @@ export const catalogoItems: CatalogItem[] = [
     "idealUse": "Amplifica señales débiles en banda ancha.",
     "category": "Entrega Inmediata"
   },
-
-
-
   {
     "title": "Kit ADS-B 1090 MHz Profesional: Antena + Filtro + Cable",
     "type": ["Antenas", "Filtros", "Accesorios"],
     "specs": [
-      "Antena exterior 5.5 dBi con conector N-Type",
+      "Antena exterior 5.5 dBi con conector tipo N",
       "Filtro SAW pasabanda 1090 MHz",
       "Cable coaxial KMR-240 de bajas pérdidas",
       "Pigtails y adaptadores incluidos",
@@ -138,19 +105,5 @@ export const catalogoItems: CatalogItem[] = [
     ],
     "idealUse": "Para quienes ya tienen receptor y buscan alcance máximo.",
     "category": "Entrega Inmediata"
-  },
-  {
-    "title": "Estación ADS-B: Receptor V3 + Antena + Filtro",
-    "type": ["SDR", "Antenas", "Filtros"],
-    "specs": [
-      "Receptor RTL-SDR Blog V3 (Carcasa de aluminio)",
-      "Antena exterior 5.5 dBi 1090 MHz con conector N",
-      "Filtro SAW 1090 MHz para rechazo de interferencias",
-      "Cableado KMR de bajas pérdidas y adaptadores",
-      "Kit completo llave en mano para montar un radar local"
-    ],
-    "idealUse": "Kit integral para montar tu propio radar de aviones.",
-    "category": "Entrega Inmediata"
-  },
-
+  }
 ];
