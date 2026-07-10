@@ -11,7 +11,7 @@ const {
   title,
   description,
   canonicalUrl = new URL(Astro.url.pathname, Astro.site || Astro.url.origin),
-  image = new URL('/web-app-manifest-512x512.png', Astro.site || Astro.url.origin),
+  image = new URL('/og-image.webp', Astro.site || Astro.url.origin),
   type = 'website',
 } = Astro.props;
 
@@ -41,6 +41,9 @@ const schema = {
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={image} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Zorzal RF - Especialistas en SDR y RF" />
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
