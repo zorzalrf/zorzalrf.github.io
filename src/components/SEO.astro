@@ -11,26 +11,44 @@ const {
   title,
   description,
   canonicalUrl = new URL(Astro.url.pathname, Astro.site || Astro.url.origin),
-  image = new URL('/default-og-image.webp', Astro.site || Astro.url.origin),
+  image = new URL('/web-app-manifest-512x512.png', Astro.site || Astro.url.origin),
   type = 'website',
 } = Astro.props;
+
+const fullTitle = `${title} | Zorzal RF`;
+
+// Structured data
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": fullTitle,
+  "description": description,
+  "url": canonicalUrl
+};
 ---
 
 <!-- SEO Básico -->
-<title>{title} | Zorzal RF</title>
+<title>{fullTitle}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalUrl} />
+<meta name="theme-color" content="#ff8c00" />
 
 <!-- Open Graph / Facebook -->
+<meta property="og:site_name" content="Zorzal RF" />
+<meta property="og:locale" content="es_AR" />
 <meta property="og:type" content={type} />
 <meta property="og:url" content={canonicalUrl} />
-<meta property="og:title" content={title} />
+<meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={image} />
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@ZorzalRF" />
 <meta name="twitter:url" content={canonicalUrl} />
-<meta name="twitter:title" content={title} />
+<meta name="twitter:title" content={fullTitle} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={image} />
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
