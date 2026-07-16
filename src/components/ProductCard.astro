@@ -6,12 +6,13 @@ interface Props {
   specs: string[];
   price?: number;
   mercadoLibreUrl?: string;
+  url?: string;
   idealUse?: string;
   isHero?: boolean;
   badge?: string;
 }
 
-const { title, category, type, specs, price, idealUse, isHero, badge, mercadoLibreUrl = "https://www.mercadolibre.com.ar" } = Astro.props;
+const { title, category, type, specs, price, idealUse, isHero, badge, mercadoLibreUrl, url = "#" } = Astro.props;
 
 // Helper to split the category text into two lines
 const splitCategory = (cat: string) => {
@@ -33,7 +34,6 @@ const getCategoryClass = (cat: string) => {
 };
 
 const badgeClass = getCategoryClass(category);
-const buttonText = category === 'Sin Stock' ? 'Agotado' : 'Muy pronto';
 ---
 
 <div class={`product-card ${isHero ? 'hero-card' : ''}`} data-category={category} data-type={type.join(',')}>
@@ -61,9 +61,11 @@ const buttonText = category === 'Sin Stock' ? 'Agotado' : 'Muy pronto';
   </div>
   
   <div class="card-footer">
-    <span class="action-button disabled-btn">
-      {buttonText}
-    </span>
+    {category === 'Sin Stock' ? (
+      <span class="action-button disabled-btn">Agotado</span>
+    ) : (
+      <a href={url} target="_blank" rel="noopener noreferrer" class={`action-button ${category !== 'Entrega Inmediata' ? 'requires-confirmation' : ''}`}>Comprar</a>
+    )}
     {category !== 'Entrega Inmediata' && category !== 'Sin Stock' && (
       <div class="reserve-text">
         Este es un producto de importación bajo demanda. Una vez confirmado tu pedido, realizamos la gestión de importación y soporte técnico pre-entrega.
