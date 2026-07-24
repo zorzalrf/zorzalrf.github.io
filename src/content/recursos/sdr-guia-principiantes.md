@@ -4,7 +4,7 @@ description: "Paso a paso para comprar, instalar y configurar tu primer equipo d
 publishDate: 2026-07-24
 author: "Equipo Zorzal RF"
 tags: ["sdr", "principiantes", "hardware", "rtl-sdr", "guia"]
-category: "Guías de Inicio"
+category: "Iniciación / Primeros Pasos"
 difficulty: "Principiante"
 readingTime: 8
 ---

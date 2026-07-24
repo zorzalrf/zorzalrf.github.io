@@ -262,6 +262,15 @@ const currentPath = Astro.url.pathname;
         document.addEventListener('astro:before-swap', () => {
             document.removeEventListener('keydown', handleKeyDown);
         }, { once: true });
+
+        // Hacer que los enlaces externos (como Empretienda) abran en una nueva pestaña
+        const externalLinks = document.querySelectorAll('.docs-content a, .prose a');
+        externalLinks.forEach(link => {
+          if (link.hostname && link.hostname !== window.location.hostname) {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+          }
+        });
       });
     </script>
   </body>
