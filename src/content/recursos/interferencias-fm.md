@@ -19,7 +19,7 @@ Las emisoras de radio FM comerciales (88-108 MHz) transmiten con potencias gigan
 
 ## La Solución: El FM Trap
 
-Un **FM Trap** (o filtro de rechazo de banda FM) es un pequeño dispositivo pasivo que se conecta entre tu antena y tu SDR.
+Un **[FM Trap](https://zorzalrf.empretienda.com.ar/filtros/filtro-rechazo-banda-fm-88-108-mhz-elimina-interferencia)** (o filtro de rechazo de banda FM) es un pequeño dispositivo pasivo que se conecta entre tu antena y tu SDR.
 
 Su trabajo es atenuar drásticamente (bajar el volumen) a todas las señales entre 88 y 108 MHz, pero dejar pasar todo el resto.
 
@@ -32,4 +32,4 @@ Podés conseguir filtros de excelente calidad en nuestra tienda. ¡Te van a camb
 
 ### 🛒 ¿Necesitás el hardware para este proyecto?
 Bloqueá las emisoras locales y recuperá la sensibilidad de tu SDR con nuestro filtro dedicado:
-- **[Filtro Rechazo Banda FM (88-108 MHz) - FM Trap para SDR](/catalogo/filtros/)**
+- **[Filtro Rechazo Banda FM (88-108 MHz) - FM Trap para SDR](https://zorzalrf.empretienda.com.ar/filtros/filtro-rechazo-banda-fm-88-108-mhz-elimina-interferencia)**

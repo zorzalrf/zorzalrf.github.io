@@ -70,7 +70,7 @@ export const catalogoItems: CatalogItem[] = [
     ],
     "idealUse": "Bloquea interferencias de emisoras FM locales.",
     "category": "Entrega Inmediata",
-    "url": "https://zorzalrf.empretienda.com.ar/filtros/filtro-rechazo-banda-fm-88-108-mhz-fm-trap-para-sdr"
+    "url": "https://zorzalrf.empretienda.com.ar/filtros/filtro-rechazo-banda-fm-88-108-mhz-elimina-interferencia"
   },
   {
     "title": "Kit Antena Dipolo Multipropósito para SDR - Portátil y Versátil",

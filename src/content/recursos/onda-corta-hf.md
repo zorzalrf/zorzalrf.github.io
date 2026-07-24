@@ -29,6 +29,6 @@ Si querés escuchar HF en serio con tu RTL-SDR, necesitás un equipo de hardware
 Un Upconverter es un dispositivo que se coloca entre tu antena y tu SDR. Su trabajo es tomar todas las señales bajas de HF (0 a 31 MHz) y "subirlas" a una banda de VHF, donde tu SDR se siente increíblemente cómodo y sensible. 
 
 * Ventaja: Elimina completamente el ruido y las interferencias de la banda de AM local.
-* Ideal para: Usuarios que ya tienen un [RTL-SDR V3](/catalogo/sdr/).
+* Ideal para: Usuarios que ya tienen un [RTL-SDR V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf).
 
-> **💡 Consejo de Hardware:** Recordá que en HF la [antena](/catalogo/antenas/) es gigantesca en tamaño comparada con UHF. Un dipolo simple o un hilo largo (Random Wire) de 10 a 20 metros colgado en tu jardín es el compañero ideal para empezar en estas frecuencias.
+> **💡 Consejo de Hardware:** Recordá que en HF la [antena](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil) es gigantesca en tamaño comparada con UHF. Un dipolo simple o un hilo largo (Random Wire) de 10 a 20 metros colgado en tu jardín es el compañero ideal para empezar en estas frecuencias.

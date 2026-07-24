@@ -18,11 +18,11 @@ A la hora de construir un sistema receptor de seguimiento de aeronaves, primero 
 
 ## Eligiendo un punto de partida
 
-Si sos nuevo en este pasatiempo, comenzá con **VHF ACARS o VDL2**. Éstos requieren la menor inversión en hardware (un solo [RTL-SDR](/catalogo/sdr/) y una [antena](/catalogo/antenas/) VHF básica) y producirán resultados rápidamente si estás cerca de un aeropuerto o ruta de vuelo.
+Si sos nuevo en este pasatiempo, comenzá con **VHF ACARS o VDL2**. Éstos requieren la menor inversión en hardware (un solo [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) y una [antena](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil) VHF básica) y producirán resultados rápidamente si estás cerca de un aeropuerto o ruta de vuelo.
 
 Si deseás rastrear vuelos transoceánicos, el **HFDL** es la opción más accesible — también usa un solo SDR pero con una antena de HF (alta frecuencia).
 
-El **SATCOM** (Inmarsat AERO e Iridium) requiere hardware mucho más especializado (antenas parabólicas, [LNA](/catalogo/accesorios/) de Banda L) y es mejor abordarlo después de tener experiencia con los modos más sencillos.
+El **SATCOM** (Inmarsat AERO e Iridium) requiere hardware mucho más especializado (antenas parabólicas, [LNA](https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog) de Banda L) y es mejor abordarlo después de tener experiencia con los modos más sencillos.
 
 ## Sistemas de Iniciación / Exploratorios
 
