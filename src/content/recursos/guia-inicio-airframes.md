@@ -15,7 +15,7 @@ order: 3
   <p><strong>Basado en la documentación oficial de airframes.io.</strong><br/>Traducido y adaptado por el equipo técnico de Zorzal RF para la comunidad hispanohablante.</p>
 </div>
 
-![Image 1: Airframes Logo](/images/airframes/logo.svg)
+![Logotipo de Airframes](/images/airframes/logo.svg)
 
 Esta guía te ayudará a pasar de cero a estar enviando datos ACARS a Airframes.
 

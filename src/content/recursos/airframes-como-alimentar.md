@@ -15,7 +15,7 @@ order: 4
   <p><strong>Basado en la documentación oficial de airframes.io.</strong><br/>Traducido y adaptado por el equipo técnico de Zorzal RF para la comunidad hispanohablante.</p>
 </div>
 
-![Image 1: Airframes Logo](/images/airframes/logo.svg)
+![Logotipo de Airframes](/images/airframes/logo.svg)
 
 Compartir datos (*Feeding*) requiere que ya tengas una recepción activa de datos de aviación (provenientes de aeronaves, estaciones terrestres, etc.) utilizando uno o más dispositivos SDR.
 

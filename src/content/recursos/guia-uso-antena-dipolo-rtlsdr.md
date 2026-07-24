@@ -23,7 +23,7 @@ Esta publicación es una guía sobre cómo usar el set de antena dipolo en diver
 *   **1x montaje de trípode flexible con tornillo macho de 1/4".** Esta pieza te permite montar el dipolo en una variedad de lugares diferentes. Por ejemplo, un poste, la rama de un árbol, un escritorio, una puerta, el alféizar de una ventana. Las patas del trípode son flexibles y están recubiertas de goma, por lo que pueden envolverse firmemente alrededor de muchos objetos.
 *   **1x montaje de ventosa con tornillo macho de 1/4".** Con este soporte, podés fijar el dipolo en el exterior de una ventana, en una pared, el techo/ventana de un automóvil, o en cualquier otra superficie lisa. Para usarlo, primero limpia la superficie con limpiavidrios o alcohol isopropílico. Luego colocá la ventosa sobre la superficie limpia y cierra la palanca para activar la succión.
 
-[![Image 1: What's included in the new Dipole kit](/images/dipole-kit/dipole_components-500x500.jpg)](/images/dipole-kit/dipole_components.jpg)
+[![Componentes incluidos en el kit de antena dipolo](/images/dipole-kit/dipole_components-500x500.jpg)](/images/dipole-kit/dipole_components.jpg)
 
 ## Orientación del Dipolo
 
@@ -35,7 +35,7 @@ Para la polarización vertical, en teoría no importa de qué lado orientes la a
 
 También hay formas de optimizar el patrón de radiación con dipolos. Por ejemplo, para los satélites VHF LEO (Órbita Terrestre Baja), podés usar una configuración de "V-dipole". También podés fabricar una antena algo direccional utilizando una configuración de dipolo doblado. Algunos ejemplos más de configuraciones de dipolo se pueden encontrar en [la página de KK4OBI sobre dipolos doblados](http://www.qsl.net/kk4obi/Center-fed%20L-dipoles%20Vertical.html).
 
-![Image 2](/images/dipole-kit/Bent-Dipole-Animation.gif)
+![Animación de antena dipolo doblada en V](/images/dipole-kit/Bent-Dipole-Animation.gif)
 
 ## Recepción de Señales Terrestres
 
@@ -53,9 +53,9 @@ Para satélites de 137 MHz como NOAA y Meteor M2, extiende los elementos de ante
 
 Con un [LNA](https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog) (Amplificador de Bajo Ruido) de banda L apropiado como el [Outernet LNA](http://amzn.to/2nnEHtk), el dipolo también puede funcionar hasta cierto punto para recibir satélites de la banda L. Utilizando la antena más pequeña contraída, aplica una configuración de dipolo en V y apúntala hacia el satélite de banda L. Lo ideal es utilizar también un reflector. En la imagen de abajo, usamos una simple lata de galletas como reflector. Se perforó un agujero en el centro y se usó la montura para sujetar la antena. Esto, junto con el LNA Outernet, fue suficiente para recibir AERO y STD-C.
 
-![Image 3: L-band v-dipole with reflector tin](/images/dipole-kit/l-band_veedipole.jpg)
+![Antena dipolo en V para banda L con reflector](/images/dipole-kit/l-band_veedipole.jpg)
 
-![Image 4: Receiving Inmarsat signals with the Outernet LNA](/images/dipole-kit/dipole_lbandreflect_1.jpg)
+![Recepción de señales Inmarsat con Outernet LNA y antena dipolo](/images/dipole-kit/dipole_lbandreflect_1.jpg)
 
 ## Eligiendo la Longitud de los Elementos de la Antena
 
@@ -83,7 +83,7 @@ El soporte de ventosa te permite fijar la antena fácilmente a una ventana o sup
 
 El soporte tipo trípode flexible es muy útil para amarrar el dipolo a casi cualquier otra cosa, como ramas o marcos de puerta, ya que sus patas se doblan y están recubiertas.
 
-[![Image 7: Some examples of how to use the mounts.](/images/dipole-kit/dipole_mounts.jpg)](/images/dipole-kit/dipole_mounts.jpg)
+[![Ejemplos de cómo usar los soportes de la antena dipolo](/images/dipole-kit/dipole_mounts.jpg)](/images/dipole-kit/dipole_mounts.jpg)
 
 **¡Atención! Al igual que con el látigo magnético, NO recomendamos montar esta antena al aire libre permanentemente.**
 Esta antena está diseñada como una unidad portátil para montar y desmontar en el día. No es a probá de agua y no tiene protección a tierra para rayos. El acero no se oxida, pero el agua y la mugre podrían arruinar el mecanismo telescópico interior.
@@ -100,15 +100,15 @@ Decidimos mejorar la protección ESD en el propio dongle en su lugar, por lo que
 
 ## Gráficos de Muestra de VSWR
 
-![Image 8: Small Antenna Collapsed](/images/dipole-kit/Small_Ant_Collapsed.jpg)
+![Antena dipolo pequeña plegada](/images/dipole-kit/Small_Ant_Collapsed.jpg)
 
-![Image 9: Small Antenna Extended](/images/dipole-kit/Small_Ant_Extended.jpg)
+![Antena dipolo pequeña extendida](/images/dipole-kit/Small_Ant_Extended.jpg)
 
-![Image 12: RG174 Cable Loss](/images/dipole-kit/RG174_Cable_Loss.jpg)
+![Gráfico de pérdida de señal en cable RG174](/images/dipole-kit/RG174_Cable_Loss.jpg)
 
-![Image 15: Large Antenna Collapsed](/images/dipole-kit/Large_Ant_Collapsed-500x400.jpg)
+![Antena dipolo grande plegada](/images/dipole-kit/Large_Ant_Collapsed-500x400.jpg)
 
-![Image 16: Large Antenna Extended](/images/dipole-kit/Large_Ant_Extended-500x400.jpg)
+![Antena dipolo grande extendida](/images/dipole-kit/Large_Ant_Extended-500x400.jpg)
 
 ## Notas Adicionales
 
