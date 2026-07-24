@@ -4,7 +4,7 @@ description: "Guía completa desde la antena hasta la pantalla con los aviones. 
 publishDate: 2026-06-24
 author: "Equipo Zorzal RF"
 tags: ["proyectos", "ads-b", "aviacion", "sdr", "radar", "argentina"]
-category: "Iniciación / Primeros Pasos"
+category: "Iniciación"
 difficulty: "Principiante"
 readingTime: 5
 featured: true

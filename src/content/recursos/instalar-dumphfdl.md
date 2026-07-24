@@ -4,7 +4,7 @@ description: "Aprendé a compilar y ejecutar dumphfdl para rastrear aviones util
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["tutorial", "dumphfdl", "instalación", "linux", "hfdl"]
-category: "Decodificación"
+category: "Aviación y ACARS"
 difficulty: "Avanzado"
 readingTime: 7
 ---

@@ -4,7 +4,7 @@ description: "Explicación básica para que entiendan la importancia de usar bue
 publishDate: 2026-06-24
 author: "Equipo Zorzal RF"
 tags: ["soporte", "cables", "conectores", "KMR", "atenuacion"]
-category: "Antenas y Cables"
+category: "Hardware y Antenas"
 difficulty: "Principiante"
 readingTime: 5
 ---

@@ -4,7 +4,7 @@ description: "Descubrí cómo captar conversaciones de los astronautas y descarg
 publishDate: 2026-07-24
 author: "Equipo Zorzal RF"
 tags: ["iss", "espacio", "sstv", "astronautas", "sdr"]
-category: "Guías de Dispositivos"
+category: "Proyectos Prácticos"
 difficulty: "Intermedio"
 readingTime: 6
 ---

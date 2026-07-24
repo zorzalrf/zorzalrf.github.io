@@ -4,7 +4,7 @@ description: "Conoce por qué ACARS no cuenta con encriptación y cómo afecta e
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["seguridad", "privacidad", "acars", "encriptación"]
-category: "Tecnología Aeronáutica"
+category: "Aviación y ACARS"
 difficulty: "Intermedio"
 readingTime: 4
 ---

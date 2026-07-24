@@ -4,7 +4,7 @@ description: "Cómo ver vehículos, estaciones repetidoras y telemetría en tiem
 publishDate: 2026-07-24
 author: "Equipo Zorzal RF"
 tags: ["aprs", "radioaficionados", "rastreo", "vhf", "sdr"]
-category: "Guías de Dispositivos"
+category: "Proyectos Prácticos"
 difficulty: "Intermedio"
 readingTime: 6
 ---

@@ -4,7 +4,7 @@ description: "Aprende a interceptar satélites meteorológicos y descargar fotos
 publishDate: 2026-07-24
 author: "Equipo Zorzal RF"
 tags: ["noaa", "satelites", "clima", "dipolo", "sdr"]
-category: "Guías de Dispositivos"
+category: "Proyectos Prácticos"
 difficulty: "Intermedio"
 readingTime: 7
 ---

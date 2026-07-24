@@ -4,7 +4,7 @@ description: "Sintonizá radios internacionales, radioaficionados y mapas climá
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["hf", "onda-corta", "spyverter", "airspy", "sdr"]
-category: "SDR Avanzado"
+category: "Satelital y Avanzado"
 difficulty: "Intermedio"
 readingTime: 6
 ---

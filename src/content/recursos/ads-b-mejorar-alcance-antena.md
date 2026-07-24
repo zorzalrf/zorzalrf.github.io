@@ -4,7 +4,7 @@ description: "Pasá de ver solo el tráfico local a recibir aviones a 400 kilóm
 publishDate: 2026-07-24
 author: "Equipo Zorzal RF"
 tags: ["ads-b", "antenas", "filtros", "lna", "aviones"]
-category: "Guías de Dispositivos"
+category: "Hardware y Antenas"
 difficulty: "Intermedio"
 readingTime: 6
 ---

@@ -4,7 +4,7 @@ description: "Aprendé a rastrear y decodificar automáticamente globos meteorol
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["tutorial", "radiosondas", "smn", "sondehub", "rtl-sdr", "rs41"]
-category: "Decodificación"
+category: "Satelital y Avanzado"
 difficulty: "Intermedio"
 readingTime: 10
 ---

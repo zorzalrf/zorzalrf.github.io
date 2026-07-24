@@ -4,7 +4,7 @@ description: "Comprende qué es ACARS, qué datos transmite y las frecuencias qu
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["tecnología", "acars", "vhf", "poa"]
-category: "Tecnología Aeronáutica"
+category: "Aviación y ACARS"
 difficulty: "Principiante"
 readingTime: 5
 ---

@@ -4,7 +4,7 @@ description: "Cómo utilizar tu receptor SDR para rastrear barcos y embarcacione
 publishDate: 2026-06-18
 author: "Equipo Zorzal RF"
 tags: ["sdr", "ais", "barcos", "vhf", "tutorial"]
-category: "Decodificación"
+category: "Satelital y Avanzado"
 difficulty: "Intermedio"
 readingTime: 5
 ---

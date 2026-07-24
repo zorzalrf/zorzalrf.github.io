@@ -4,7 +4,7 @@ description: "Llevá tu estación de radio a todos lados. Aprendé a escuchar av
 publishDate: 2026-07-24
 author: "Equipo Zorzal RF"
 tags: ["android", "sdr-touch", "usb-c", "portatil", "app"]
-category: "Guías de Dispositivos"
+category: "Software y Servidores"
 difficulty: "Principiante"
 readingTime: 5
 ---

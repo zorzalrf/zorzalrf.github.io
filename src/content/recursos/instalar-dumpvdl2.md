@@ -4,7 +4,7 @@ description: "Guía de instalación de dumpvdl2 para la decodificación de mensa
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["tutorial", "dumpvdl2", "instalación", "linux", "vdl2"]
-category: "Decodificación"
+category: "Aviación y ACARS"
 difficulty: "Avanzado"
 readingTime: 9
 ---

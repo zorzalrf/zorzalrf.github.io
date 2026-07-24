@@ -4,7 +4,7 @@ description: "Cómo decodificar ráfagas de satélite Iridium usando iridium-sni
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["tutorial", "iridium", "satélite", "linux"]
-category: "Decodificación"
+category: "Satelital y Avanzado"
 difficulty: "Experto"
 readingTime: 6
 ---

@@ -4,7 +4,7 @@ description: "Cómo la constelación de satélites Iridium proporciona conectivi
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["tecnología", "iridium", "aoi", "satcom"]
-category: "Tecnología Aeronáutica"
+category: "Aviación y ACARS"
 difficulty: "Experto"
 readingTime: 5
 ---

@@ -4,7 +4,7 @@ description: "Descubrí el mundo invisible de la Internet de las Cosas (IoT). De
 publishDate: 2026-07-24
 author: "Equipo Zorzal RF"
 tags: ["433mhz", "iot", "rtl_433", "sensores", "sdr"]
-category: "Guías de Dispositivos"
+category: "Proyectos Prácticos"
 difficulty: "Principiante"
 readingTime: 6
 ---

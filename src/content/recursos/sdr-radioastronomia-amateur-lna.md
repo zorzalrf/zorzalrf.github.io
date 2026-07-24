@@ -4,7 +4,7 @@ description: "Convertí tu patio trasero en un observatorio astronómico. Detect
 publishDate: 2026-07-24
 author: "Equipo Zorzal RF"
 tags: ["radioastronomia", "lna", "espacio", "hidrogeno", "sdr"]
-category: "Guías de Dispositivos"
+category: "Proyectos Prácticos"
 difficulty: "Experto"
 readingTime: 6
 ---

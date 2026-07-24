@@ -4,7 +4,7 @@ description: "Guía sobre cómo elegir y combinar dispositivos SDR para recibir 
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["hardware", "receptores", "sdr", "configuración"]
-category: "Tecnología Aeronáutica"
+category: "Aviación y ACARS"
 difficulty: "Principiante"
 readingTime: 5
 ---

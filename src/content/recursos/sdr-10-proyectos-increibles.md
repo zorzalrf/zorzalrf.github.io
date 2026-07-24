@@ -4,7 +4,7 @@ description: "Descubrí el fascinante mundo de la radio definida por software. D
 publishDate: 2026-07-24
 author: "Equipo Zorzal RF"
 tags: ["sdr", "rtl-sdr", "principiantes", "proyectos", "ideas"]
-category: "Iniciación / Primeros Pasos"
+category: "Iniciación"
 difficulty: "Principiante"
 readingTime: 7
 ---

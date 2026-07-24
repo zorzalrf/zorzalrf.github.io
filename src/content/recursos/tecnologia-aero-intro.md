@@ -4,7 +4,7 @@ description: "Aprendé cómo el sistema ACARS se transmite a través de satélit
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["tecnología", "aero", "inmarsat", "satcom", "jaero"]
-category: "Tecnología Aeronáutica"
+category: "Aviación y ACARS"
 difficulty: "Intermedio"
 readingTime: 6
 ---

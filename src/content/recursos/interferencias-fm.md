@@ -4,7 +4,7 @@ description: "Uso práctico del FM Trap y filtros de banda para limpiar tu recep
 publishDate: 2026-06-24
 author: "Equipo Zorzal RF"
 tags: ["soporte", "interferencia", "filtros", "fm", "fm-trap"]
-category: "Antenas y Cables"
+category: "Hardware y Antenas"
 difficulty: "Intermedio"
 readingTime: 4
 ---

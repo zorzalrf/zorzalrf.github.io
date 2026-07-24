@@ -4,7 +4,7 @@ description: "Convertite en un 'spotter' profesional. Aprendé a configurar tu S
 publishDate: 2026-07-24
 author: "Equipo Zorzal RF"
 tags: ["aviacion", "vhf", "am", "torre-control", "sdr"]
-category: "Iniciación / Primeros Pasos"
+category: "Proyectos Prácticos"
 difficulty: "Principiante"
 readingTime: 6
 ---

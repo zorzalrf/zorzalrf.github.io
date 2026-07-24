@@ -19,14 +19,13 @@ const { title, description = "Zorzal RF - Centro de Recursos y Documentación", 
 
 const allResources = await getCollection('recursos').catch(() => []);
 const categories = [
-  'Iniciación / Primeros Pasos', 
-  'Tecnología Aeronáutica', 
-  'Decodificación', 
-  'Airframes',
-  'SDR Avanzado', 
-  'Antenas y Cables', 
-  'Guías de Dispositivos', 
-  'General'
+  'Iniciación',
+  'Proyectos Prácticos',
+  'Hardware y Antenas',
+  'Software y Servidores',
+  'Guías Airframes',
+  'Aviación y ACARS',
+  'Satelital y Avanzado'
 ];
 
 const groupedResources = categories.map(cat => ({
@@ -264,7 +263,7 @@ const currentPath = Astro.url.pathname;
         }, { once: true });
 
         // Hacer que los enlaces externos (como Empretienda) abran en una nueva pestaña
-        const externalLinks = document.querySelectorAll('.docs-content a, .prose a');
+        const externalLinks = document.querySelectorAll('.docs-content a, .prose a') as NodeListOf<HTMLAnchorElement>;
         externalLinks.forEach(link => {
           if (link.hostname && link.hostname !== window.location.hostname) {
             link.setAttribute('target', '_blank');

@@ -4,7 +4,7 @@ description: "Aprendé los fundamentos teóricos y prácticos para construir tu 
 publishDate: 2026-06-15
 author: "Equipo Zorzal RF"
 tags: ["antenas", "dipolo", "sdr", "hardware", "tutorial"]
-category: "Antenas y Cables"
+category: "Hardware y Antenas"
 difficulty: "Principiante"
 readingTime: 6
 ---

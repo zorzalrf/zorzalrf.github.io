@@ -4,7 +4,7 @@ description: "El ruido y las estaciones fantasma son el problema número uno en 
 publishDate: 2026-07-24
 author: "Equipo Zorzal RF"
 tags: ["ruido", "interferencias", "fm", "filtros", "sdr"]
-category: "Guías de Dispositivos"
+category: "Hardware y Antenas"
 difficulty: "Principiante"
 readingTime: 5
 ---

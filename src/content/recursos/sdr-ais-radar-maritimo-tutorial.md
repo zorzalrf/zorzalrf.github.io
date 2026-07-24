@@ -4,7 +4,7 @@ description: "Si vivís cerca de un puerto, un río navegable o el mar, podés r
 publishDate: 2026-07-24
 author: "Equipo Zorzal RF"
 tags: ["ais", "barcos", "maritimo", "sdr", "radar"]
-category: "Guías de Dispositivos"
+category: "Proyectos Prácticos"
 difficulty: "Intermedio"
 readingTime: 6
 ---

@@ -4,7 +4,7 @@ description: "Evitá amplificar ruido e interferencias. Aprendé por qué la ubi
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["lna", "amplificador", "hardware", "antenas", "ruido"]
-category: "Guías de Dispositivos"
+category: "Hardware y Antenas"
 difficulty: "Intermedio"
 readingTime: 5
 ---

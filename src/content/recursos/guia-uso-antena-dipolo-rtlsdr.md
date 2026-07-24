@@ -4,7 +4,7 @@ description: "Aprendé a utilizar el kit de antena dipolo multipropósito de RTL
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["tutorial", "antena", "dipolo", "rtl-sdr", "v-dipole"]
-category: "Guías de Dispositivos"
+category: "Hardware y Antenas"
 difficulty: "Principiante"
 readingTime: 8
 ---

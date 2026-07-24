@@ -4,7 +4,7 @@ description: "Cómo recibir mensajes de Japón, Europa y África desde el patio 
 publishDate: 2026-07-24
 author: "Equipo Zorzal RF"
 tags: ["ft8", "hf", "onda-corta", "wsjt-x", "sdr"]
-category: "Guías de Dispositivos"
+category: "Proyectos Prácticos"
 difficulty: "Avanzado"
 readingTime: 7
 ---

@@ -4,7 +4,7 @@ description: "Aprendé qué es VDL Mode 2, en qué se diferencia del ACARS origi
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["tecnología", "vdl2", "vhf", "dumpvdl2"]
-category: "Tecnología Aeronáutica"
+category: "Aviación y ACARS"
 difficulty: "Principiante"
 readingTime: 5
 ---

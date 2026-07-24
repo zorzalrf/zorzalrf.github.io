@@ -4,7 +4,7 @@ description: "Una visión general del panorama tecnológico de ACARS, los difere
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["tecnología", "acars", "vdl2", "hfdl", "satcom", "airframes"]
-category: "Tecnología Aeronáutica"
+category: "Aviación y ACARS"
 difficulty: "Intermedio"
 readingTime: 6
 ---

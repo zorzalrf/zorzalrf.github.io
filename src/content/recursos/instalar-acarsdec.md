@@ -4,7 +4,7 @@ description: "Guía completa de instalación, compilación y configuración de a
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["tutorial", "acarsdec", "instalación", "linux", "rtl-sdr"]
-category: "Decodificación"
+category: "Aviación y ACARS"
 difficulty: "Avanzado"
 readingTime: 10
 ---

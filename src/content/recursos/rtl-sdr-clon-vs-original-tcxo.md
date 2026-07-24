@@ -4,7 +4,7 @@ description: "Entendé el problema de la deriva térmica y por qué comprar un S
 publishDate: 2026-07-24
 author: "Equipo Zorzal RF"
 tags: ["hardware", "tcxo", "ppm", "rtl-sdr", "tecnico"]
-category: "Guías de Dispositivos"
+category: "Hardware y Antenas"
 difficulty: "Principiante"
 readingTime: 6
 ---

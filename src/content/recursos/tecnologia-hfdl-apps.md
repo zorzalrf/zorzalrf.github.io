@@ -4,7 +4,7 @@ description: "Herramientas creadas por la comunidad para facilitar el seguimient
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["herramientas", "hfdl", "software", "dumphfdl"]
-category: "Tecnología Aeronáutica"
+category: "Aviación y ACARS"
 difficulty: "Intermedio"
 readingTime: 4
 ---

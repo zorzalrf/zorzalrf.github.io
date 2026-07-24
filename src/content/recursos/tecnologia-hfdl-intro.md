@@ -4,7 +4,7 @@ description: "Comprende cómo funciona el Enlace de Datos de Alta Frecuencia (HF
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
 tags: ["tecnología", "hfdl", "hf", "océanos"]
-category: "Tecnología Aeronáutica"
+category: "Aviación y ACARS"
 difficulty: "Intermedio"
 readingTime: 6
 ---
