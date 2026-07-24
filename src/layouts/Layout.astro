@@ -9,9 +9,10 @@ interface Props {
   title: string;
   description?: string;
   type?: 'website' | 'article' | 'product';
+  schema?: any;
 }
 
-const { title, description = "Zorzal RF - Soluciones Técnicas", type = 'website' } = Astro.props;
+const { title, description = "Zorzal RF - Soluciones Técnicas", type = 'website', schema } = Astro.props;
 ---
 
 <!doctype html>
@@ -35,7 +36,7 @@ const { title, description = "Zorzal RF - Soluciones Técnicas", type = 'website
       setTheme();
       document.addEventListener('astro:after-swap', setTheme);
     </script>
-    <SEO title={title} description={description} type={type} />
+    <SEO title={title} description={description} type={type} schema={schema} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href={`${import.meta.env.BASE_URL}favicon-96x96.png`} sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />

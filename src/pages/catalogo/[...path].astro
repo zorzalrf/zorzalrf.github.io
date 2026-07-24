@@ -20,9 +20,33 @@ const outOfStockItems = catalogoItems.filter(item => item.category === 'Sin Stoc
 const otherItems = catalogoItems.filter(item => !item.isHero && item.category !== 'Sin Stock').sort(() => Math.random() - 0.5);
 
 const sortedItems = [...heroItems, ...otherItems, ...outOfStockItems];
+
+const catalogSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": sortedItems.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@type": "Product",
+      "name": item.title,
+      "description": item.specs.join('. '),
+      "url": item.url || Astro.url.href,
+      "brand": {
+        "@type": "Brand",
+        "name": "Zorzal RF"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": item.category === 'Sin Stock' ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
+        "priceCurrency": "ARS"
+      }
+    }
+  }))
+};
 ---
 
-<Layout title="Catálogo" description="Explorá nuestro catálogo de equipos y componentes de RF. Encontrá receptores SDR, antenas, filtros y accesorios para tu estación de radio.">
+<Layout title="Catálogo" description="Explorá nuestro catálogo de equipos y componentes de RF. Encontrá receptores SDR, antenas, filtros y accesorios para tu estación de radio." schema={catalogSchema}>
   <div class="catalogo-header">
     <h1>Catálogo de Productos</h1>
     <p>Explorá nuestra selección de equipos y componentes de RF especializados.</p>

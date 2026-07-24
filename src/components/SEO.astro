@@ -5,6 +5,7 @@ export interface Props {
   canonicalUrl?: string | URL;
   image?: string;
   type?: 'website' | 'article' | 'product';
+  schema?: any;
 }
 
 const {
@@ -13,18 +14,21 @@ const {
   canonicalUrl = new URL(Astro.url.pathname, Astro.site || Astro.url.origin),
   image = new URL('/og-image.webp', Astro.site || Astro.url.origin),
   type = 'website',
+  schema,
 } = Astro.props;
 
 const fullTitle = `${title} | Zorzal RF`;
 
 // Structured data
-const schema = {
+const defaultSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": fullTitle,
   "description": description,
   "url": canonicalUrl
 };
+
+const finalSchema = schema || defaultSchema;
 ---
 
 <!-- SEO Básico -->
@@ -54,4 +58,4 @@ const schema = {
 <meta name="twitter:image" content={image} />
 
 <!-- JSON-LD Structured Data -->
-<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<script type="application/ld+json" set:html={JSON.stringify(finalSchema)} />

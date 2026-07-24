@@ -33,9 +33,28 @@ const getDifficultyColor = (diff: string) => {
   if (diff === 'Experto') return 'var(--color-red, #ef4444)';
   return 'var(--color-text-muted)';
 };
+
+const indexSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": new URL('/', Astro.site || Astro.url.origin).toString()
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Recursos",
+      "item": new URL('/recursos/', Astro.site || Astro.url.origin).toString()
+    }
+  ]
+};
 ---
 
-<DocsLayout title="Centro de Recursos" description="Centro de recursos y documentación sobre SDR, ADS-B e ingeniería de RF. Guías paso a paso, tutoriales y referencias técnicas para todos los niveles.">
+<DocsLayout title="Centro de Recursos" description="Centro de recursos y documentación sobre SDR, ADS-B e ingeniería de RF. Guías paso a paso, tutoriales y referencias técnicas para todos los niveles." schema={indexSchema}>
   <div class="welcome-header">
     <h1>Centro de Recursos y Documentación</h1>
     <p class="subtitle">Aprendé sobre SDR, ADS-B e ingeniería de RF con guías paso a paso y referencias técnicas detalladas.</p>

@@ -1,9 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ProductCard from '../components/ProductCard.astro';
+import { catalogoItems } from '../data/catalogo';
+
+const featuredItems = catalogoItems.filter(i => 
+  i.title.includes("Kit RTL-SDR Blog V3 + Antena Dipolo") || 
+  i.title.includes("Kit ADS-B 1090 MHz Profesional") || 
+  i.title.includes("Receptor RTL-SDR Blog V3 - HF/VHF/UHF")
+).slice(0, 3);
+
+const indexSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": featuredItems.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@type": "Product",
+      "name": item.title,
+      "description": item.specs.join('. '),
+      "url": item.url || Astro.url.href,
+      "brand": {
+        "@type": "Brand",
+        "name": "Zorzal RF"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": item.category === 'Sin Stock' ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
+        "priceCurrency": "ARS"
+      }
+    }
+  }))
+};
 ---
 
-<Layout title="Inicio - Especialistas en SDR y RF" description="Especialistas en Radio Definida por Software (SDR) y sistemas de RF. Hardware testeado, antenas y kits completos para recepción de alta performance.">
+<Layout title="Inicio - Especialistas en SDR y RF" description="Especialistas en Radio Definida por Software (SDR) y sistemas de RF. Hardware testeado, antenas y kits completos para recepción de alta performance." schema={indexSchema}>
   <section class="hero">
     <h1>Componentes y Soluciones para Recepción de Alta Performance</h1>
     <p>Nos especializamos en Radio Definida por Software (SDR) y sistemas de RF especializados.</p>
@@ -55,6 +86,14 @@ import ProductCard from '../components/ProductCard.astro';
         category="Entrega Inmediata"
         url="https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf"
       />
+    </div>
+    
+    <div class="category-links">
+      <p>Explorá más productos por categoría: 
+        <a href={import.meta.env.BASE_URL + 'catalogo/sdr/'}>Receptores SDR</a> | 
+        <a href={import.meta.env.BASE_URL + 'catalogo/antenas/'}>Antenas y Cables</a> | 
+        <a href={import.meta.env.BASE_URL + 'catalogo/filtros/'}>Filtros RF</a>
+      </p>
     </div>
   </section>
 </Layout>
@@ -134,6 +173,31 @@ import ProductCard from '../components/ProductCard.astro';
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
+  }
+  
+  .category-links {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px dashed var(--color-border);
+  }
+  
+  .category-links p {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+  }
+  
+  .category-links a {
+    color: var(--color-orange);
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.2s;
+  }
+  
+  .category-links a:hover {
+    color: var(--color-heading);
+    text-decoration: underline;
   }
 
   @media (max-width: 768px) {

@@ -13,6 +13,7 @@ const recursosCollection = defineCollection({
     readingTime: z.number().default(5),
     featured: z.boolean().optional(),
     order: z.number().optional(),
+    image: z.string().optional(),
   }),
 });
 

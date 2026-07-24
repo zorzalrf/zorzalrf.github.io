@@ -12,9 +12,10 @@ interface Props {
   title: string;
   description?: string;
   type?: 'website' | 'article';
+  schema?: any;
 }
 
-const { title, description = "Zorzal RF - Centro de Recursos y Documentación", type = 'website' } = Astro.props;
+const { title, description = "Zorzal RF - Centro de Recursos y Documentación", type = 'website', schema } = Astro.props;
 
 const allResources = await getCollection('recursos').catch(() => []);
 const categories = [
@@ -63,7 +64,7 @@ const currentPath = Astro.url.pathname;
       setTheme();
       document.addEventListener('astro:after-swap', setTheme);
     </script>
-    <SEO title={title} description={description} type={type} />
+    <SEO title={title} description={description} type={type} schema={schema} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href={`${import.meta.env.BASE_URL}favicon-96x96.png`} sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
