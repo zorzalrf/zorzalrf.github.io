@@ -13,8 +13,7 @@ El sistema **ACARS** (Aircraft Communications Addressing and Reporting System) e
 
 Los mensajes ACARS contienen información valiosa, como el plan de vuelo, datos meteorológicos, reportes de mantenimiento y telemetría de los motores. Con un simple receptor SDR podés interceptar y leer estos mensajes mientras los aviones sobrevuelan tu zona.
 
-## Requisitos de Hardware
-
+## Requisitos de Hardware necesarios
 1. **Receptor SDR**: Cualquier RTL-SDR estándar es más que suficiente para esto.
 2. **Antena VHF**: Una antena dipolo vertical ajustada a unos 131 MHz o una antena telescópica básica funcionará bien.
 3. **Cables y adaptadores**: Para conectar la antena a tu receptor.

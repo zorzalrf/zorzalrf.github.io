@@ -1,5 +1,5 @@
 ---
-title: "Instalar y Configurar dumpvdl2"
+title: "Guía de instalación y configuración de dumpvdl2"
 description: "Guía de instalación de dumpvdl2 para la decodificación de mensajes VDL Mode 2 y conexión a Airframes."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
@@ -16,10 +16,8 @@ readingTime: 9
 
 `dumpvdl2` es un decodificador de mensajes VDL Mode 2 y analizador de protocolos. Es el decodificador recomendado para VDL2 y admite múltiples canales simultáneos con opciones de salida flexibles.
 
-## Instalación en Debian/Ubuntu
-
-### Instalar dependencias
-
+## Instalación paso a paso en Debian/Ubuntu
+### Instalación de dependencias necesarias
 ```bash
 sudo apt-get install build-essential cmake git pkg-config libglib2.0-dev librtlsdr-dev
 ```
@@ -62,10 +60,8 @@ Una alternativa a compilar desde el código fuente es el script de instalación 
 bash -c "$(wget -q -O - https://raw.githubusercontent.com/wiedehopf/adsb-wiki/main/dumpvdl2-install.sh)"
 ```
 
-## Configuración
-
-### Uso básico
-
+## Pasos de Configuración
+### Guía de uso básico
 ```bash
 dumpvdl2 --rtlsdr 0 --gain 40 --correction 0 \
   --output decoded:json:udp:address=feed.airframes.io,port=5552 \
@@ -73,8 +69,7 @@ dumpvdl2 --rtlsdr 0 --gain 40 --correction 0 \
   136975000
 ```
 
-### Opciones clave de la línea de comandos
-
+### Opciones principales de la línea de comandos
 | Opción | Descripción |
 | --- | --- |
 | `--rtlsdr <dispositivo>` | Usa el dispositivo RTL-SDR (por índice o número de serie) |

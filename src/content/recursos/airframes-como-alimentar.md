@@ -1,5 +1,5 @@
 ---
-title: "Cómo Compartir Datos"
+title: "Cómo Compartir Datos Aeronáuticos con Airframes"
 description: "Aprendé cómo enviar los datos de tus decodificadores a los servidores de agregación de Airframes."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"

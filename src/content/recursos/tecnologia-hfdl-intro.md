@@ -1,5 +1,5 @@
 ---
-title: "Introducción a HFDL"
+title: "¿Qué es HFDL? Recepción de datos aeronáuticos en Onda Corta"
 description: "Comprende cómo funciona el Enlace de Datos de Alta Frecuencia (HFDL) para rastrear aviones transoceánicos."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"

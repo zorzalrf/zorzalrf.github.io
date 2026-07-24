@@ -1,5 +1,5 @@
 ---
-title: "¿Por qué deberías compartir tus datos?"
+title: "Por qué deberías compartir tus datos SDR con la comunidad"
 description: "Descubrí por qué tu contribución a la red de Airframes.io es importante y cómo ayuda a la comunidad."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"

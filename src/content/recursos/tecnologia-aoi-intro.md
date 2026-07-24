@@ -1,5 +1,5 @@
 ---
-title: "Introducción a AoI (ACARS sobre Iridium)"
+title: "¿Qué es AoI (ACARS sobre Iridium)? Guía paso a paso"
 description: "Cómo la constelación de satélites Iridium proporciona conectividad ACARS global y cómo podés decodificarla."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
@@ -16,8 +16,7 @@ readingTime: 5
 
 ACARS sobre Iridium (AoI) transmite datos ACARS a través de la constelación de satélites Iridium, una red de satélites de órbita terrestre baja (LEO) que proporciona una verdadera cobertura global, incluyendo las regiones polares que los satélites geoestacionarios como Inmarsat no pueden alcanzar.
 
-## Cómo Funciona
-
+## Cómo funciona esta tecnología
 La constelación Iridium consta de 66 satélites LEO activos orbitando a aproximadamente 780 km de altitud. A diferencia de los satélites geoestacionarios que permanecen fijos sobre el ecuador, los satélites Iridium orbitan la Tierra y transfieren las conexiones a medida que pasan por encima, proporcionando una cobertura ininterrumpida en cualquier lugar del planeta.
 
 ## Qué Transporta
@@ -28,8 +27,7 @@ AoI transporta mensajes ACARS estándar y comunicaciones de seguridad de vuelo. 
 
 Las señales de Iridium operan en Banda L (alrededor de 1616–1626.5 MHz). Debido a que los satélites se mueven constantemente, la recepción requiere una antena omnidireccional o de haz ancho con visibilidad clara al cielo.
 
-### Requisitos de Hardware
-
+### Requisitos de Hardware necesarios
 *   **SDR**: Receptor SDR compatible con la banda
 *   **Antena**: Antena activa Banda-L
 

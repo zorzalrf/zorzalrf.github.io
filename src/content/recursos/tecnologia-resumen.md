@@ -1,5 +1,5 @@
 ---
-title: "Tecnología Aeronáutica: Resumen"
+title: "Resumen de Tecnologías Aeronáuticas: ACARS, ADS-B, VDL2 y más"
 description: "Una visión general del panorama tecnológico de ACARS, los diferentes medios de transmisión y cómo Airframes los captura."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"

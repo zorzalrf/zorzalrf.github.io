@@ -1,5 +1,5 @@
 ---
-title: "Sistemas Receptores para Aviación"
+title: "Sistemas y Equipos Receptores para Monitoreo de Aviación"
 description: "Guía sobre cómo elegir y combinar dispositivos SDR para recibir diferentes señales y frecuencias de forma simultánea."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"

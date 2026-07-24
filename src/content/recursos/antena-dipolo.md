@@ -1,5 +1,5 @@
 ---
-title: "Construcción de una Antena Dipolo de Media Onda"
+title: "Cómo construir tu propia Antena Dipolo de Media Onda para SDR"
 description: "Aprendé los fundamentos teóricos y prácticos para construir tu propia antena dipolo para proyectos de radiofrecuencia y SDR."
 publishDate: 2026-06-15
 author: "Equipo Zorzal RF"

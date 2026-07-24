@@ -1,5 +1,5 @@
 ---
-title: "Introducción a ACARS"
+title: "¿Qué es el sistema ACARS? Guía introductoria para radioescuchas"
 description: "Comprende qué es ACARS, qué datos transmite y las frecuencias que utiliza."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"

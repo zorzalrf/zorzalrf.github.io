@@ -1,5 +1,5 @@
 ---
-title: "Introducción a AoA (ACARS sobre AERO)"
+title: "¿Qué es AoA (ACARS sobre AERO)? Conceptos básicos"
 description: "Aprendé cómo el sistema ACARS se transmite a través de satélites Inmarsat para dar cobertura oceánica."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
@@ -16,8 +16,7 @@ readingTime: 6
 
 ACARS sobre AERO se refiere a los datos ACARS transmitidos a través de los servicios aeronáuticos de la constelación de satélites Inmarsat. Esto proporciona comunicación aire-tierra para aeronaves que vuelan sobre océanos y áreas remotas más allá de la cobertura de VHF o incluso HF.
 
-## Cómo Funciona
-
+## Cómo funciona esta tecnología
 La constelación de Inmarsat consiste en satélites geoestacionarios que brindan cobertura sobre las regiones del Océano Atlántico, Pacífico e Índico. Los aviones equipados con aviónica SATCOM se conectan a estos satélites para enviar y recibir mensajes ACARS, informes de posición ADS-C y CPDLC.
 
 Se utilizan dos bandas principales:

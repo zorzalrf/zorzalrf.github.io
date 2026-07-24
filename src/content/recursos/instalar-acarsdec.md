@@ -1,5 +1,5 @@
 ---
-title: "Instalar y Configurar acarsdec"
+title: "Guía de instalación y configuración de acarsdec para SDR"
 description: "Guía completa de instalación, compilación y configuración de acarsdec para decodificar ACARS VHF y compartir los datos."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
@@ -16,10 +16,8 @@ readingTime: 10
 
 `acarsdec` es un decodificador ACARS VHF multicanal. Esta guía cubre la instalación, configuración y envío de datos (feeding) a Airframes.
 
-## Instalación en Debian/Ubuntu
-
-### Instalar dependencias
-
+## Instalación paso a paso en Debian/Ubuntu
+### Instalación de dependencias necesarias
 ```bash
 sudo apt-get install build-essential cmake git libusb-1.0-0-dev librtlsdr-dev libxml2-dev zlib1g-dev pkg-config
 ```
@@ -52,16 +50,13 @@ Opciones de compilación para otro hardware SDR:
 *   SDRplay: `cmake .. -Dsdrplay=ON`
 *   SoapySDR: `cmake .. -Dsoapy=ON`
 
-## Configuración
-
-### Uso básico
-
+## Pasos de Configuración
+### Guía de uso básico
 ```bash
 acarsdec -o 4 -j feed.airframes.io:5550 -i MI-ESTACION-ACARS -r 0 130.025 130.450 131.125 131.550
 ```
 
-### Opciones clave de la línea de comandos
-
+### Opciones principales de la línea de comandos
 | Opción | Descripción |
 | --- | --- |
 | `-r <dispositivo> f1 f2 ...` | Número del dispositivo [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) seguido de las frecuencias (en MHz) |
@@ -134,8 +129,7 @@ sudo systemctl enable acarsdec
 sudo systemctl start acarsdec
 ```
 
-## Solución de Problemas
-
+## Solución a Problemas Frecuentes
 **No se reciben mensajes:**
 *   Verificá que se detecta tu SDR: `rtl_test`.
 *   Revisá tu configuración de ganancia (intentá valores entre 20–48).

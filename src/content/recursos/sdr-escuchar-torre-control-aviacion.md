@@ -17,14 +17,14 @@ Si buscás inspiración de lo fascinante que puede ser este mundo, te recomendam
 
 Acá te explicamos cómo configurar tu equipo para no perderte ningún diálogo.
 
-## El Equipo Necesario
+## Equipamiento necesario para recibir la banda aérea
 
 Para escuchar la banda aeronáutica (que va de los **118 MHz a los 136 MHz**), no hace falta gastar una fortuna. El setup básico consta de:
 
 1. **Receptor:** El [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) (ideal para notebooks) o la versión [RTL-SDR V3 USB-C](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-usb-c-hfvhfuhf) si preferís ir al aeropuerto y escuchar todo desde tu celular Android.
 2. **Antena:** La señal de la torre de control suele ser fuerte si estás a menos de 20 km del aeropuerto. Usando el [Kit Antena Dipolo](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil), ajustá ambas varillas para que midan unos **57 centímetros** cada una, y poné la antena completamente recta, apuntando hacia arriba.
 
-## El secreto del éxito: Configurar el Software (SDR#)
+## Cómo configurar el Software SDR para sintonizar AM
 
 La banda de aviación tiene una particularidad histórica: a diferencia de las radios de música (que usan FM), la aviación sigue utilizando **Modulación en Amplitud (AM)** por motivos de seguridad (permite que dos personas que hablan al mismo tiempo se escuchen superpuestas, en lugar de bloquearse).
 
@@ -36,7 +36,7 @@ Seguí estos pasos en tu programa favorito (como SDR#):
 3. **Paso crucial:** Cambiá el modo de `NFM` o `WFM` a **`AM`**.
 4. Ajustá el *Bandwidth* (Ancho de banda) a unos `8000` Hz para tener buena calidad de voz.
 
-## Domando el ruido: El Squelch (Silenciador)
+## Cómo eliminar el ruido constante usando el Squelch
 
 La torre de control no transmite música constante; los pilotos hablan 5 segundos, cortan, la torre responde 5 segundos, y cortan. 
 En los tiempos de silencio, tu SDR te va a reproducir un ruido a "lluvia estática" fortísimo y molesto.
@@ -46,7 +46,7 @@ Para evitar volverte loco, tenés que encender el **Squelch** (Silenciador). Est
 2. Movela poco a poco hacia la derecha hasta que el ruido blanco se apague de golpe.
 3. Ahora dejá la radio encendida de fondo. ¡Tu PC solo emitirá sonido cuando un piloto presione su micrófono!
 
-## ¿Dónde encuentro las frecuencias?
+## Dónde encontrar las frecuencias de tu aeropuerto local
 
 Cada aeropuerto tiene múltiples frecuencias: Autorizaciones, Rodaje (Tierra), Torre (Despegues), Aproximación y Centro. 
 

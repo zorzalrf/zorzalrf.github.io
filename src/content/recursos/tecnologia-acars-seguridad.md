@@ -1,5 +1,5 @@
 ---
-title: "Seguridad y Privacidad en ACARS"
+title: "Seguridad y Privacidad en las comunicaciones aeronáuticas (ACARS)"
 description: "Conoce por qué ACARS no cuenta con encriptación y cómo afecta esto a la seguridad y la privacidad en el entorno aeronáutico."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"

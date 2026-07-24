@@ -1,5 +1,5 @@
 ---
-title: "Introducción a Airframes"
+title: "¿Qué es Airframes.io? La plataforma de datos aeronáuticos libres"
 description: "Descubrí qué hace a Airframes único, los datos que captura mediante ACARS y las diferentes herramientas que conforman su ecosistema."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"

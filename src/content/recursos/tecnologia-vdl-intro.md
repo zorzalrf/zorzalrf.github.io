@@ -1,5 +1,5 @@
 ---
-title: "Introducción a VDL Mode 2"
+title: "¿Qué es VDL Mode 2? Evolución de las comunicaciones aeronáuticas"
 description: "Aprendé qué es VDL Mode 2, en qué se diferencia del ACARS original y qué frecuencias debés sintonizar."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"

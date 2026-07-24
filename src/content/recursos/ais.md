@@ -1,5 +1,5 @@
 ---
-title: "Monitoreo de Tráfico Marítimo (AIS)"
+title: "Cómo monitorear el Tráfico Marítimo (AIS) con tu SDR"
 description: "Cómo utilizar tu receptor SDR para rastrear barcos y embarcaciones comerciales a lo largo de la costa."
 publishDate: 2026-06-18
 author: "Equipo Zorzal RF"

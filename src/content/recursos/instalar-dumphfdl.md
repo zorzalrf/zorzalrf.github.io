@@ -1,5 +1,5 @@
 ---
-title: "Instalar y Configurar dumphfdl"
+title: "Guía de instalación y configuración de dumphfdl"
 description: "Aprendé a compilar y ejecutar dumphfdl para rastrear aviones utilizando la tecnología HFDL a nivel mundial."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
@@ -16,10 +16,8 @@ readingTime: 7
 
 `dumphfdl` es un decodificador HFDL multicanal que recibe mensajes ACARS, informes de posición ADS-C y comunicaciones CPDLC de aeronaves por radio de alta frecuencia (HF). El HFDL ofrece cobertura sobre océanos y zonas remotas donde no llegan las señales VHF.
 
-## Instalación en Debian/Ubuntu
-
-### Instalar dependencias
-
+## Instalación paso a paso en Debian/Ubuntu
+### Instalación de dependencias necesarias
 ```bash
 sudo apt-get install build-essential cmake git pkg-config libglib2.0-dev libconfig++-dev libliquid-dev libfftw3-dev
 ```
@@ -57,10 +55,8 @@ make
 sudo make install
 ```
 
-## Configuración
-
-### Uso básico
-
+## Pasos de Configuración
+### Guía de uso básico
 Las frecuencias de HFDL se especifican en kHz:
 
 ```bash
@@ -70,8 +66,7 @@ dumphfdl --soapysdr driver=rtlsdr --sample-rate 250000 \
   8927 8912 8894 8885 8834
 ```
 
-### Opciones clave de la línea de comandos
-
+### Opciones principales de la línea de comandos
 | Opción | Descripción |
 | --- | --- |
 | `--soapysdr <driver>` | Cadena de dispositivo SoapySDR (ej. `driver=rtlsdr`) |

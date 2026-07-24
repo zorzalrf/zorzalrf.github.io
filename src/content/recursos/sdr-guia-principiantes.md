@@ -15,7 +15,7 @@ Pero no te preocupes, el concepto básico es muy simple: reemplazamos toda la ci
 
 En esta guía te vamos a explicar exactamente qué necesitas comprar y cómo armar tu primera estación para garantizar tu éxito desde el día uno.
 
-## 1. El Cerebro: El Receptor SDR
+## 1. El Cerebro: Cómo elegir tu receptor SDR (RTL-SDR)
 
 Lo primero que necesitás es el hardware que captura las ondas de radio y las convierte en datos digitales. 
 
@@ -26,7 +26,7 @@ Hoy en día, existen versiones diseñadas específicamente para el hobby, con co
 *   **Para Computadoras (El Clásico):** El [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) original con conexión USB tipo A. Es el estándar de oro de la comunidad, compatible con todos los programas del mercado.
 *   **Para Celulares, Tablets y Macs (El Moderno):** El [Receptor RTL-SDR Blog V3 USB-C](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-usb-c-hfvhfuhf) es exactamente el mismo equipo por dentro, pero con conexión USB-C. Ideal si planeás conectarlo directo a tu celular Android o a una notebook moderna sin usar molestos adaptadores OTG.
 
-## 2. Los Oídos: La Antena
+## 2. Los Oídos: Qué antena SDR necesitas para empezar
 
 Acá es donde muchos principiantes fallan. Usan la antenita miniatura que viene con sintonizadores baratos de TV, la ponen adentro de su pieza de concreto, y luego piensan que "el SDR no sirve porque solo se escucha ruido".
 
@@ -37,7 +37,7 @@ Diferentes frecuencias (aviones, satélites, radio comercial) tienen diferentes 
 Para arrancar, lo mejor es **una antena que pueda cambiar de tamaño**.
 Por eso recomendamos el [Kit Antena Dipolo Multipropósito](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil). Este kit incluye una base en forma de "V" y varias antenas telescópicas intercambiables que podés alargar o acortar según lo que vayas a sintonizar en el momento.
 
-## 3. El Software: Dándole vida al hardware
+## 3. El Software: Programas para escuchar radio (SDR# y SDR++)
 
 Una vez que tengas tu equipo en mano (por ejemplo, habiendo comprado el combo que incluye todo: [Kit RTL-SDR Blog V3 + Antena Dipolo](https://zorzalrf.empretienda.com.ar/antenas/kit-rtl-sdr-blog-v3-antena-dipolo-sdr-completo)), es momento de conectarlo.
 
@@ -48,7 +48,7 @@ Los pasos básicos son:
     *   **SDRSharp (SDR#):** Excelente para Windows, muy visual y fácil de usar para escuchar emisoras, aviones y radioaficionados.
     *   **SDR++:** El nuevo estándar multiplataforma. Más ligero y moderno, funciona increíble en Windows, Linux y Mac.
 
-## 4. El Secreto Final: La Ubicación
+## 4. El Secreto Final: La ubicación de la antena SDR
 
 La radiofrecuencia detesta las paredes y las computadoras chinas ruidosas (eléctricamente hablando). 
 

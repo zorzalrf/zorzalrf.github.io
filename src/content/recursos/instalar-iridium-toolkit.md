@@ -1,5 +1,5 @@
 ---
-title: "Instalar iridium-toolkit"
+title: "Cómo instalar y usar Iridium Toolkit para decodificar satélites"
 description: "Cómo decodificar ráfagas de satélite Iridium usando iridium-sniffer e iridium-toolkit en Linux."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
@@ -25,10 +25,8 @@ Decodificar ACARS sobre Iridium requiere dos componentes:
     *   **gr-iridium**: Demodulador basado en GNU Radio. Consume más recursos pero está bien establecido.
 2.  **iridium-toolkit** que toma las tramas demoduladas y extrae los mensajes ACARS.
 
-## Instalación en Debian/Ubuntu
-
-### Instalar dependencias
-
+## Instalación paso a paso en Debian/Ubuntu
+### Instalación de dependencias necesarias
 ```bash
 sudo apt-get install build-essential python3 python3-pip git
 ```
@@ -63,8 +61,7 @@ El flujo de trabajo típico conecta (vía *pipe*) la salida demodulada de `iridi
 iridium-sniffer -d driver=rtlsdr 2>/dev/null | python3 iridium-parser.py
 ```
 
-### Requisitos de Hardware
-
+### Requisitos de Hardware necesarios
 *   **SDR**: Cualquier SDR que pueda sintonizar la Banda L de Iridium (1616–1626.5 MHz). SDRs con más ancho de banda capturarán más frecuencias Iridium a la vez. El [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) funciona, pero tiene un ancho limitado de ~2.4 MHz.
 *   **[Antena](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil)**: Una antena omnidireccional Banda L con vista despejada al cielo.
 *   **[LNA](https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog)**: Se recomienda encarecidamente un amplificador de bajo ruido (LNA) para el rango de 1.6 GHz (ej. Nooelec SAWbird+ IR).

@@ -1,5 +1,5 @@
 ---
-title: "Clientes Decodificadores (Decoder Clients)"
+title: "Clientes Decodificadores para Airframes: Guía completa"
 description: "Conoce los diferentes clientes de software decodificador compatibles con la red de Airframes.io para ACARS, VDL2 y HFDL."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"

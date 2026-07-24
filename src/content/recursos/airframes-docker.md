@@ -1,5 +1,5 @@
 ---
-title: "Compartir Datos con Docker"
+title: "Cómo compartir datos aeronáuticos usando Docker"
 description: "Aprendé cómo usar Docker y ACARS Hub para ejecutar múltiples decodificadores y alimentar los servicios de Airframes en una sola máquina."
 publishDate: 2026-06-25
 author: "Equipo Zorzal RF"
@@ -164,8 +164,7 @@ Una vez que tu feeder esté funcionando, visita la [página de estaciones de Air
 
 Tener marcas de tiempo (timestamps) precisas es importante para los mensajes ACARS. Si tu sistema (especialmente una Raspberry Pi sin un reloj en tiempo real o RTC) no tiene una hora confiable, podés configurarlo mediante NTP (`systemd-timesyncd`).
 
-## Solución de Problemas
-
+## Solución a Problemas Frecuentes
 **Los contenedores no arrancan / No se encuentra el SDR:**
 *   Verificá el acceso al dispositivo USB ejecutando `lsusb`. Debería mostrar tu SDR.
 *   Asegurate de que ninguna otra pieza de software esté ocupando el SDR.
