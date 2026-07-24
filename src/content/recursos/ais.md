@@ -13,8 +13,7 @@ Así como los aviones utilizan ADS-B para evitar colisiones aéreas, la industri
 
 Si vivís cerca de la costa, puertos, o ríos navegables de gran tamaño, podés utilizar un SDR para capturar los datos de identificación, posición, rumbo y velocidad de todo el tráfico naval comercial y recreativo a tu alrededor.
 
-## Frecuencias de Operación
-
+## Frecuencias de Operación del Sistema AIS
 El AIS funciona en la banda marítima de VHF utilizando dos canales principales simultáneamente:
 
 - **Canal 87B:** `161.975 MHz`
@@ -22,8 +21,7 @@ El AIS funciona en la banda marítima de VHF utilizando dos canales principales 
 
 Al estar en el rango de los 162 MHz, las ondas se propagan un poco mejor que las de ADS-B, pero siguen dependiendo fuertemente de tener una línea de visión clara hacia el agua. 
 
-## Requisitos para el Monitoreo
-
+## Hardware y Software para monitoreo AIS
 ### 1. Antena
 Dado que las señales marinas utilizan **polarización vertical**, es crucial que tu antena esté montada de forma estrictamente vertical. Una antena dipolo o una antena vertical de plano de tierra (ground plane) con brazos de aproximadamente **46 centímetros** es ideal para resonar en 162 MHz.
 

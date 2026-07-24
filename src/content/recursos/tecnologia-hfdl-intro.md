@@ -49,6 +49,5 @@ La red HFDL es operada por estaciones distribuidas en todo el mundo. Cada estaci
 
 Utilizá [hfdl.observer](https://hfdl.observer/) para ver qué estaciones y frecuencias están activas en tiempo real.
 
-## Recibiendo HFDL
-
+## Cómo recibir y decodificar señales HFDL
 La recepción requiere un SDR capaz de sintonizar HF (con soporte nativo de HF o mediante upconverter) y una antena apropiada para HF. El software utilizado es `dumphfdl`. Una antena de hilo de al menos 10 metros, colocada lo más alto posible, es ideal para comenzar.

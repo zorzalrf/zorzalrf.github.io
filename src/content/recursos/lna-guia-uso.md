@@ -20,8 +20,7 @@ La solución clásica es comprar un amplificador. Sin embargo, muchos cometen el
 Cada componente de tu sistema (el SDR, el cable, los conectores) añade ruido térmico a la señal. A esto se le llama **Figura de Ruido**.
 El LNA es un amplificador especial diseñado con componentes de altísima calidad para amplificar la señal agregando **casi cero ruido**. (Por ejemplo, el *[LNA Wideband 50-4000MHz RTL-SDR Blog](https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog)* tiene un ruido inferior a 1dB en muchas bandas).
 
-## El Enemigo Oculto: El Cable Coaxial
-
+## El enemigo oculto de la recepción: El Cable Coaxial
 Imaginá que tenés 15 metros de cable coaxial bajando desde el techo hasta tu PC. Ese cable se come (atenuación) un gran porcentaje de tu señal de los satélites antes de que siquiera llegue a tu escritorio.
 
 **Escenario 1: El LNA al lado de la PC (INCORRECTO)**

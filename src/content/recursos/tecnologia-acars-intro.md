@@ -22,8 +22,7 @@ El sistema original (POA) transmite por radio VHF (Very High Frequency), princip
 
 POA funciona con línea de visión, lo que limita su cobertura a áreas continentales y zonas costeras cercanas.
 
-## Qué Transporta ACARS
-
+## Qué información transportan los mensajes ACARS
 Algunos de los tipos de mensajes más comunes incluyen:
 *   **Reportes OOOI**: (Out, Off, On, In) Eventos que registran automáticamente los tiempos de salida y llegada a la puerta de embarque, así como el despegue y aterrizaje.
 *   **Reportes de Posición**: Datos periódicos de latitud, longitud y altitud.
@@ -52,6 +51,5 @@ VHF ACARS opera en frecuencias dedicadas dentro de la banda de aviación VHF.
 
 > **Consejo:** No necesitás monitorear todas las frecuencias. Empezá con 131.550 y 131.725. Estas dos transportan la mayoría del tráfico a nivel mundial.
 
-## Recibiendo ACARS
-
+## Cómo recibir mensajes ACARS con tu SDR
 ACARS VHF es el punto de entrada más sencillo. Solo necesitás un dongle SDR básico y una [antena](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil) VHF junto con el software `acarsdec`.

@@ -27,8 +27,7 @@ Imaginemos que queremos recibir ADS-B (1090 MHz) y tenemos 10 metros de cable:
 - **Cable barato (tipo RG-58):** A 1000 MHz, pierde aproximadamente **5.5 dB** cada 10 metros. ¡Perdiste más del 70% de la señal antes de llegar al SDR!
 - **Cable de calidad (tipo KMR-400):** A 1000 MHz, pierde alrededor de **1.3 dB** cada 10 metros. La diferencia es abismal.
 
-## Conectores y Adaptadores
-
+## Tipos de conectores y adaptadores RF (SMA, BNC, UHF)
 Cada vez que ponés un adaptador (ej. SMA a BNC, BNC a PL259, etc.), perdés un poco de señal (entre 0.1 y 0.5 dB por unión, o más si son de mala calidad).
 
 **Regla de oro:** 

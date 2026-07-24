@@ -25,16 +25,14 @@ $$
 
 *Nota: El factor 142.5 contempla la velocidad de la luz y el efecto de los extremos de la antena en el mundo real, siendo ligeramente más corta que el cálculo puramente teórico de $\frac{150}{f}$.*
 
-## Materiales Necesarios
-
+## Materiales necesarios para construir la antena
 - Cable de cobre (ej. alambre de instalación eléctrica).
 - Un conector coaxial (ej. SMA o BNC, dependiendo de tu SDR).
 - Cable coaxial de 50 ohms (como RG58).
 - Un aislante central (puede ser plástico, PVC o incluso una ficha de empalme).
 - Soldador y estaño.
 
-## Construcción Paso a Paso
-
+## Construcción paso a paso del dipolo
 1. **Definí tu frecuencia objetivo**: Por ejemplo, si querés escuchar la banda de aviación civil en 118 MHz.
 2. **Calculá la longitud**: Usando la fórmula, $L = 142.5 / 118 \approx 1.20$ metros totales. Cada brazo medirá unos **60 centímetros**.
 3. **Prepará los elementos**: Cortá dos tramos de cable de cobre de un poco más de 60 cm (para dejar margen para el ajuste).

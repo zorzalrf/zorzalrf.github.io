@@ -50,6 +50,5 @@ VDL2 opera en canales dedicados dentro de la banda de aviación VHF. El Canal Co
 | 136.875 MHz | Europa | SITA |
 | 136.975 MHz | Mundial | CSC (ARINC & SITA) |
 
-## Recibiendo VDL2
-
+## Guía de recepción y decodificación de VDL Mode 2
 La recepción de VDL2 utiliza la misma antena VHF y el mismo hardware [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) que el ACARS tradicional. El decodificador recomendado es `dumpvdl2`, que puede procesar múltiples canales simultáneamente.
