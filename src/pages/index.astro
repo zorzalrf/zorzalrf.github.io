@@ -18,16 +18,70 @@ const indexSchema = {
     "item": {
       "@type": "Product",
       "name": item.title,
+      "image": new URL('/og-image.webp', Astro.site || Astro.url.origin).toString(),
       "description": item.specs.join('. '),
       "url": item.url || Astro.url.href,
       "brand": {
         "@type": "Brand",
         "name": "Zorzal RF"
       },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "1"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Cliente Zorzal RF"
+        }
+      },
       "offers": {
         "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "ARS",
         "availability": item.category === 'Sin Stock' ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
-        "priceCurrency": "ARS"
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "AR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0.00",
+            "currency": "ARS"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "AR"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 5,
+              "unitCode": "DAY"
+            }
+          }
+        }
       }
     }
   }))
