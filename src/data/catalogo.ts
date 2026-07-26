@@ -11,6 +11,7 @@ export interface CatalogItem {
   url?: string;
   isHero?: boolean;
   badge?: string;
+  price?: number;
 }
 
 export const catalogoItems: CatalogItem[] = [
@@ -28,7 +29,8 @@ export const catalogoItems: CatalogItem[] = [
     "category": "Entrega Inmediata",
     "isHero": true,
     "badge": "RECOMENDADO PARA PRINCIPIANTES",
-    "url": "https://zorzalrf.empretienda.com.ar/antenas/kit-rtl-sdr-blog-v3-antena-dipolo-sdr-completo"
+    "url": "https://zorzalrf.empretienda.com.ar/antenas/kit-rtl-sdr-blog-v3-antena-dipolo-sdr-completo",
+    "price": 247000
   },
   {
     "title": "Receptor RTL-SDR Blog V3 - HF/VHF/UHF TCXO 1PPM",
@@ -42,7 +44,8 @@ export const catalogoItems: CatalogItem[] = [
     ],
     "idealUse": "Receptor SDR versátil de excelente valor.",
     "category": "Entrega Inmediata",
-    "url": "https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf"
+    "url": "https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf",
+    "price": 205000
   },
   {
     "title": "Receptor RTL-SDR Blog V3 USB-C - TCXO 1PPM SMA",
@@ -56,7 +59,8 @@ export const catalogoItems: CatalogItem[] = [
     ],
     "idealUse": "Receptor SDR optimizado para dispositivos modernos.",
     "category": "Entrega Inmediata",
-    "url": "https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-usb-c-hfvhfuhf"
+    "url": "https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-usb-c-hfvhfuhf",
+    "price": 205000
   },
   {
     "title": "Filtro Rechazo Banda FM (88-108 MHz) - FM Trap para SDR",
@@ -70,7 +74,8 @@ export const catalogoItems: CatalogItem[] = [
     ],
     "idealUse": "Bloquea interferencias de emisoras FM locales.",
     "category": "Entrega Inmediata",
-    "url": "https://zorzalrf.empretienda.com.ar/filtros/filtro-rechazo-banda-fm-88-108-mhz-elimina-interferencia"
+    "url": "https://zorzalrf.empretienda.com.ar/filtros/filtro-rechazo-banda-fm-88-108-mhz-elimina-interferencia",
+    "price": 85000
   },
   {
     "title": "Kit Antena Dipolo Multipropósito para SDR - Portátil y Versátil",
@@ -84,7 +89,8 @@ export const catalogoItems: CatalogItem[] = [
     ],
     "idealUse": "Antena versátil para uso portátil temporal.",
     "category": "Entrega Inmediata",
-    "url": "https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil"
+    "url": "https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil",
+    "price": 70000
   },
   {
     "title": "LNA Wideband 50-4000MHz RTL-SDR Blog",
@@ -98,7 +104,8 @@ export const catalogoItems: CatalogItem[] = [
     ],
     "idealUse": "Amplifica señales débiles en banda ancha.",
     "category": "Entrega Inmediata",
-    "url": "https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog"
+    "url": "https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog",
+    "price": 140000
   },
   {
     "title": "Kit ADS-B 1090 MHz Profesional: Antena + Filtro + Cable",
@@ -112,6 +119,7 @@ export const catalogoItems: CatalogItem[] = [
     ],
     "idealUse": "Para quienes ya tienen receptor y buscan alcance máximo.",
     "category": "Entrega Inmediata",
-    "url": "https://zorzalrf.empretienda.com.ar/antenas/estacion-ads-b-zorzal-rf-antena-cable-filtro"
+    "url": "https://zorzalrf.empretienda.com.ar/antenas/estacion-ads-b-zorzal-rf-antena-cable-filtro",
+    "price": 520000
   }
 ];
