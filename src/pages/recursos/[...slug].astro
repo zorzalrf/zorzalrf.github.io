@@ -41,7 +41,7 @@ const schema = {
         "name": entry.data.author || "Zorzal RF"
       },
       "datePublished": new Date(entry.data.publishDate).toISOString(),
-      "image": entry.data.image ? new URL(entry.data.image, Astro.site || Astro.url.origin).toString() : new URL('/og-image.webp', Astro.site || Astro.url.origin).toString(),
+      "image": [entry.data.image ? new URL(entry.data.image, Astro.site || Astro.url.origin).toString() : new URL('/og-image.webp', Astro.site || Astro.url.origin).toString()],
       "url": Astro.url.href
     },
     {

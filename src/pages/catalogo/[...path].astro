@@ -30,7 +30,7 @@ const catalogSchema = {
     "item": {
       "@type": "Product",
       "name": item.title,
-      "image": new URL('/og-image.webp', Astro.site || Astro.url.origin).toString(),
+      "image": [new URL('/og-image.webp', Astro.site || Astro.url.origin).toString()],
       "description": item.specs.join('. '),
       "url": item.url || Astro.url.href,
       "brand": {
@@ -56,7 +56,7 @@ const catalogSchema = {
       },
       "offers": {
         "@type": "Offer",
-        "price": "0.00",
+        "price": item.price || 0,
         "priceCurrency": "ARS",
         "availability": item.category === 'Sin Stock' ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
         "hasMerchantReturnPolicy": {
