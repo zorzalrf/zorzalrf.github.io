@@ -78,7 +78,7 @@ services:
     restart: always
     environment:
       - TZ=Etc/UTC
-      - SERIAL=               # Número de serie de tu [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf)
+      - SERIAL=               # Número de serie de tu [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original)
       - GAIN=-10
       - PPM=0
       - FREQUENCIES=130.025;130.450;131.125;131.550

@@ -46,7 +46,7 @@ sudo make install
 ```
 
 Opciones opcionales de compilación (flags):
-*   `-DRTLSDR=TRUE` — Soporte [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) (habilitado por defecto si se encuentra librtlsdr)
+*   `-DRTLSDR=TRUE` — Soporte [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) (habilitado por defecto si se encuentra librtlsdr)
 *   `-DMIRISDR=TRUE` — Soporte Mirics SDR
 *   `-DSDRPLAY=TRUE` — Soporte SDRplay
 *   `-DSOAPYSDR=TRUE` — Soporte SoapySDR

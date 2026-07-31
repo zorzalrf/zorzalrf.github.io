@@ -21,7 +21,7 @@ Acá te explicamos cómo configurar tu equipo para no perderte ningún diálogo.
 
 Para escuchar la banda aeronáutica (que va de los **118 MHz a los 136 MHz**), no hace falta gastar una fortuna. El setup básico consta de:
 
-1. **Receptor:** El [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) (ideal para notebooks) o la versión [RTL-SDR V3 USB-C](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-usb-c-hfvhfuhf) si preferís ir al aeropuerto y escuchar todo desde tu celular Android.
+1. **Receptor:** El [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) (ideal para notebooks) o la versión [RTL-SDR V3 USB-C](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-c-original) si preferís ir al aeropuerto y escuchar todo desde tu celular Android.
 2. **Antena:** La señal de la torre de control suele ser fuerte si estás a menos de 20 km del aeropuerto. Usando el [Kit Antena Dipolo](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil), ajustá ambas varillas para que midan unos **57 centímetros** cada una, y poné la antena completamente recta, apuntando hacia arriba.
 
 ## Cómo configurar el Software SDR para sintonizar AM

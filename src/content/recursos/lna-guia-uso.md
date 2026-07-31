@@ -18,7 +18,7 @@ La solución clásica es comprar un amplificador. Sin embargo, muchos cometen el
 ## ¿Qué es la Figura de Ruido (Noise Figure)?
 
 Cada componente de tu sistema (el SDR, el cable, los conectores) añade ruido térmico a la señal. A esto se le llama **Figura de Ruido**.
-El LNA es un amplificador especial diseñado con componentes de altísima calidad para amplificar la señal agregando **casi cero ruido**. (Por ejemplo, el *[LNA Wideband 50-4000MHz RTL-SDR Blog](https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog)* tiene un ruido inferior a 1dB en muchas bandas).
+El LNA es un amplificador especial diseñado con componentes de altísima calidad para amplificar la señal agregando **casi cero ruido**. (Por ejemplo, el *[LNA Wideband 50-4000MHz RTL-SDR Blog](https://zorzalrf.empretienda.com.ar/accesorios/lna-amplificador-rtl-sdr-blog-50-4000-mhz-original)* tiene un ruido inferior a 1dB en muchas bandas).
 
 ## El enemigo oculto de la recepción: El Cable Coaxial
 Imaginá que tenés 15 metros de cable coaxial bajando desde el techo hasta tu PC. Ese cable se come (atenuación) un gran porcentaje de tu señal de los satélites antes de que siquiera llegue a tu escritorio.
@@ -37,4 +37,4 @@ La señal satelital llega a la antena. **Inmediatamente** (a 10 cm de distancia)
 
 Acá es donde entra la magia del **Bias-Tee** (que te enseñamos a usar en otro tutorial). El SDR envía 5 Voltios "subiendo" por el mismo cable coaxial para encender el LNA que está en el techo, mientras la señal de radio baja por ese mismo cable.
 
-Un equipo como el **[LNA Wideband 50-4000MHz](https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog)** de nuestra tienda está diseñado específicamente para aprovechar el Bias-Tee de receptores como el [RTL-SDR V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf), convirtiéndolo en un accesorio esencial e "invisible" que hace que tus señales satelitales exploten en la pantalla.
+Un equipo como el **[LNA Wideband 50-4000MHz](https://zorzalrf.empretienda.com.ar/accesorios/lna-amplificador-rtl-sdr-blog-50-4000-mhz-original)** de nuestra tienda está diseñado específicamente para aprovechar el Bias-Tee de receptores como el [RTL-SDR V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original), convirtiéndolo en un accesorio esencial e "invisible" que hace que tus señales satelitales exploten en la pantalla.

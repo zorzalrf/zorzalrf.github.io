@@ -19,7 +19,7 @@ En un par de minutos de monitoreo en la frecuencia correcta, tu pantalla de SDR 
 
 La banda de Onda Corta requiere sintonizadores específicos. Los clones baratos de SDR (de carcasa de plástico) simplemente **no pueden** escuchar HF, ya que su hardware corta en 24 MHz.
 
-Es acá donde brilla la ingeniería del original. El [Receptor RTL-SDR Blog V3 original](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) (y la versión [USB-C](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-usb-c-hfvhfuhf)) cuentan con una función integrada en el circuito llamada **Muestreo Directo de la rama Q (Q-Branch Direct Sampling)**. 
+Es acá donde brilla la ingeniería del original. El [Receptor RTL-SDR Blog V3 original](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) (y la versión [USB-C](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-c-original)) cuentan con una función integrada en el circuito llamada **Muestreo Directo de la rama Q (Q-Branch Direct Sampling)**. 
 
 Al activar esta casilla en las configuraciones de tu programa SDR, el equipo "salta" el chip sintonizador principal y le envía las señales de onda corta directamente al cerebro analógico-digital del equipo, abriéndote las puertas de las bandas de 40 y 20 metros (donde ocurre la magia internacional).
 

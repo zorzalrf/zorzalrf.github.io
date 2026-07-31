@@ -37,4 +37,4 @@ Necesitarás tres herramientas gratuitas para hacer magia:
 ## Consejos para la primera imagen
 
 El mayor desafío no es el software, sino la vista al cielo. El satélite emite a muy baja potencia desde 800 kilómetros de altura. 
-Si tenés árboles o edificios bloqueando el horizonte, tu señal tendrá ruido (franjas blancas o negras en la imagen). Para obtener la mítica "imagen libre de ruido de punta a punta", buscá un campo abierto o el techo más alto posible, enchufá tu [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) a tu notebook, y preparate para ver la Tierra como nunca antes.
+Si tenés árboles o edificios bloqueando el horizonte, tu señal tendrá ruido (franjas blancas o negras en la imagen). Para obtener la mítica "imagen libre de ruido de punta a punta", buscá un campo abierto o el techo más alto posible, enchufá tu [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) a tu notebook, y preparate para ver la Tierra como nunca antes.

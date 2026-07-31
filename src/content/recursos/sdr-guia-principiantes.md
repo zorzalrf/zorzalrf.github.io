@@ -23,8 +23,8 @@ El rey indiscutido para principiantes (e incluso avanzados) es el **RTL-SDR**. O
 
 Hoy en día, existen versiones diseñadas específicamente para el hobby, con componentes mejorados, protección contra estática, y enfriamiento.
 
-*   **Para Computadoras (El Clásico):** El [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) original con conexión USB tipo A. Es el estándar de oro de la comunidad, compatible con todos los programas del mercado.
-*   **Para Celulares, Tablets y Macs (El Moderno):** El [Receptor RTL-SDR Blog V3 USB-C](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-usb-c-hfvhfuhf) es exactamente el mismo equipo por dentro, pero con conexión USB-C. Ideal si planeás conectarlo directo a tu celular Android o a una notebook moderna sin usar molestos adaptadores OTG.
+*   **Para Computadoras (El Clásico):** El [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) original con conexión USB tipo A. Es el estándar de oro de la comunidad, compatible con todos los programas del mercado.
+*   **Para Celulares, Tablets y Macs (El Moderno):** El [Receptor RTL-SDR Blog V3 USB-C](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-c-original) es exactamente el mismo equipo por dentro, pero con conexión USB-C. Ideal si planeás conectarlo directo a tu celular Android o a una notebook moderna sin usar molestos adaptadores OTG.
 
 ## 2. Los Oídos: Qué antena SDR necesitas para empezar
 
@@ -56,4 +56,4 @@ La radiofrecuencia detesta las paredes y las computadoras chinas ruidosas (eléc
 *   **Paso 2:** Poné la antena afuera (afuera de la ventana, balcón, techo).
 *   **Paso 3:** Alejá la antena del router de internet, fuentes de alimentación baratas y luces LED intermitentes, ya que generan muchísima interferencia.
 
-¡Con el [RTL-SDR V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf), tu antena dipolo apuntando al cielo despejado, y el volumen alto, ya estás listo para explorar el espectro invisible!
+¡Con el [RTL-SDR V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original), tu antena dipolo apuntando al cielo despejado, y el volumen alto, ya estás listo para explorar el espectro invisible!

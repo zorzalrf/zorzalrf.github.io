@@ -16,7 +16,7 @@ Acá te explicamos el proceso completo, desde el hardware hasta el software.
 
 ## 1. El Hardware que necesitás
 
-- **Un SDR:** Un [RTL-SDR V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) es ideal para empezar.
+- **Un SDR:** Un [RTL-SDR V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) es ideal para empezar.
 - **Antena:** Necesitás una antena sintonizada a **1090 MHz**. Podés usar la dipolo que viene con el kit RTL-SDR ajustando la longitud de los brazos a unos 6.5 cm cada uno, o comprar una antena comercial vertical de fibra de vidrio específica para ADS-B.
 - **Computadora:** Puede ser tu PC de escritorio, pero lo ideal es una **Raspberry Pi** para dejarla prendida 24/7 gastando poca luz.
 - *(Opcional pero muy recomendado)* **Filtro ADS-B:** Especialmente en ciudades argentinas con muchas torres de celular, un filtro a 1090 MHz evitará que tu SDR se sature con las señales de 4G/LTE.
@@ -33,7 +33,7 @@ La forma más moderna y potente de empezar es usando la imagen de **[ADSB.im](ht
 
 1. Ingresá a [adsb.im/download](https://adsb.im/download) y descargá la imagen correspondiente a tu Raspberry Pi o placa SBC.
 2. Usá un programa como **BalenaEtcher** o **Raspberry Pi Imager** para grabar esa imagen en una tarjeta MicroSD.
-3. Poné la MicroSD en la Raspberry Pi, conectala al router por cable de red (idealmente), enchufá el [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) (con su [antena](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil)) y encendela.
+3. Poné la MicroSD en la Raspberry Pi, conectala al router por cable de red (idealmente), enchufá el [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) (con su [antena](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil)) y encendela.
 
 ## 4. Configuración y visualización de los aviones
 

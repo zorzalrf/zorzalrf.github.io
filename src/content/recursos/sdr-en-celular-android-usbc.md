@@ -21,7 +21,7 @@ Durante años, conectar un SDR al celular implicaba usar un **cable adaptador OT
 
 ¿El problema? Quedaba un bloque rígido y pesado colgando del teléfono. Al más mínimo movimiento de la mano, el adaptador se movía, el celular desconectaba el SDR, y el programa se cerraba. Era frustrante.
 
-Para solucionar esto de forma definitiva, se diseñó el [Receptor RTL-SDR Blog V3 USB-C](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-usb-c-hfvhfuhf).
+Para solucionar esto de forma definitiva, se diseñó el [Receptor RTL-SDR Blog V3 USB-C](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-c-original).
 Tiene **exactamente la misma electrónica** premium que el V3 clásico, pero la carcasa incluye una salida nativa **USB-C hembra**. 
 
 Con este equipo, usás un cable de celular común (USB-C a USB-C) directo desde el SDR a tu teléfono. Es flexible, no se desconecta si te movés, y elimina la palanca mecánica que terminaba rompiendo el pin de carga del celular.
@@ -37,7 +37,7 @@ A diferencia de Windows (donde usás Zadig), en Android todo es más fácil. Vas
 En la misma Play Store, buscá e instalá **"SDR Touch"**. Es la aplicación más popular para sintonizar señales en Android. Tiene una interfaz diseñada para pantallas táctiles, con cascada (waterfall), análisis de espectro y opciones para AM, FM, SSB, etc.
 
 ### 3. Conectá y Escuchá
-1. Enchufá tu [RTL-SDR USB-C](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-usb-c-hfvhfuhf) al celular con un cable.
+1. Enchufá tu [RTL-SDR USB-C](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-c-original) al celular con un cable.
 2. Tu Android te va a mostrar una ventana emergente preguntando: _"¿Permitir que SDR Driver acceda al dispositivo USB?"_. Dale **Aceptar**.
 3. Abrí SDR Touch, tocá el botón de "Power" (Encender), ¡y listo! Vas a empezar a ver las ondas de radio en tu pantalla.
 

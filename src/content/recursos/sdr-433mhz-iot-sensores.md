@@ -24,7 +24,7 @@ Si dejás tu SDR monitoreando esta frecuencia durante unas horas, te vas a sorpr
 
 ## El hardware necesario
 
-Dado que estas señales son de baja potencia (para no gastar las pilas de los sensores) y de alta frecuencia (ondas cortas), cualquier [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) funciona a la perfección.
+Dado que estas señales son de baja potencia (para no gastar las pilas de los sensores) y de alta frecuencia (ondas cortas), cualquier [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) funciona a la perfección.
 
 Para la antena, el [Kit Antena Dipolo Multipropósito](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil) es ideal. Simplemente ajustá las dos varillas a unos **17 centímetros** de largo cada una (sintonizadas a 433 MHz), colocalas de forma recta y dejalas sobre tu escritorio o cerca de una ventana.
 

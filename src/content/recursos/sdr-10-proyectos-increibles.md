@@ -28,7 +28,7 @@ Los satélites meteorológicos NOAA orbitan la Tierra constantemente transmitien
 Similar al sistema de los aviones, los grandes barcos transmiten constantemente su posición mediante el sistema AIS (alrededor de 162 MHz). Si vivís cerca de la costa, un puerto o un río grande, vas a poder ver el tráfico marítimo en tu pantalla.
 
 ## 5. Escuchar Radioaficionados Hablando con Todo el Mundo (HF)
-El [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) tiene un modo especial de "muestreo directo" que le permite bajar hasta las bandas de onda corta (HF). Vas a poder escuchar a radioaficionados hablando a miles de kilómetros de distancia gracias al rebote ionosférico.
+El [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) tiene un modo especial de "muestreo directo" que le permite bajar hasta las bandas de onda corta (HF). Vas a poder escuchar a radioaficionados hablando a miles de kilómetros de distancia gracias al rebote ionosférico.
 
 ## 6. Escuchar Emisoras de Onda Corta Internacionales
 Muchos países todavía tienen potentes estaciones de radio transmitiendo noticias internacionales al mundo en onda corta (China, Cuba, Rumania). Con un trozo largo de cable como antena, el mundo llega a tu cuarto.

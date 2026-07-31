@@ -9,7 +9,7 @@ difficulty: "Intermedio"
 readingTime: 3
 ---
 
-El **Bias-Tee** es una función clave en muchos SDRs (como el [RTL-SDR V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) y los Airspy) que permite enviar energía (generalmente 3.3V o 5V) a través del mismo cable coaxial de antena. Esto sirve para alimentar LNAs (Amplificadores de Bajo Ruido) o antenas activas.
+El **Bias-Tee** es una función clave en muchos SDRs (como el [RTL-SDR V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) y los Airspy) que permite enviar energía (generalmente 3.3V o 5V) a través del mismo cable coaxial de antena. Esto sirve para alimentar LNAs (Amplificadores de Bajo Ruido) o antenas activas.
 
 Si conectás un LNA pero no activás el Bias-Tee, ¡tu LNA va a actuar como un atenuador gigante y no vas a escuchar nada!
 
@@ -37,5 +37,5 @@ Acá te explicamos cómo activarlo en los programas más populares:
 
 ### 🛒 ¿Necesitás el hardware para este proyecto?
 Para sacarle el jugo al Bias-Tee de tu receptor, te recomendamos:
-- **[LNA Wideband 50-4000MHz RTL-SDR Blog](https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog)**
-- **[Receptor RTL-SDR Blog V3 USB-C - TCXO 1PPM SMA](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-usb-c-hfvhfuhf)**
+- **[LNA Wideband 50-4000MHz RTL-SDR Blog](https://zorzalrf.empretienda.com.ar/accesorios/lna-amplificador-rtl-sdr-blog-50-4000-mhz-original)**
+- **[Receptor RTL-SDR Blog V3 USB-C - TCXO 1PPM SMA](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-c-original)**

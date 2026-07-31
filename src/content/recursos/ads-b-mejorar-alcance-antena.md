@@ -35,7 +35,7 @@ Un filtro pasabanda SAW cortará absolutamente todo lo que no esté en la frecue
 
 Si ya tenés línea de visión y un buen filtro, el siguiente paso es contrarrestar la pérdida del cable. Si bajás el cable desde el techo hasta tu habitación, estás perdiendo señal valiosa en el viaje.
 
-Aquí entra en juego el amplificador. Añadir un [LNA Wideband](https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog) directamente en el techo (justo debajo de la antena) tomará esa débil señal de los aviones lejanos y le dará un "empujón" gigante para que baje por tu cable fuerte y clara.
+Aquí entra en juego el amplificador. Añadir un [LNA Wideband](https://zorzalrf.empretienda.com.ar/accesorios/lna-amplificador-rtl-sdr-blog-50-4000-mhz-original) directamente en el techo (justo debajo de la antena) tomará esa débil señal de los aviones lejanos y le dará un "empujón" gigante para que baje por tu cable fuerte y clara.
 
 ## 4. La Antena Específica
 

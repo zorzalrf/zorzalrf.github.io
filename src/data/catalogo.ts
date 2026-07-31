@@ -44,7 +44,7 @@ export const catalogoItems: CatalogItem[] = [
     ],
     "idealUse": "Receptor SDR versátil de excelente valor.",
     "category": "Entrega Inmediata",
-    "url": "https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf",
+    "url": "https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original",
     "price": 205000
   },
   {
@@ -59,7 +59,7 @@ export const catalogoItems: CatalogItem[] = [
     ],
     "idealUse": "Receptor SDR optimizado para dispositivos modernos.",
     "category": "Entrega Inmediata",
-    "url": "https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-usb-c-hfvhfuhf",
+    "url": "https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-c-original",
     "price": 205000
   },
   {
@@ -104,7 +104,7 @@ export const catalogoItems: CatalogItem[] = [
     ],
     "idealUse": "Amplifica señales débiles en banda ancha.",
     "category": "Entrega Inmediata",
-    "url": "https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog",
+    "url": "https://zorzalrf.empretienda.com.ar/accesorios/lna-amplificador-rtl-sdr-blog-50-4000-mhz-original",
     "price": 140000
   },
   {

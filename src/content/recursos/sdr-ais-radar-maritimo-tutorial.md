@@ -19,9 +19,9 @@ Interceptar estos datos y volcarlos en un mapa digital es muy similar a rastrear
 
 Las frecuencias de AIS (162 MHz) tienen un comportamiento estrictamente de línea de visión (a menos que ocurran extrañas condiciones atmosféricas). Por lo tanto, tu antena es la clave del éxito.
 
-1. **El SDR:** El versátil [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) es todo lo que necesitás. 
+1. **El SDR:** El versátil [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) es todo lo que necesitás. 
 2. **La Antena:** Las señales de los barcos viajan con polarización vertical. Usando el [Kit Antena Dipolo Multipropósito](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil), podés enroscar las dos varillas a unos **46 centímetros** cada una, y ubicar el dipolo totalmente vertical (parado apuntando hacia arriba y abajo). Y recordá: poné la antena lo más alto posible.
-3. **Para llegar mar adentro (LNA):** A diferencia de los aviones que vuelan a 10.000 metros (y son fáciles de ver), los barcos están al nivel del mar. La curvatura de la Tierra oculta los barcos lejanos. Agregar un preamplificador como el [LNA Wideband](https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog) directamente en la base de la antena, impulsado por el Bias-Tee del RTL-SDR, te permitirá rescatar los últimos suspiros de las señales lejanas que rozan el horizonte.
+3. **Para llegar mar adentro (LNA):** A diferencia de los aviones que vuelan a 10.000 metros (y son fáciles de ver), los barcos están al nivel del mar. La curvatura de la Tierra oculta los barcos lejanos. Agregar un preamplificador como el [LNA Wideband](https://zorzalrf.empretienda.com.ar/accesorios/lna-amplificador-rtl-sdr-blog-50-4000-mhz-original) directamente en la base de la antena, impulsado por el Bias-Tee del RTL-SDR, te permitirá rescatar los últimos suspiros de las señales lejanas que rozan el horizonte.
 
 ## Software: Ais-catcher y OpenCPN
 

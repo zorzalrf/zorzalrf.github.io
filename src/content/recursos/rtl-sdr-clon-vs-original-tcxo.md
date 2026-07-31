@@ -9,7 +9,7 @@ difficulty: "Principiante"
 readingTime: 6
 ---
 
-Estás listo para entrar al mundo del SDR, entrás a buscar online y te encontrás con un dilema: ves pequeños sintonizadores de plástico genéricos (los famosos receptores DVB-T) por 5 a 10 dólares, y por otro lado ves equipos metálicos como el [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) a un precio más alto.
+Estás listo para entrar al mundo del SDR, entrás a buscar online y te encontrás con un dilema: ves pequeños sintonizadores de plástico genéricos (los famosos receptores DVB-T) por 5 a 10 dólares, y por otro lado ves equipos metálicos como el [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) a un precio más alto.
 
 Ambos usan el mismo chip base (RTL2832U). Entonces, ¿son lo mismo? ¿Vale la pena la diferencia?
 La respuesta es un rotundo **SÍ**, y la clave radica en un pequeño componente electrónico llamado **TCXO**.
@@ -30,7 +30,7 @@ Consecuencia: **Perdés la señal**. Dejás de ver aviones, perdés el satélite
 
 ## La Solución de Grado Profesional: TCXO 1PPM
 
-Para solucionar este caos, la versión original del [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) y su hermano, el [RTL-SDR V3 USB-C](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-usb-c-hfvhfuhf), reemplazan ese cristal barato por un **TCXO** (Oscilador de Cristal Compensado por Temperatura) de **1 PPM** (Parte Por Millón).
+Para solucionar este caos, la versión original del [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) y su hermano, el [RTL-SDR V3 USB-C](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-c-original), reemplazan ese cristal barato por un **TCXO** (Oscilador de Cristal Compensado por Temperatura) de **1 PPM** (Parte Por Millón).
 
 Este pequeño chip de alta precisión mide la temperatura ambiente y la de la placa, e instantáneamente corrige el cristal para que no se mueva. 
 
@@ -39,7 +39,7 @@ Este pequeño chip de alta precisión mide la temperatura ambiente y la de la pl
 ## Las otras ventajas del V3 Original
 
 Además del indispensable TCXO, comprar el equipo original garantiza:
-1. **Bias-Tee por software:** Podés encender amplificadores (como el [LNA Wideband](https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog)) enviando energía por el cable coaxial.
+1. **Bias-Tee por software:** Podés encender amplificadores (como el [LNA Wideband](https://zorzalrf.empretienda.com.ar/accesorios/lna-amplificador-rtl-sdr-blog-50-4000-mhz-original)) enviando energía por el cable coaxial.
 2. **Carcasa Metálica:** Actúa como un escudo contra las interferencias eléctricas de tu PC (las carcasas plásticas dejan entrar todo el ruido) y funciona como disipador térmico.
 3. **Muestreo Directo (Q-Branch):** Te permite escuchar onda corta (HF) por debajo de los 24 MHz, cosa que los clones no pueden hacer.
 

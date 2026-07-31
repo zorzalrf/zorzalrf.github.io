@@ -11,7 +11,7 @@ readingTime: 6
 
 A unos 400 kilómetros por encima nuestro viaja el laboratorio más rápido de la historia: la Estación Espacial Internacional (ISS). Lo que muchos ignoran es que a bordo viaja equipamiento de radioaficionado (ARISS) que transmite señales hacia la Tierra todo el tiempo.
 
-Usando tu [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf), podés sintonizar la ISS cuando pase sobre tu ciudad para escuchar a los astronautas o decodificar fotografías espaciales.
+Usando tu [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original), podés sintonizar la ISS cuando pase sobre tu ciudad para escuchar a los astronautas o decodificar fotografías espaciales.
 
 ## ¿Qué transmite la ISS?
 

@@ -19,12 +19,12 @@ Con paciencia y la amplificación correcta, un radioaficionado entusiasta puede 
 
 La energía de esta señal de radio viaja miles de años luz antes de llegar a la Tierra. Cuando alcanza tu antena, es tan, pero tan débil, que el ruido natural de tu receptor la taparía por completo. 
 
-El [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) es el corazón de nuestro radiotelescopio (porque puede sintonizar los 1420 MHz sin problemas), pero es sordo por sí solo ante señales tan profundas.
+El [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) es el corazón de nuestro radiotelescopio (porque puede sintonizar los 1420 MHz sin problemas), pero es sordo por sí solo ante señales tan profundas.
 
 ### La solución indispensable: El LNA
 
 Para que la señal del hidrógeno galáctico supere el piso de ruido de tus cables, necesitás inyectarle esteroides puros y sin ruido. 
-Acá es donde el [LNA Wideband 50-4000MHz](https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog) brilla de manera absoluta. 
+Acá es donde el [LNA Wideband 50-4000MHz](https://zorzalrf.empretienda.com.ar/accesorios/lna-amplificador-rtl-sdr-blog-50-4000-mhz-original) brilla de manera absoluta. 
 
 Por su ultra-baja "figura de ruido" (inferior a 1dB), podés conectarlo directamente en la base de la antena astronómica y encenderlo enviándole 5v por el mismo cable usando el Bias-Tee del RTL-SDR. Sin uno (o dos) de estos amplificadores instalados en cascada, la radioastronomía amateur es directamente imposible.
 
@@ -36,7 +36,7 @@ No podés usar una pequeña varilla para mirar el espacio. Necesitás área de c
 
 ## El Software de Observación
 
-Una vez que tengas tu antena apuntando hacia arriba, el [LNA](https://zorzalrf.empretienda.com.ar/accesorios/lna-wideband-50-4000mhz-rtl-sdr-blog) conectado y bajando a tu [RTL-SDR V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) en la PC, usarás software específico.
+Una vez que tengas tu antena apuntando hacia arriba, el [LNA](https://zorzalrf.empretienda.com.ar/accesorios/lna-amplificador-rtl-sdr-blog-50-4000-mhz-original) conectado y bajando a tu [RTL-SDR V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) en la PC, usarás software específico.
 
 Los programas como **SDR#** (con el plugin de promediado y FFT) o software dedicado para astronomía (como **Virgo** o programas en GNU Radio) te permiten promediar la señal durante largos minutos.
 Al hacerlo, la aleatoriedad del ruido estático se "aplasta" y una clara joroba, un pico de señal evidente, emergerá en los 1420.405 MHz. 

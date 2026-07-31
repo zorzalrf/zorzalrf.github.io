@@ -25,7 +25,7 @@ Si aún no estás familiarizado con el seguimiento de aeronaves y las tecnologí
 
 El camino más rápido desde que abres la caja hasta que envías datos:
 
-1.  **Consigue un dongle [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) y una [antena](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil)** — Un RTL-SDR Blog V3, junto a una antena VHF básica, funcionarán.
+1.  **Consigue un dongle [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) y una [antena](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil)** — Un RTL-SDR Blog V3, junto a una antena VHF básica, funcionarán.
 2.  **Prepara una Raspberry Pi o una computadora Linux** — Cualquier Raspberry Pi 3 o más reciente, o una máquina Linux x86.
 3.  **Ejecutá el instalador de Airframes:**
     ```bash

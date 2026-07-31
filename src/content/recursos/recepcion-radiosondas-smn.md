@@ -20,7 +20,7 @@ Estos dispositivos ascienden hasta 30 kilómetros de altura midiendo temperatura
 
 ## ¿Qué vas a necesitar?
 
-*   **Receptor:** Un [RTL-SDR V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf).
+*   **Receptor:** Un [RTL-SDR V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original).
 *   **Antena:** Una antena sintonizada cerca de los **403 MHz** (la banda meteorológica). Un dipolo en V cortado a medida o una antena colineal básica funcionarán perfecto.
 *   **Computadora:** Una Raspberry Pi o cualquier PC con Linux (ideal si querés dejarla encendida 24/7).
 
@@ -67,7 +67,7 @@ Ahora tenés que editar el archivo `station.cfg` (podés usar `nano station.cfg`
 
 *   `[station]` -> `callsign = TU_NOMBRE_O_LICENCIA` (El nombre que aparecerá en SondeHub).
 *   `[station]` -> `station_lat` y `station_lon` (Tus coordenadas para que el sistema calcule distancias).
-*   `[sdr]` -> `sdr_quantity = 1` (Si usás un solo [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf)).
+*   `[sdr]` -> `sdr_quantity = 1` (Si usás un solo [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original)).
 
 Una vez configurado, simplemente levantá el contenedor de Docker:
 

@@ -26,7 +26,7 @@ A diferencia del ADS-B de los aviones, el APRS opera en la banda de VHF de radio
 
 El hardware requerido es extremadamente sencillo, idéntico al que usarías para escuchar la torre de control de un aeropuerto:
 
-1. **Receptor:** El [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/receptor-rtl-sdr-blog-v3-hfvhfuhf) es el dispositivo por defecto para esta tarea.
+1. **Receptor:** El [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) es el dispositivo por defecto para esta tarea.
 2. **Antena:** La señal de los vehículos usa polarización vertical (como las antenas de techo de los autos). Ajustá las varillas de tu [Kit Antena Dipolo](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil) a aproximadamente **49 centímetros** cada una, colocalas de forma recta y **pará la antena en vertical**. Cuanto más alta la ubiques, más kilómetros a la redonda vas a cubrir.
 
 ## Cómo decodificar los datos
