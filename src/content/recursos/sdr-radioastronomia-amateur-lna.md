@@ -1,7 +1,7 @@
 ---
 title: "Radioastronomía amateur: Detectando hidrógeno galáctico desde el patio"
-description: "Convertí tu patio trasero en un observatorio astronómico. Detectá las nubes de hidrógeno neutro de la Vía Láctea usando SDR."
-publishDate: 2026-07-24
+description: "Detectá la emisión de hidrógeno neutro a 1420 MHz (la Línea del Hidrógeno) con un RTL-SDR y un LNA. Guía de radioastronomía amateur desde el patio de tu casa."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["radioastronomia", "lna", "espacio", "hidrogeno", "sdr"]
 category: "Proyectos Prácticos"
@@ -42,3 +42,10 @@ Los programas como **SDR#** (con el plugin de promediado y FFT) o software dedic
 Al hacerlo, la aleatoriedad del ruido estático se "aplasta" y una clara joroba, un pico de señal evidente, emergerá en los 1420.405 MHz. 
 
 **¡Felicidades! Estás "viendo" los misteriosos brazos de nuestra galaxia cruzar por encima de tu ciudad de forma invisible, descubriendo el universo más allá del límite de nuestros ojos.**
+
+---
+
+### 🛍️ ¿Necesitás el hardware para este proyecto?
+La radioastronomía amateur requiere el LNA de más baja figura de ruido disponible:
+- **[LNA Wideband 50-4000MHz RTL-SDR Blog](https://zorzalrf.empretienda.com.ar/accesorios/lna-amplificador-rtl-sdr-blog-50-4000-mhz-original)**
+- **[Receptor RTL-SDR Blog V3 USB-A](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original)**
