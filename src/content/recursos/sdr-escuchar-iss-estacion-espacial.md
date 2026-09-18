@@ -79,7 +79,7 @@ El modo SSTV que usa la ISS habitualmente es **PD-120** o **Robot-36**.
 ## Preguntas Frecuentes
 
 **¿Puedo escuchar la ISS cualquier día?**
-La ISS siempre está orbiting y siempre tenés pases. Pero los eventos de voz o SSTV son actividades específicas que ocurren cuando los astronautas tienen tiempo en su agenda. Fuera de esos eventos, en 145.800 MHz solo escuchás el baliza automático de telemetría.
+La ISS siempre está orbitando y siempre tenés pases. Pero los eventos de voz o SSTV son actividades específicas que ocurren cuando los astronautas tienen tiempo en su agenda. Fuera de esos eventos, en 145.800 MHz solo escuchás el baliza automático de telemetría.
 
 **¿Desde cualquier parte de Argentina?**
 Sí. La ISS pasa sobre todo el territorio argentino (aunque en Ushuaia los pases son distintos porque la inclinación orbital roza la latitud). Cada ciudad tiene su propio horario de pases; usá Heavens-Above con tus coordenadas específicas.
