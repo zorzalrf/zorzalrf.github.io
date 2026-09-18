@@ -1,7 +1,7 @@
 ---
 title: "¿Qué es HFDL? Recepción de datos aeronáuticos en Onda Corta"
-description: "Comprende cómo funciona el Enlace de Datos de Alta Frecuencia (HFDL) para rastrear aviones transoceánicos."
-publishDate: 2026-06-25
+description: "Qué es HFDL y cómo funciona el Enlace de Datos de Alta Frecuencia (HF) para rastrear aviones transoceánicos sobre el Atlántico Sur. Cómo recibir HFDL desde Argentina con RTL-SDR y dumphfdl."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["tecnología", "hfdl", "hf", "océanos"]
 category: "Aviación y ACARS"
@@ -50,4 +50,10 @@ La red HFDL es operada por estaciones distribuidas en todo el mundo. Cada estaci
 Utilizá [hfdl.observer](https://hfdl.observer/) para ver qué estaciones y frecuencias están activas en tiempo real.
 
 ## Cómo recibir y decodificar señales HFDL
-La recepción requiere un SDR capaz de sintonizar HF (con soporte nativo de HF o mediante upconverter) y una antena apropiada para HF. El software utilizado es `dumphfdl`. Una antena de hilo de al menos 10 metros, colocada lo más alto posible, es ideal para comenzar.
+La recepción requiere un SDR capaz de sintonizar HF (el [RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) con Muestreo Directo Q-Branch funciona) y una antena apropiada. El software utilizado es `dumphfdl`. Una antena de hilo de al menos 10 metros, colocada lo más alto posible, es ideal para empezar.
+
+### Frecuencias útiles desde Argentina
+
+Desde Argentina, las estaciones más accesibles son la de **Santa Cruz (Bolivia, ID 13)** y la de **Albrook (Panamá, ID 11)** para trayectos hacia Norteamérica, y la de **Johannesburgo (ID 8)** y **Canarias (ID 17)** para los vuelos transatlánticos.
+
+Usá [hfdl.observer](https://hfdl.observer/) para ver en tiempo real qué frecuencias están activas en este momento y ajustar tu `dumphfdl` en consecuencia. La propagación ionosférica cambia según la hora del día y la estación del año.

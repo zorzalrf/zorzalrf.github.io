@@ -1,7 +1,7 @@
 ---
 title: "Cómo detectar y eliminar interferencias de FM"
-description: "Uso práctico del FM Trap y filtros de banda para limpiar tu recepción de RF."
-publishDate: 2026-06-24
+description: "Las emisoras FM saturan tu SDR e impiden escuchar satélites o aviación. Aprendé a identificar la interferencia y eliminarla con un filtro FM Trap pasivo."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["soporte", "interferencia", "filtros", "fm", "fm-trap"]
 category: "Hardware y Antenas"

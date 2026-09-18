@@ -1,7 +1,7 @@
 ---
 title: "Empezando con Airframes.io"
-description: "Guía de inicio para comenzar a capturar y enviar datos ACARS a la red de Airframes. Conoce las opciones de instalación más recomendadas."
-publishDate: 2026-06-25
+description: "Guía de inicio para comenzar a capturar y enviar datos ACARS a la red de Airframes. Conocé las opciones de instalación más recomendadas y el inicio rápido en un solo comando."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["tutorial", "airframes", "acars", "vdl2", "hfdl", "rtl-sdr"]
 category: "Guías Airframes"
@@ -23,10 +23,10 @@ Si aún no estás familiarizado con el seguimiento de aeronaves y las tecnologí
 
 ## Inicio Rápido
 
-El camino más rápido desde que abres la caja hasta que envías datos:
+El camino más rápido desde que abrís la caja hasta que estás enviando datos:
 
 1.  **Consigue un dongle [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) y una [antena](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil)** — Un RTL-SDR Blog V3, junto a una antena VHF básica, funcionarán.
-2.  **Prepara una Raspberry Pi o una computadora Linux** — Cualquier Raspberry Pi 3 o más reciente, o una máquina Linux x86.
+2.  **Prepará una Raspberry Pi o una computadora Linux** — Cualquier Raspberry Pi 3 o más reciente, o una máquina Linux x86.
 3.  **Ejecutá el instalador de Airframes:**
     ```bash
     curl -sSL https://install.airframes.sh/installer | bash
@@ -61,9 +61,9 @@ Compilá y configurá cada decodificador desde el código fuente. Esto te da el 
 
 ## Pasos para Empezar
 
-1.  **Determina qué tipo de sistema deseás configurar** — Comenzá con un solo SDR para VHF ACARS o VDL2, y luego expándelo.
-2.  **Adquiere las partes** — Un SDR, una antena y una computadora para ejecutar todo.
-3.  **Instalá el software** — Usá uno de los caminos mencionados arriba.
+1.  **Determiná qué tipo de sistema querés configurar** — Empezá con un solo SDR para VHF ACARS o VDL2, y después expandílo.
+2.  **Adquirí las partes** — Un SDR, una antena y una computadora para ejecutar todo.
+3.  **Installá el software** — Usá uno de los caminos mencionados arriba.
 4.  **Configurá las frecuencias para tu región** — Las guías de cada decodificador incluyen listas de frecuencias específicas por región.
 5.  **Envía los datos a Airframes** — Apunta la salida de tu decodificador a los [puntos de entrada/ingesta de Airframes](https://docs.airframes.io/docs/feeding/how#direct-feeding-from-decoders).
 6.  **Verificá en app.airframes.io** — Confirma que tu estación aparece y que se están recibiendo mensajes en [app.airframes.io/stations](https://app.airframes.io/stations).

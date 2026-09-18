@@ -2,6 +2,7 @@
 title: "Cómo mejorar tu recepción ADS-B y ver aviones a cientos de kilómetros"
 description: "Pasá de ver solo el tráfico local a recibir aviones a 400 kilómetros de distancia optimizando tu antena, filtrado y amplificación en 1090 MHz."
 publishDate: 2026-07-24
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["ads-b", "antenas", "filtros", "lna", "aviones"]
 category: "Hardware y Antenas"
@@ -52,3 +53,11 @@ Este kit resuelve todos los problemas de una vez:
 * **Cable coaxial KMR-240** de bajísima pérdida, para que la señal no muera en el trayecto de bajada.
 
 Combinando este kit con un cielo despejado, tu mapa de aviones explotará de tráfico de la noche a la mañana.
+
+---
+
+### 🛍️ ¿Necesitás el hardware para este proyecto?
+Aqui tenés los componentes exactos para maximizar tu alcance ADS-B:
+- **[Kit ADS-B 1090 MHz Profesional: Antena + Filtro + Cable](https://zorzalrf.empretienda.com.ar/antenas/estacion-ads-b-zorzal-rf-antena-cable-filtro)**
+- **[LNA Wideband 50-4000MHz RTL-SDR Blog](https://zorzalrf.empretienda.com.ar/accesorios/lna-amplificador-rtl-sdr-blog-50-4000-mhz-original)**
+- **[Receptor RTL-SDR Blog V3 USB-A](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original)**

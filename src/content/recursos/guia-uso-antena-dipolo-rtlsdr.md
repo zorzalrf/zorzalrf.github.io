@@ -1,7 +1,7 @@
 ---
 title: "Guía de Uso: Kit de Antena Dipolo RTL-SDR"
-description: "Aprendé a utilizar el kit de antena dipolo multipropósito de RTL-SDR Blog. Orientación, longitud y configuraciones especiales para satélites."
-publishDate: 2026-06-25
+description: "Guía oficial traducida del Kit de Antena Dipolo RTL-SDR Blog. Orientación, longitudes por frecuencia, configuración V-Dipole para satélites y consejos de montaje."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["tutorial", "antena", "dipolo", "rtl-sdr", "v-dipole"]
 category: "Hardware y Antenas"

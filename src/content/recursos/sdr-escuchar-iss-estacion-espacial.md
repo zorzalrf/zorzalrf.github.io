@@ -1,7 +1,7 @@
 ---
 title: "Escuchando a los Astronautas: Cómo sintonizar la Estación Espacial Internacional (ISS)"
 description: "Descubrí cómo captar conversaciones de los astronautas y descargar las imágenes conmemorativas SSTV que la ISS transmite hacia la Tierra."
-publishDate: 2026-07-24
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["iss", "espacio", "sstv", "astronautas", "sdr"]
 category: "Proyectos Prácticos"
@@ -42,3 +42,9 @@ Si hay un evento SSTV programado:
 3. El programa empezará a "pintar" la foto en tu pantalla línea por línea como si fuera una impresora en tiempo real. 
 
 ¡Es una de las experiencias más emocionantes para estrenar tu equipo SDR!
+
+---
+
+### 🛍️ ¿Necesitás el hardware para este proyecto?
+Sintonizá la ISS la próxima vez que pase sobre tu ciudad:
+- **[Kit RTL-SDR Blog V3 + Antena Dipolo - SDR Completo](https://zorzalrf.empretienda.com.ar/sdrs/kit-receptor-rtl-sdr-blog-v3-usb-a-con-antena-dipolo)**

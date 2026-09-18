@@ -1,7 +1,7 @@
 ---
 title: "¿Qué es VDL Mode 2? Evolución de las comunicaciones aeronáuticas"
-description: "Aprendé qué es VDL Mode 2, en qué se diferencia del ACARS original y qué frecuencias debés sintonizar."
-publishDate: 2026-06-25
+description: "VDL Mode 2 es el sucesor digital del ACARS original: 13 veces más rápido a 31.500 bps y decodificable con dumpvdl2. Frecuencias, diferencias con POA y cómo recibirlo con SDR."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["tecnología", "vdl2", "vhf", "dumpvdl2"]
 category: "Aviación y ACARS"
@@ -52,3 +52,16 @@ VDL2 opera en canales dedicados dentro de la banda de aviación VHF. El Canal Co
 
 ## Guía de recepción y decodificación de VDL Mode 2
 La recepción de VDL2 utiliza la misma antena VHF y el mismo hardware [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) que el ACARS tradicional. El decodificador recomendado es `dumpvdl2`, que puede procesar múltiples canales simultáneamente.
+
+### Frecuencias más activas en Argentina
+
+En Argentina y la región, las frecuencias de VDL2 con mayor tráfico son:
+- **136.975 MHz** (Canal CSC — obligatorio para todos los aviones que usen VDL2)
+- **136.800 MHz** (Canal SITA con mucha actividad en Latinoamérica)
+- **136.700 MHz** (Canal ARINC, tráfico transatlántico)
+
+Usá `dumpvdl2` con múltiples frecuencias simultáneas con el flag `--vdl2-freq`:
+```bash
+dumpvdl2 --rtlsdr 0 136700000 136800000 136975000
+```
+[Ver guía de instalación de dumpvdl2 →](/recursos/instalar-dumpvdl2)

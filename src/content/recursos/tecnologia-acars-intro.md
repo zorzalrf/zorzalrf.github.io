@@ -1,7 +1,7 @@
 ---
 title: "¿Qué es el sistema ACARS? Guía introductoria para radioescuchas"
-description: "Comprende qué es ACARS, qué datos transmite y las frecuencias que utiliza."
-publishDate: 2026-06-25
+description: "Qué es ACARS, qué datos transmiten los aviones y cuáles son las frecuencias principales a sintonizar en Argentina (131.550 y 131.725 MHz)."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["tecnología", "acars", "vhf", "poa"]
 category: "Aviación y ACARS"
@@ -52,4 +52,14 @@ VHF ACARS opera en frecuencias dedicadas dentro de la banda de aviación VHF.
 > **Consejo:** No necesitás monitorear todas las frecuencias. Empezá con 131.550 y 131.725. Estas dos transportan la mayoría del tráfico a nivel mundial.
 
 ## Cómo recibir mensajes ACARS con tu SDR
-ACARS VHF es el punto de entrada más sencillo. Solo necesitás un dongle SDR básico y una [antena](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil) VHF junto con el software `acarsdec`.
+ACARS VHF es el punto de entrada más sencillo. Solo necesitás un [RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) y una [antena VHF](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil) junto con el software `acarsdec`.
+
+### Ejemplo de comando para Argentina
+
+Para monitorear las dos frecuencias principales en Argentina simultáneamente:
+```bash
+acarsdec -r 0 131.550 131.725
+```
+
+[Ver guía completa de decodificación ACARS →](/recursos/acars)
+[Ver guía de instalación de acarsdec →](/recursos/instalar-acarsdec)

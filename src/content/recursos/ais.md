@@ -1,10 +1,10 @@
 ---
-title: "Cómo monitorear el Tráfico Marítimo (AIS) con tu SDR"
-description: "Cómo utilizar tu receptor SDR para rastrear barcos y embarcaciones comerciales a lo largo de la costa."
-publishDate: 2026-06-18
+title: "Cómo rastrear barcos con SDR: recepción AIS en Argentina"
+description: "Guía paso a paso para rastrear buques y embarcaciones en tiempo real con un RTL-SDR. Frecuencias, antena a 162 MHz y software AIS-catcher para el Río de la Plata y costas argentinas."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
-tags: ["sdr", "ais", "barcos", "vhf", "tutorial"]
-category: "Satelital y Avanzado"
+tags: ["sdr", "ais", "barcos", "vhf", "tutorial", "argentina", "maritimo"]
+category: "Proyectos Prácticos"
 difficulty: "Intermedio"
 readingTime: 5
 ---

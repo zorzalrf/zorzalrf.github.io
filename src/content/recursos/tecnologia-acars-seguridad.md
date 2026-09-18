@@ -1,7 +1,7 @@
 ---
 title: "Seguridad y Privacidad en las comunicaciones aeronáuticas (ACARS)"
-description: "Conoce por qué ACARS no cuenta con encriptación y cómo afecta esto a la seguridad y la privacidad en el entorno aeronáutico."
-publishDate: 2026-06-25
+description: "ACARS no tiene encriptación: cualquier persona con un SDR puede leer los mensajes de los aviones. Entendé los riesgos de privacidad y seguridad en las comunicaciones aereonáuticas."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["seguridad", "privacidad", "acars", "encriptación"]
 category: "Aviación y ACARS"
