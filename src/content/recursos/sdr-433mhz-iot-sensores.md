@@ -1,44 +1,137 @@
 ---
-title: "Interceptando 433 MHz: Hackeando sensores y estaciones meteorológicas"
-description: "Descubrí el mundo invisible de la Internet de las Cosas (IoT). Decodificá termómetros, controles remotos y sensores de neumáticos en tu barrio."
-publishDate: 2026-07-24
+title: "Interceptando 433 MHz: Decodificando sensores y dispositivos IoT"
+description: "La banda ISM de 433 MHz está llena de datos sin encriptación. Con rtl_433 podés decodificar estaciones meteorológicas, sensores TPMS de autos y controles remotos de tu vecindario en minutos."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
-tags: ["433mhz", "iot", "rtl_433", "sensores", "sdr"]
+tags: ["433mhz", "iot", "rtl_433", "sensores", "sdr", "seguridad", "argentina"]
 category: "Proyectos Prácticos"
 difficulty: "Principiante"
-readingTime: 6
+readingTime: 7
 ---
 
-Vivimos rodeados de una red invisible de datos. La banda ISM (Industrial, Científica y Médica) centrada en **433.92 MHz** (y también en 315 MHz o 868 MHz según el país) es el "salvaje oeste" de las telecomunicaciones a corta distancia.
+La banda **ISM** (Industrial, Científica y Médica) centrada en **433.92 MHz** es el "salvaje oeste" de las telecomunicaciones a corta distancia. Al no requerir licencias, los fabricantes la utilizan para que sus dispositivos transmitan ráfagas de datos libremente: termómetros, sensores de lluvia, alarmas de autos, llaves de portones y decenas de dispositivos más gritando su información al aire, **sin ningún tipo de encriptación**.
 
-Al no requerir licencias, los fabricantes la usan para transmitir ráfagas digitales de información desde todo tipo de dispositivos cotidianos. Usando tu computadora y tu SDR, podés interceptar y leer estos datos que viajan libremente por el aire en tu vecindario.
+Con un [RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) y un programa de código abierto llamado `rtl_433`, podés interceptar y leer todos esos datos en tiempo real. Es uno de los proyectos de iniciación más impresionantes por la cantidad de datos que encontrás en el primer minuto de uso.
 
-## ¿Qué podés escuchar en 433 MHz?
+## ¿Qué podés decodificar en 433 MHz?
 
-Si dejás tu SDR monitoreando esta frecuencia durante unas horas, te vas a sorprender de la cantidad de dispositivos que están "gritando" sus datos al viento sin ninguna encriptación:
+La diversidad de protocolos en 433 MHz es enorme. `rtl_433` tiene soporte para **más de 200 tipos de dispositivos** de marcas como Acurite, Oregon Scientific, Bresser, Texas Instruments y cientos más. En un barrio argentino típico, vas a encontrar:
 
-1. **Estaciones meteorológicas hogareñas:** La base inalámbrica que el vecino puso en el patio transmite la temperatura, humedad y velocidad del viento.
-2. **Sensores TPMS de autos:** Las válvulas de las ruedas de los autos modernos transmiten por radio la presión de las gomas a la computadora del vehículo mientras pasan por la calle.
-3. **Llaves (Keyfobs) y controles de portones:** Alarmas de autos antiguas, portones eléctricos y timbres inalámbricos.
-4. **Sensores de consumo eléctrico:** Medidores inteligentes que reportan el consumo de luz.
+### Estaciones Meteorológicas Hogareñas
+Las consolas de clima inalámbricas (como las de Oregon Scientific o Acurite) tienen un sensor exterior que transmite cada 30-60 segundos:
+- Temperatura en tiempo real (al 0.1°C)
+- Humedad relativa
+- Velocidad y dirección del viento (en modelos más completos)
+- Lluvia acumulada
 
-## El hardware necesario
+En un barrio densamente poblado, es común encontrar 5-10 estaciones meteorológicas activas de los vecinos.
 
-Dado que estas señales son de baja potencia (para no gastar las pilas de los sensores) y de alta frecuencia (ondas cortas), cualquier [Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) funciona a la perfección.
+### Sensores TPMS de Neumáticos
+Los autos modernos (desde 2012 en adelante, por regulación europea) tienen **sensores de presión de neumáticos** (TPMS) que transmiten por radio a la computadora del vehículo. Cada vez que un auto pasa por la calle, sus cuatro ruedas están transmitiendo:
+- Presión de cada neumático (en PSI o kPa)
+- Temperatura del neumático
+- Estado de la batería del sensor
+- ID único del sensor
 
-Para la antena, el [Kit Antena Dipolo Multipropósito](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil) es ideal. Simplemente ajustá las dos varillas a unos **17 centímetros** de largo cada una (sintonizadas a 433 MHz), colocalas de forma recta y dejalas sobre tu escritorio o cerca de una ventana.
+Esto es fascinante desde el punto de vista de seguridad: es posible identificar un vehículo específico por el ID único de sus sensores TPMS.
 
-## rtl_433: La herramienta mágica
+### Controles Remotos y Alarmas
+Las llaves de autos (keyfobs), timbres inalámbricos, alarmas perimetrales y sensores de movimiento sin cable suelen usar la banda 433 MHz. Con `rtl_433` podés ver qué dispositivos están activos alrededor tuyo.
 
-No hace falta ser un experto en criptografía para leer estos datos. La comunidad ha creado un software de código abierto legendario llamado **rtl_433**.
+### Medidores Inteligentes de Energía
+Algunos medidores eléctricos de consumo inteligentes (smart meters) transmiten en esta banda, reportando el consumo energético periódicamente.
 
-Este programa es tan simple como abrir la consola de tu computadora y ejecutar el comando `rtl_433`. 
-Instantáneamente, el programa tomará el control de tu SDR, sintonizará la frecuencia correcta, y empezará a "escupir" texto en tu pantalla cada vez que detecte una transmisión.
+## Hardware Necesario
 
-Verás líneas aparecer de la nada como:
+Cualquier [RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original) funciona a la perfección para esta tarea. Las señales de 433 MHz son relativamente fuertes (los dispositivos están pensados para funcionar en interiores) y no necesitás equipos sofisticados.
+
+Para la antena, usá el [Kit Antena Dipolo Multipropósito](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil):
+1. Enroscá las varillas de longitud media.
+2. Extendé cada brazo hasta **17 centímetros** (longitud de resonancia a 433 MHz).
+3. Colocá la antena vertical cerca de una ventana.
+
+Con esta configuración básica, vas a ver decenas de dispositivos activos en un barrio residencial normal.
+
+## rtl_433: La herramienta de referencia
+
+**[rtl_433](https://github.com/merbanan/rtl_433)** es un proyecto de código abierto que combina un demodulador SDR, un motor de decodificación de protocolos y una base de datos de 200+ dispositivos conocidos. Es el estándar de facto de la comunidad para análisis de 433 MHz.
+
+### Instalación
+
+**Windows:** Descargá el ejecutable precompilado desde la sección [Releases](https://github.com/merbanan/rtl_433/releases) del repositorio de GitHub.
+
+**Linux (Ubuntu/Debian/Raspberry Pi):**
+```bash
+sudo apt-get install rtl_433
 ```
-[Sensor de temperatura] Modelo: Acurite-Tower ID: 1542 Temp: 22.4 C Humedad: 45%
-[Sensor TPMS auto] Marca: Ford Presión: 32 PSI Batería: OK
+
+**macOS (Homebrew):**
+```bash
+brew install rtl_433
 ```
 
-Es uno de los proyectos de entrada más divertidos para quienes se inclinan por el lado del *hacking* ético, el Internet de las Cosas y la domótica, demostrando que en el aire de la ciudad, los secretos vuelan libres.
+### Uso básico
+
+Simplemente ejecutá en la consola:
+```bash
+rtl_433
+```
+
+El programa tomará control automáticamente del RTL-SDR, sintonizará la frecuencia central de 433.92 MHz, y comenzará a mostrar dispositivos detectados:
+
+```
+[Acurite-Tower] id: 1542  channel: B  battery_ok: 1
+    temperature_C: 22.4  humidity: 65
+
+[TPMS] type: Renault  id: 0xA3B2C1D0  
+    pressure_kPa: 221.0  temperature_C: 28  flags: 00
+
+[Bresser-3CH] id: 9  channel: 1  battery_ok: 1
+    temperature_C: 19.7  humidity: 71
+```
+
+### Opciones útiles
+
+```bash
+# Monitorear en frecuencia específica
+rtl_433 -f 433920000
+
+# Exportar datos a JSON para análisis posterior
+rtl_433 -F json > datos_433.json
+
+# Modo verbose: ver todos los paquetes, incluyendo los no reconocidos
+rtl_433 -v
+
+# Escanear múltiples frecuencias ISM (433, 868, 315 MHz)
+rtl_433 -f 433.92M -f 868.3M -f 315M
+```
+
+## Integración con Home Assistant
+
+Una de las aplicaciones más populares de `rtl_433` es integrar los datos de las estaciones meteorológicas del vecindario en **Home Assistant** (el sistema de automatización del hogar):
+
+1. Ejecutá `rtl_433` con salida MQTT.
+2. Configurá Home Assistant para escuchar el topic MQTT de tu sensor favorito.
+3. Tus dashboards de casa ahora pueden mostrar la temperatura del jardín del vecino en lugar de (o además de) la tuya.
+
+Esta integración requiere un broker MQTT (como Mosquitto) y está más allá del alcance de esta guía, pero hay excelente documentación en la comunidad de Home Assistant y `rtl_433`.
+
+---
+
+## Preguntas Frecuentes
+
+**¿Es legal decodificar estas señales?**
+La radioescucha pasiva es legal en Argentina. Los dispositivos ISM de 433 MHz transmiten datos en abierto deliberadamente (no tienen encriptación). Sin embargo, **usar esa información para perjudicar a alguien** (ej. clonar una llave de auto para robo) está prohibido por el Código Penal. Descifrar la señal por curiosidad técnica y educativa es completamente legítimo.
+
+**¿Puedo detectar si alguien me está "espiando" con este método?**
+Al contrario: este método es pasivo y solo recibe. No hay forma de que el dueño del dispositivo sepa que lo estás escuchando. Lo que sí podés hacer es revisar qué sensores propios tuyos están transmitiendo y qué información revelan.
+
+**¿Puedo también transmitir en 433 MHz?**
+Para transmitir necesitás hardware adicional (un módulo transmisor de 433 MHz o un HackRF/LimeSDR). Además, hacerlo sin seguir las regulaciones de potencia y uso de la banda ISM puede generar interferencias. El RTL-SDR es solo receptor.
+
+---
+
+### 🛍️ ¿Necesitás el hardware para este proyecto?
+Empezá a escanear la banda ISM 433 MHz con el hardware recomendado:
+- **[Receptor RTL-SDR Blog V3 USB-A](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original)**
+- **[Kit Antena Dipolo Multipropósito para SDR](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil)**
