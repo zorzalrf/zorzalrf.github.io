@@ -1,7 +1,7 @@
 ---
 title: "Guía de instalación y configuración de dumphfdl"
-description: "Aprendé a compilar y ejecutar dumphfdl para rastrear aviones utilizando la tecnología HFDL a nivel mundial."
-publishDate: 2026-06-25
+description: "Guía completa para compilar e instalar dumphfdl en Linux y Raspberry Pi. Rastré aviones transoceánicos sobre el Atlántico Sur usando HFDL y compartir los datos con Airframes.io."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["tutorial", "dumphfdl", "instalación", "linux", "hfdl"]
 category: "Aviación y ACARS"

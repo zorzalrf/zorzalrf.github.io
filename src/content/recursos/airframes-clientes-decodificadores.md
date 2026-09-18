@@ -1,7 +1,7 @@
 ---
 title: "Clientes Decodificadores para Airframes: Guía completa"
-description: "Conoce los diferentes clientes de software decodificador compatibles con la red de Airframes.io para ACARS, VDL2 y HFDL."
-publishDate: 2026-06-25
+description: "Conocé los diferentes clientes de software decodificador compatibles con la red de Airframes.io: acarsdec, dumpvdl2, dumphfdl, JAERO e iridium-toolkit. Cuál usar para cada banda y cómo instalarlos."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["decodificadores", "acarsdec", "dumpvdl2", "dumphfdl", "software", "airframes"]
 category: "Guías Airframes"

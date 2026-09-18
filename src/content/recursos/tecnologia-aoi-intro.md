@@ -1,7 +1,7 @@
 ---
 title: "¿Qué es AoI (ACARS sobre Iridium)? Guía paso a paso"
-description: "Cómo la constelación de satélites Iridium proporciona conectividad ACARS global y cómo podés decodificarla."
-publishDate: 2026-06-25
+description: "AoI (ACARS sobre Iridium): cómo la constelación de 66 satélites LEO Iridium da cobertura ACARS global incluyendo los polos, y cómo decodificarla con iridium-toolkit y iridium-sniffer."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["tecnología", "iridium", "aoi", "satcom"]
 category: "Aviación y ACARS"

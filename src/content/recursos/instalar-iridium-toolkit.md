@@ -1,7 +1,7 @@
 ---
 title: "Cómo instalar y usar Iridium Toolkit para decodificar satélites"
 description: "Cómo decodificar ráfagas de satélite Iridium usando iridium-sniffer e iridium-toolkit en Linux."
-publishDate: 2026-06-25
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["tutorial", "iridium", "satélite", "linux"]
 category: "Satelital y Avanzado"
@@ -66,4 +66,4 @@ iridium-sniffer -d driver=rtlsdr 2>/dev/null | python3 iridium-parser.py
 *   **[Antena](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil)**: Una antena omnidireccional Banda L con vista despejada al cielo.
 *   **[LNA](https://zorzalrf.empretienda.com.ar/accesorios/lna-amplificador-rtl-sdr-blog-50-4000-mhz-original)**: Se recomienda encarecidamente un amplificador de bajo ruido (LNA) para el rango de 1.6 GHz (ej. Nooelec SAWbird+ IR).
 
-> **Nota:** La decodificación Iridium es más avanzada que VHF ACARS o VDL2. Si recién comienzas con Airframes, considera empezar primero con `acarsdec` o `dumpvdl2`.
+> **Nota:** La decodificación Iridium es más avanzada que VHF ACARS o VDL2. Si recién empézas con Airframes, considerá empezar primero con `acarsdec` o `dumpvdl2`.

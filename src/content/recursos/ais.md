@@ -43,6 +43,7 @@ Bajo condiciones normales, y con una antena instalada en el techo de tu casa, po
 ---
 
 ### 🛒 ¿Necesitás el hardware para este proyecto?
-Monitoreá el tráfico marítimo configurando nuestra antena dipolo a 162 MHz:
+Monitorear el tráfico marítimo del Río de la Plata y las costas argentinas:
 - **[Kit Antena Dipolo Multipropósito para SDR - Portátil y Versátil](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil)**
-- **[Receptor RTL-SDR Blog V3 USB-C](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-c-original)**
+- **[Receptor RTL-SDR Blog V3 USB-A](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original)**
+- **[LNA Wideband 50-4000MHz RTL-SDR Blog](https://zorzalrf.empretienda.com.ar/accesorios/lna-amplificador-rtl-sdr-blog-50-4000-mhz-original)** — Para alcanzar barcos más allá del horizonte

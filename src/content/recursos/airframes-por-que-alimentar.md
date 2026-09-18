@@ -1,7 +1,7 @@
 ---
 title: "Por qué deberías compartir tus datos SDR con la comunidad"
 description: "Descubrí por qué tu contribución a la red de Airframes.io es importante y cómo ayuda a la comunidad."
-publishDate: 2026-06-25
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["airframes", "feed", "comunidad", "adsbexchange"]
 category: "Guías Airframes"
@@ -15,13 +15,13 @@ order: 2
   <p><strong>Basado en la documentación oficial de airframes.io.</strong><br/>Traducido y adaptado por el equipo técnico de Zorzal RF para la comunidad hispanohablante.</p>
 </div>
 
-Cada usuario que comparte datos (*feeder*) fortalece la red. He aquí por qué tu contribución importa:
+Cada usuario que comparte datos (*feeder*) fortalece la red. Estas son las razones por las que tu contribución importa:
 
 **1. Se siente bien devolver a la comunidad que te ha aportado.**
 Es una forma relativamente sencilla de agregar valor real al esfuerzo global del proyecto y apoyar a la comunidad conformada por personas como vos. Se siente bien apoyar a los demás.
 
 **2. Es barato o "gratis" compartir datos.**
-Incluso si no estás en posición de contribuir al proyecto económica o temporalmente, compartir tus datos no te cuesta nada. Ya has pagado por la computadora, el SDR y el acceso a Internet, así que enviar pequeños paquetes de datos a los servidores de agregación no te afectará. No consumirá más de tu tiempo (una vez que lo configures) y no requerirá ningún pago.
+Incluso si no estás en posición de contribuir al proyecto económica o temporalmente, compartir tus datos no te cuesta nada. Ya pagaste por la computadora, el SDR y el acceso a Internet, así que enviar pequeños paquetes de datos a los servidores de agregación no te va a afectar. No va a consumir más de tu tiempo (una vez que lo configurés) y no requiere ningún pago.
 
 **3. Tus datos mejoran y corrigen los datos de otros cerca tuyo.**
 Incluso si hay otros en tu ciudad o región compartiendo datos a [Airframes](https://airframes.io/) u otros servicios, vos ayudarás a rellenar los huecos donde falten detalles, y contribuirás a filtrar datos erróneos o completamente inválidos.
@@ -35,5 +35,5 @@ Los datos de servicios de agregación como [ADSBExchange](https://adsbexchange.c
 **6. Potencialmente ayudarás a investigar accidentes.**
 A veces los aviones se estrellan o desaparecen. Si bien la investigación oficial implica recuperar la caja negra y obtener datos oficiales, los curiosos o los medios que cubren estos accidentes a menudo desean tener acceso a este tipo de datos. [Airframes](https://airframes.io/) recopila información de sus *feeders* que a menudo cuenta una historia mucho más amplia sobre el trayecto de la aeronave, y cuantos más *feeders* proporcionen datos, mayores serán las posibilidades de descubrir toda la historia.
 
-**7. En el fondo, no podemos hacerlo sin ti.**
-Sos una gran pieza de este rompecabezas. Sin ti aportando datos desde tu región, no podemos lograr la claridad de las rutas de vuelo de extremo a extremo que todos necesitamos. Ayuda convirtiéndote en el eslabón perdido.
+**7. En el fondo, no podemos hacerlo sin vos.**
+Sos una gran pieza de este rompecabezas. Sin vos aportando datos desde tu región, no podemos lograr la claridad de las rutas de vuelo de extremo a extremo que todos necesitamos. Ayudá convirtiéndote en el eslabón perdido.
