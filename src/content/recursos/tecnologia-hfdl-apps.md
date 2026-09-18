@@ -1,7 +1,7 @@
 ---
 title: "Aplicaciones y Utilidades para HFDL"
-description: "Herramientas creadas por la comunidad para facilitar el seguimiento de frecuencias y el manejo de múltiples receptores HFDL."
-publishDate: 2026-06-25
+description: "hfdlobserver, hfdl.observer y ACARS Hub: herramientas esenciales para gestionar múltiples receptores HFDL y optimizar la selección de frecuencias según la propagación ionosférica."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["herramientas", "hfdl", "software", "dumphfdl"]
 category: "Aviación y ACARS"
