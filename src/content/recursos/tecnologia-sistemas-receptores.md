@@ -1,7 +1,7 @@
 ---
 title: "Sistemas y Equipos Receptores para Monitoreo de Aviación"
-description: "Guía sobre cómo elegir y combinar dispositivos SDR para recibir diferentes señales y frecuencias de forma simultánea."
-publishDate: 2026-06-25
+description: "Cuántos SDRs necesitás y cómo combinarlos para recibir ACARS, VDL2 y HFDL simultáneamente. Guía de configuraciones de 1 a 4+ receptores para monitoreo de aviación."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["hardware", "receptores", "sdr", "configuración"]
 category: "Aviación y ACARS"

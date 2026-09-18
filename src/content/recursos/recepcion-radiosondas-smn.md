@@ -1,12 +1,12 @@
 ---
-title: "Recepción de Radiosondas del SMN"
-description: "Aprendé a rastrear y decodificar automáticamente globos meteorológicos del Servicio Meteorológico Nacional usando radiosonde_auto_rx y SondeHub."
-publishDate: 2026-06-25
+title: "Recepción de Radiosondas del SMN con RTL-SDR: guía completa"
+description: "Seguí en tiempo real los globos meteorológicos del Servicio Meteorológico Nacional (SMN) con un RTL-SDR. Instalación de radiosonde_auto_rx, frecuencias de 400-406 MHz y cómo aparecer en el mapa mundial SondeHub."
+publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
-tags: ["tutorial", "radiosondas", "smn", "sondehub", "rtl-sdr", "rs41"]
+tags: ["tutorial", "radiosondas", "smn", "sondehub", "rtl-sdr", "rs41", "argentina"]
 category: "Satelital y Avanzado"
 difficulty: "Intermedio"
-readingTime: 10
+readingTime: 12
 ---
 
 <div class="attribution">
@@ -14,77 +14,126 @@ readingTime: 10
   <p><strong>Basado en la documentación oficial de projecthorus/radiosonde_auto_rx.</strong><br/>Traducido y adaptado por el equipo técnico de Zorzal RF para la comunidad hispanohablante.</p>
 </div>
 
-¿Alguna vez miraste al cielo y te preguntaste cómo se obtienen los datos para el pronóstico del clima? Todos los días, el **Servicio Meteorológico Nacional (SMN)** y otros organismos de la región lanzan globos meteorológicos equipados con pequeños transmisores de radio llamados **radiosondas**. 
+Todos los días, a las 9 AM y a las 9 PM hora argentina, el **Servicio Meteorológico Nacional (SMN)** lanza globos meteorológicos equipados con pequeños transmisores de radio llamados **radiosondas**. Estos globos ascienden hasta 30.000 metros de altura midiendo temperatura, humedad y presión atmosférica en cada capa, mientras transmiten su posición GPS y telemetría por radio en la banda de **400-406 MHz**.
 
-Estos dispositivos ascienden hasta 30 kilómetros de altura midiendo temperatura, humedad y presión, mientras transmiten su posición GPS y telemetría por radio. Con un simple RTL-SDR, ¡podés interceptar esa señal, decodificarla y seguir el vuelo en tiempo real!
+Con un [RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original), una antena VHF/UHF y el software correcto, podés interceptar esa señal, decodificarla y seguir el vuelo del globo en tiempo real en un mapa. Muchos entusiastas van un paso más allá: **salen a buscar y recuperar la sonda cuando el globo explota**.
 
-## ¿Qué vas a necesitar?
+## ¿Cómo funciona el sistema?
 
-*   **Receptor:** Un [RTL-SDR V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original).
-*   **Antena:** Una antena sintonizada cerca de los **403 MHz** (la banda meteorológica). Un dipolo en V cortado a medida o una antena colineal básica funcionarán perfecto.
-*   **Computadora:** Una Raspberry Pi o cualquier PC con Linux (ideal si querés dejarla encendida 24/7).
+A medida que el globo asciende:
+1. La sonda mide datos atmosféricos (temperatura, presión, humedad relativa)
+2. El GPS integrado reporta la posición con precisión de metros
+3. Un transmisor de baja potencia (unos 60 mW) emite estos datos continuamente
+4. Desde tierra, receptores como el tuyo decodifican la señal y publican los datos
 
-## Las Radiosondas en Argentina (SMN)
+Gracias a que los globos suben a más de 30.000 metros, tienen **línea de visión directa** con un radio enorme. Podés recibir la señal de un globo lanzado en Córdoba estando en Rosario, o un globo de Ezeiza estando en Mar del Plata.
 
-En Argentina, el SMN realiza lanzamientos desde varias estaciones distribuidas por el país (como Ezeiza, Córdoba, Mendoza, Comodoro Rivadavia, entre otras). 
+## Radiosondas en Argentina: Datos para comenzar
 
-*   **Horarios:** Por lo general, los lanzamientos globales sincronizados se realizan cerca de las **12:00 UTC** (09:00 AM hora local) y a veces a las **00:00 UTC** (09:00 PM hora local).
-*   **Modelo:** El modelo más utilizado actualmente es la **Vaisala RS41**, una sonda moderna y muy fácil de decodificar.
-*   **Frecuencias:** Transmiten en la banda UHF, estrictamente entre **400 MHz y 406 MHz**.
+### Estaciones de lanzamiento del SMN
+El SMN lanza globos desde varias estaciones distribuidas en el país:
 
-Dado que los globos suben a más de 30.000 metros de altura, tienen línea de visión directa. ¡Podés recibir la señal de una radiosonda que está a más de 300 o 400 kilómetros de distancia de tu casa!
+| Estación | Provincia | Coordenadas aprox. |
+|---|---|---|
+| Ezeiza | Buenos Aires | 34.8°S, 58.5°W |
+| Córdoba | Córdoba | 31.3°S, 64.2°W |
+| Mendoza | Mendoza | 32.8°S, 68.8°W |
+| Resistencia | Chaco | 27.4°S, 59.0°W |
+| Comodoro Rivadavia | Chubut | 45.8°S, 67.5°W |
+| Santa Rosa | La Pampa | 36.6°S, 64.3°W |
 
-## SondeHub: El "FlightRadar" de los Globos
+### Horarios de lanzamiento
+- **00:00 UTC (21:00 hs ARG en verano / 21:00 hs ARG en invierno)**
+- **12:00 UTC (09:00 hs ARG en verano / 09:00 hs ARG en invierno)**
 
-Así como alimentás datos de aviones a Airframes o FlightAware, la comunidad de radioaficionados usa [SondeHub](https://sondehub.org/). Es un mapa global en tiempo real donde podés ver todas las radiosondas en vuelo. 
+Estos horarios están sincronizados con la red meteorológica mundial (WMO). Hay días en que se hacen lanzamientos adicionales en situaciones meteorológicas especiales.
 
-Tu objetivo al configurar tu estación será recibir los datos del SMN y enviarlos automáticamente a SondeHub para que todos puedan ver el trayecto y predecir dónde va a caer la sonda una vez que el globo explote. (¡Sí, mucha gente las sale a cazar o recuperar al campo!).
+### Frecuencias de operación
+Las radiosondas transmiten en la **banda UHF meteorológica** entre **400 y 406 MHz**. El modelo más usado actualmente en Argentina es la **Vaisala RS41**, que típicamente usa frecuencias entre 402 y 406 MHz.
 
-## La Magia de `radiosonde_auto_rx`
+Dado que la frecuencia exacta varía entre lanzamientos, el software `radiosonde_auto_rx` escanea toda la banda automáticamente para encontrar la señal.
 
-El proyecto de código abierto [radiosonde_auto_rx](https://github.com/projecthorus/radiosonde_auto_rx) (creado por el Project Horus) automatiza absolutamente todo el proceso. Ya no necesitás sintonizar manualmente la frecuencia ni usar decodificadores de audio complejos.
+## Hardware necesario
 
-**¿Qué hace este software?**
-1. **Escanea:** Barre automáticamente la banda de 400-406 MHz buscando picos de señal característicos.
-2. **Identifica:** Reconoce si es una sonda RS41, RS92, M10, etc.
-3. **Decodifica:** Extrae la telemetría y el GPS en tiempo real.
-4. **Sube:** Envía los datos directamente a SondeHub a tu nombre.
+- **[Receptor RTL-SDR Blog V3](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original):** El TCXO de 1 PPM es importante acá. Las radiosondas usan modulación GFSK con canales estrechos, y la precisión de frecuencia importa para una demodulación correcta.
+- **Antena para 400 MHz:** Una antena dipolo con brazos de **37 cm** (resonancia a 403 MHz) es suficiente. El Kit Dipolo ajustado a esa longitud funciona bien. Para mayor alcance, una antena vertical colineal de 400 MHz instalada en el techo da resultados notablemente mejores.
+- **Computadora:** Una **Raspberry Pi 3 o superior** es ideal para dejar el sistema corriendo 24/7. También funciona en cualquier PC Linux o en Windows con WSL2.
 
-### Instalación Rápida con Docker
+## SondeHub: El FlightRadar24 de las Radiosondas
 
-La forma más limpia y recomendada de instalar `radiosonde_auto_rx` en tu Raspberry Pi o servidor Linux es usando Docker. Asegurate de tener Docker y Docker Compose instalados, y luego ejecutá:
+Antes de configurar tu receptor, vale la pena conocer **[SondeHub](https://sondehub.org/)**: el mapa global en tiempo real de todas las radiosondas en vuelo. Cuando tu estación esté activa, tu nombre aparecerá en el mapa y verás exactamente qué globos estás recibiendo.
+
+SondeHub también tiene una función de **predicción de aterrizaje**: usa los datos de posición y viento para estimar dónde va a caer la sonda cuando el globo explote a gran altura. ¡Muchos aficionados argentinos usan esto para salir a recuperar las sondas, que a veces tienen GPS incorporado y otros componentes reutilizables!
+
+## Instalación con Docker (Raspberry Pi)
+
+La forma más recomendada de instalar `radiosonde_auto_rx` en una Raspberry Pi es usando Docker:
+
+### Paso 1: Clonar el repositorio
 
 ```bash
-# Descargá el repositorio oficial
 git clone https://github.com/projecthorus/radiosonde_auto_rx.git
 cd radiosonde_auto_rx/auto_rx/
-
-# Copiá el archivo de configuración base
 cp station.cfg.example station.cfg
 ```
 
-Ahora tenés que editar el archivo `station.cfg` (podés usar `nano station.cfg`). Es **muy importante** que completes estos datos:
+### Paso 2: Editar la configuración
 
-*   `[station]` -> `callsign = TU_NOMBRE_O_LICENCIA` (El nombre que aparecerá en SondeHub).
-*   `[station]` -> `station_lat` y `station_lon` (Tus coordenadas para que el sistema calcule distancias).
-*   `[sdr]` -> `sdr_quantity = 1` (Si usás un solo [RTL-SDR](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original)).
+Abrí el archivo de configuración con `nano station.cfg` y configurá los siguientes campos obligatorios:
 
-Una vez configurado, simplemente levantá el contenedor de Docker:
+```ini
+[station]
+# Tu nombre o indicativo de radioaficionado (aparecerá en SondeHub)
+callsign = LU1ABC-SONDEHUB
+
+# Tus coordenadas exactas (podés obtenerlas con Google Maps)
+station_lat = -34.60
+station_lon = -58.45
+station_alt = 15  # Altura sobre el nivel del mar en metros
+
+[sdr]
+sdr_quantity = 1  # Número de RTL-SDRs conectados
+```
+
+### Paso 3: Iniciar los contenedores
 
 ```bash
-# Para arquitecturas x86 (PC) o ARM (Raspberry Pi) modernas
 docker-compose up -d
 ```
 
-### Monitoreo Local
+Esto descarga las imágenes necesarias y arranca el sistema en segundo plano.
 
-Una vez que el sistema esté corriendo, `radiosonde_auto_rx` levantará una interfaz web local. Podés acceder abriendo el navegador en tu red y yendo a:
-`http://IP_DE_TU_RASPBERRY:5000`
+### Paso 4: Verificar el funcionamiento
 
-Desde ahí podrás ver un mapa en vivo (solo para tu red local), el espectro de radio, y un registro (log) que te indicará qué frecuencias está escaneando actualmente.
+Abrí el navegador y andá a `http://IP_DE_TU_PI:5000` para ver la interfaz web local de `radiosonde_auto_rx`. Vas a ver:
+- El espectro de radio en la banda 400-406 MHz en tiempo real
+- El log de eventos (qué frecuencias está escaneando)
+- El mapa local con la trayectoria de las sondas que recibís
 
-## ¡A Cazar!
+## ¿Cuándo aparecerá mi primera sonda?
 
-Con tu estación lista, solo tenés que esperar a la mañana siguiente cerca de las 09:00 AM. Verás cómo tu SDR detecta automáticamente la señal, se ancla a la frecuencia, y en cuestión de segundos tu usuario comenzará a brillar en el mapa mundial de SondeHub colaborando con la comunidad meteorológica. 
+Después de configurar todo, la clave es la **paciencia y el timing**. Aproximadamente 30 minutos antes del horario de lanzamiento (9 AM o 9 PM hora argentina), tu sistema debería empezar a detectar la señal de la sonda más cercana subiendo en el espectro.
 
-¡Animate a configurar tu estación y sumate a la red de rastreo de Argentina!
+El sonido característico de una RS41 es un tono de audio digital que cambia lentamente de frecuencia — muy diferente al ACARS o ADS-B. Si tenés auriculares conectados a la Pi, podés escucharlo.
+
+---
+
+## Preguntas Frecuentes
+
+**¿Necesito una licencia de radioaficionado para hacer esto?**
+No. La radioescucha pasiva de señales de telemetría meteorológica es completamente legal en Argentina y no requiere ninguna habilitación.
+
+**¿Puedo recuperar una radiosonda caída?**
+Sí, y es una actividad popular entre los entusiastas. Las sondas modernas como la RS41 son recuperables y hay comunidades online que documentan recuperaciones. El punto de aterrizaje predicho en SondeHub suele ser bastante preciso (error de 1-5 km con buen viento).
+
+**¿Puedo recibir globos de países vecinos?**
+Sí, especialmente desde Uruguay, Chile y Brasil. Sus frecuencias están en la misma banda (400-406 MHz) y si tenés buena antena y altura, a veces podés recibir globos a más de 400 km de distancia cuando están en la parte alta de su trayectoria.
+
+**¿Qué pasa si mi internet se cae? ¿Sigo recibiendo?**
+El sistema `radiosonde_auto_rx` sigue funcionando localmente sin internet. Los datos se guardan y se suben a SondeHub automáticamente cuando vuelve la conexión.
+
+---
+
+### 🛍️ Hardware recomendado para esta guía
+- **[Receptor RTL-SDR Blog V3 USB-A](https://zorzalrf.empretienda.com.ar/sdrs/rtl-sdr-blog-v3-receptor-sdr-usb-a-original)**
+- **[Kit Antena Dipolo Multipropósito para SDR](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil)** — Ajustá los brazos a 37 cm para 400 MHz
