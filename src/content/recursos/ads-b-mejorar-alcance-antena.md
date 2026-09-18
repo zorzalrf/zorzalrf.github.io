@@ -1,7 +1,6 @@
 ---
 title: "Cómo mejorar tu recepción ADS-B y ver aviones a cientos de kilómetros"
 description: "Pasá de ver solo el tráfico local a recibir aviones a 400 kilómetros de distancia optimizando tu antena, filtrado y amplificación en 1090 MHz."
-publishDate: 2026-07-24
 publishDate: 2026-09-18
 author: "Equipo Zorzal RF"
 tags: ["ads-b", "antenas", "filtros", "lna", "aviones"]
