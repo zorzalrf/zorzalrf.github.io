@@ -39,4 +39,4 @@ Ver líneas de texto decodificado es aburrido. Para la experiencia completa de r
 2. Añadí una nueva conexión de Red (UDP, puerto donde configuraste el AIS-catcher).
 3. ¡Mágicamente, pequeños triángulos verdes y azules empezarán a aparecer sobre el mapa de tu puerto o costa local! Al hacer clic sobre ellos, podrás ver la foto del barco, de dónde viene y hacia dónde va.
 
-Con este setup armado usando nuestro [Kit RTL-SDR Completo](https://zorzalrf.empretienda.com.ar/antenas/kit-rtl-sdr-blog-v3-antena-dipolo-sdr-completo), tendrás control de radar total sobre cualquier vía navegable cercana a tu casa.
+Con este setup armado usando nuestro [Kit RTL-SDR Completo](https://zorzalrf.empretienda.com.ar/sdrs/kit-receptor-rtl-sdr-blog-v3-usb-a-con-antena-dipolo), tendrás control de radar total sobre cualquier vía navegable cercana a tu casa.

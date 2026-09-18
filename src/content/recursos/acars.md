@@ -50,5 +50,5 @@ Estos son programas por línea de comandos diseñados específicamente para RTL-
 
 ### 🛒 ¿Necesitás el hardware para este proyecto?
 Recibí los mensajes de los aviones con claridad usando el equipo adecuado:
-- **[Kit RTL-SDR Blog V3 + Antena Dipolo - SDR Completo](https://zorzalrf.empretienda.com.ar/antenas/kit-rtl-sdr-blog-v3-antena-dipolo-sdr-completo)**
+- **[Kit RTL-SDR Blog V3 + Antena Dipolo - SDR Completo](https://zorzalrf.empretienda.com.ar/sdrs/kit-receptor-rtl-sdr-blog-v3-usb-a-con-antena-dipolo)**
 - **[Filtro Rechazo Banda FM (88-108 MHz)](https://zorzalrf.empretienda.com.ar/filtros/filtro-rechazo-banda-fm-88-108-mhz-elimina-interferencia)**

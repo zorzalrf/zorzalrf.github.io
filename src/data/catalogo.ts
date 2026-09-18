@@ -29,7 +29,7 @@ export const catalogoItems: CatalogItem[] = [
     "category": "Entrega Inmediata",
     "isHero": true,
     "badge": "RECOMENDADO PARA PRINCIPIANTES",
-    "url": "https://zorzalrf.empretienda.com.ar/antenas/kit-rtl-sdr-blog-v3-antena-dipolo-sdr-completo",
+    "url": "https://zorzalrf.empretienda.com.ar/sdrs/kit-receptor-rtl-sdr-blog-v3-usb-a-con-antena-dipolo",
     "price": 247000
   },
   {

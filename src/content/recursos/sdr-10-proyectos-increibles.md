@@ -13,7 +13,7 @@ El **SDR (Software Defined Radio)** ha revolucionado el mundo de la radioafició
 
 Si recién descubrís esta tecnología y te preguntás _¿qué puedo hacer con esto?_, la respuesta es: **casi todo lo que viaje por el aire**.
 
-Acá te mostramos 10 proyectos increíbles que podés hacer hoy mismo con un [Kit RTL-SDR Blog V3 + Antena Dipolo](https://zorzalrf.empretienda.com.ar/antenas/kit-rtl-sdr-blog-v3-antena-dipolo-sdr-completo) (el equipo ideal para empezar).
+Acá te mostramos 10 proyectos increíbles que podés hacer hoy mismo con un [Kit RTL-SDR Blog V3 + Antena Dipolo](https://zorzalrf.empretienda.com.ar/sdrs/kit-receptor-rtl-sdr-blog-v3-usb-a-con-antena-dipolo) (el equipo ideal para empezar).
 
 ## 1. Escuchar a la Torre de Control y Aviones (Banda Aérea)
 Sintonizá las frecuencias VHF (alrededor de 118 a 136 MHz) en AM para escuchar las conversaciones no encriptadas entre los pilotos y las torres de control de los aeropuertos cercanos a tu casa. ¡Es la primera prueba obligada!
@@ -48,4 +48,4 @@ La banda ISM de 433 MHz está llena de dispositivos "inteligentes" y de baja pot
 ---
 
 ### ¿Listo para empezar?
-Para poder hacer **los 10 proyectos** de esta lista sin volverte loco buscando cables y adaptadores, te recomendamos arrancar con el paquete completo. El [Kit RTL-SDR Blog V3 + Antena Dipolo](https://zorzalrf.empretienda.com.ar/antenas/kit-rtl-sdr-blog-v3-antena-dipolo-sdr-completo) incluye el receptor original de altísima calidad y una base de antena con varias varillas intercambiables que podés ajustar para sintonizar perfectamente aviones, satélites o barcos.
+Para poder hacer **los 10 proyectos** de esta lista sin volverte loco buscando cables y adaptadores, te recomendamos arrancar con el paquete completo. El [Kit RTL-SDR Blog V3 + Antena Dipolo](https://zorzalrf.empretienda.com.ar/sdrs/kit-receptor-rtl-sdr-blog-v3-usb-a-con-antena-dipolo) incluye el receptor original de altísima calidad y una base de antena con varias varillas intercambiables que podés ajustar para sintonizar perfectamente aviones, satélites o barcos.

@@ -23,7 +23,7 @@ La estación espacial tiene dos actividades principales que podemos captar:
 
 Al estar tan alta en el cielo y transmitiendo en VHF, la señal de la ISS suele ser lo suficientemente fuerte como para no requerir equipos súper exóticos. 
 
-Si tenés el [Kit RTL-SDR Blog V3 + Antena Dipolo](https://zorzalrf.empretienda.com.ar/antenas/kit-rtl-sdr-blog-v3-antena-dipolo-sdr-completo), estás preparado:
+Si tenés el [Kit RTL-SDR Blog V3 + Antena Dipolo](https://zorzalrf.empretienda.com.ar/sdrs/kit-receptor-rtl-sdr-blog-v3-usb-a-con-antena-dipolo), estás preparado:
 * Enroscá las varillas largas a la base.
 * Extendelas hasta que midan unos **49 a 50 centímetros** cada una.
 * Colocalas en forma de dipolo horizontal recto (180 grados) o en configuración de V-Dipole. 

@@ -19,7 +19,7 @@ Capturarlas es uno de los proyectos más gratificantes del mundo SDR. Todo lo qu
 
 La señal de estos satélites utiliza una polarización circular. Si bien existen antenas complejas y enormes para esto (como la Quadrifilar Helix), hay un truco maravilloso descubierto por la comunidad amateur: **La antena Dipolo en V**.
 
-Si tenés el [Kit Antena Dipolo Multipropósito](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil) que viene con nuestro [Kit SDR Completo](https://zorzalrf.empretienda.com.ar/antenas/kit-rtl-sdr-blog-v3-antena-dipolo-sdr-completo), ya tenés la antena perfecta. 
+Si tenés el [Kit Antena Dipolo Multipropósito](https://zorzalrf.empretienda.com.ar/antenas/kit-antena-dipolo-multiproposito-para-sdr-portatil-y-versatil) que viene con nuestro [Kit SDR Completo](https://zorzalrf.empretienda.com.ar/sdrs/kit-receptor-rtl-sdr-blog-v3-usb-a-con-antena-dipolo), ya tenés la antena perfecta. 
 
 Para configurarla:
 1. Enroscá las dos varillas largas en la base.

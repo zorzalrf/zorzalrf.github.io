@@ -39,7 +39,7 @@ Por eso recomendamos el [Kit Antena Dipolo Multipropósito](https://zorzalrf.emp
 
 ## 3. El Software: Programas para escuchar radio (SDR# y SDR++)
 
-Una vez que tengas tu equipo en mano (por ejemplo, habiendo comprado el combo que incluye todo: [Kit RTL-SDR Blog V3 + Antena Dipolo](https://zorzalrf.empretienda.com.ar/antenas/kit-rtl-sdr-blog-v3-antena-dipolo-sdr-completo)), es momento de conectarlo.
+Una vez que tengas tu equipo en mano (por ejemplo, habiendo comprado el combo que incluye todo: [Kit RTL-SDR Blog V3 + Antena Dipolo](https://zorzalrf.empretienda.com.ar/sdrs/kit-receptor-rtl-sdr-blog-v3-usb-a-con-antena-dipolo)), es momento de conectarlo.
 
 Los pasos básicos son:
 1. Conectar la antena al SDR, y el SDR a un puerto USB directo de tu PC (evitá hubs baratos).
